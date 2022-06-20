@@ -1,0 +1,101 @@
+/*
+ ==============
+ fonts
+ ==============
+ */
+ @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courgette&family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap'); //courgetee ,//montserrat ,// bebas neue
+ 
+
+/*
+===================
+Global variables
+===================
+*/
+// my fonts
+$ff-primary-1 :'Bebas Neue', cursive;
+$ff-primary-2 : 'Montserrat', sans-serif;
+$ff-primary-3 : 'Courgette', cursive;
+
+//my colors
+$primary-clr-1 : #fcbe85;
+$primary-clr-2 : #f8f8f8;
+$primary-clr-3 : #fff;
+
+//my text color :
+$primary-text-clr-1: #000;
+$primary-text-clr-2: #313030;
+$primary-text-clr-3: #fff;
+
+// text style
+$spacing : .1rem;
+
+//global style
+*,
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: $ff-primary-2;
+    line-height: 1.5;
+    font-size: .875rem;
+    color: $primary-text-clr-2;
+    ul{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+    }
+    h1,h2,h3,h4{
+        letter-spacing: $spacing;
+        line-height: 1.25rem;
+    }
+    h1{
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-family: $ff-primary-1;
+    }
+    h2{
+        font-size: 2rem;
+        font-family: $ff-primary-2;
+    }
+    h3{
+        font-size: 1.25rem;
+        font-family: $ff-primary-3;
+    }
+    p{
+        margin-bottom: 1.25rem;
+        color: $primary-text-clr-2;
+    }
+}
+@mixin media-md{
+    @media  screen and (min-width:768px) {
+        @content;
+        body{
+            font-size: 1rem;
+            h1 {
+                font-size: 4.5rem;
+              }
+              h2 {
+                font-size: 2.5rem;
+              }
+              h3 {
+                font-size: 1.5rem;
+              }
+              h4 {
+                font-size: 1rem;
+              }
+              body {
+                font-size: 1rem;
+              }
+              h1,
+              h2,
+              h3,
+              h4 {
+                line-height: 1;
+              }
+        }
+    }
+}

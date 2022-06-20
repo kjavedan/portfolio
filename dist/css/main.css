@@ -1,0 +1,73 @@
+/*
+ ==============
+ fonts
+ ==============
+ */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courgette&family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap");
+/*
+===================
+Global variables
+===================
+*/
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  font-size: .875rem;
+  color: #313030;
+}
+
+body ul {
+  list-style: none;
+}
+
+body a {
+  text-decoration: none;
+}
+
+body h1, body h2, body h3, body h4 {
+  letter-spacing: 0.1rem;
+  line-height: 1.25rem;
+}
+
+body h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", cursive;
+}
+
+body h2 {
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+body h3 {
+  font-size: 1.25rem;
+  font-family: "Courgette", cursive;
+}
+
+body p {
+  margin-bottom: 1.25rem;
+  color: #313030;
+}
+
+.div1 {
+  font-family: "Bebas Neue", cursive;
+}
+
+.div2 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.div3 {
+  font-family: "Courgette", cursive;
+}
+/*# sourceMappingURL=main.css.map */
