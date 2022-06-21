@@ -59,15 +59,109 @@ body p {
   color: #313030;
 }
 
-.div1 {
-  font-family: "Bebas Neue", cursive;
+body {
+  height: 2000px;
 }
 
-.div2 {
-  font-family: "Montserrat", sans-serif;
+header {
+  background-color: aqua;
+  width: 100%;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.div3 {
-  font-family: "Courgette", cursive;
+header .header-left {
+  width: 150px;
+  height: 50px;
+  background-color: red;
+}
+
+header .header-left .logo-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .nav-menu, header .menu-name {
+  display: none;
+}
+
+header .menu-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: white;
+  position: fixed;
+  right: 2rem;
+  top: 1rem;
+  z-index: 1;
+  padding-left: 7px;
+  cursor: pointer;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+header .menu-btn__burger {
+  content: '';
+  position: absolute;
+  top: 20px;
+  width: 28px;
+  height: 2px;
+  background-color: #000;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+header .menu-btn__burger::before {
+  content: '';
+  position: absolute;
+  background-color: #000;
+  height: 2px;
+  top: -8px;
+  width: 22px;
+}
+
+header .menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  background-color: #000;
+  top: 8px;
+  width: 18px;
+  height: 1.5px;
+}
+
+header .menu-btn__burger.open {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  background: transparent;
+}
+
+header .menu-btn__burger.open::before {
+  width: 28px;
+  -webkit-transform: translate(-1px, 8px) rotate(45deg);
+          transform: translate(-1px, 8px) rotate(45deg);
+}
+
+header .menu-btn__burger.open::after {
+  width: 28px;
+  height: 2px;
+  -webkit-transform: translate(-1px, -8px) rotate(-45deg);
+          transform: translate(-1px, -8px) rotate(-45deg);
 }
 /*# sourceMappingURL=main.css.map */
