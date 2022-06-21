@@ -6,7 +6,7 @@ header{
     width: 100%;
     height: 60px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     .header-left{
         width: 150px;
         height: 50px;
@@ -18,9 +18,23 @@ header{
     .nav{
         display: flex;
     }
-        .nav-menu, .menu-name{
+        .nav-menu{
             display: none;
+            &.open{
+                display: block;
+                width: 100vw;
+                height: 100%;
+                background-color: red;
+                opacity: .9;
+                position:fixed;
+                left: 0;
+                top: 0;
+            }
+            &__item{
+                font-size: large;
+            }
         }
+        
         .menu-btn{
             width: 40px;
             height: 40px;
