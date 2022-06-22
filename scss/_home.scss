@@ -1,8 +1,27 @@
 body{
     height: 2000px;
+    overflow-x: hidden;
+    .test{
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        background-color: brown;
+        
+        @include transition-ease;
+
+        &.open{
+            top: 0;
+            left: 0;
+            display: block;
+            position: fixed;
+            transform: translateX(50%);
+            
+        }
+    }
+    
 }
 header{
-    background-color: aqua;
+    background-color: brown;
     width: 100%;
     height: 60px;
     display: flex;
@@ -10,7 +29,6 @@ header{
     .header-left{
         width: 150px;
         height: 50px;
-        background-color: red;
        .logo-nav{
         @include centralize
        }
@@ -20,12 +38,13 @@ header{
     }
         .nav-menu{
             display: none;
+            
             &.open{
                 display: block;
-                width: 100vw;
+                width: 50vw;
                 height: 100%;
-                background-color: red;
-                opacity: .9;
+                background-color: white;
+                // opacity: .9;
                 position:fixed;
                 left: 0;
                 top: 0;
@@ -33,8 +52,7 @@ header{
             &__item{
                 font-size: large;
             }
-        }
-        
+        }  
         .menu-btn{
             width: 40px;
             height: 40px;
@@ -92,4 +110,6 @@ header{
             }
            
         }
+       
     }
+    

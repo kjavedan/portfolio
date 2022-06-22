@@ -61,10 +61,29 @@ body p {
 
 body {
   height: 2000px;
+  overflow-x: hidden;
+}
+
+body .test {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: brown;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+body .test.open {
+  top: 0;
+  left: 0;
+  display: block;
+  position: fixed;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
 }
 
 header {
-  background-color: aqua;
+  background-color: brown;
   width: 100%;
   height: 60px;
   display: -webkit-box;
@@ -78,7 +97,6 @@ header {
 header .header-left {
   width: 150px;
   height: 50px;
-  background-color: red;
 }
 
 header .header-left .logo-nav {
@@ -104,10 +122,9 @@ header .nav-menu {
 
 header .nav-menu.open {
   display: block;
-  width: 100vw;
+  width: 50vw;
   height: 100%;
-  background-color: red;
-  opacity: .9;
+  background-color: white;
   position: fixed;
   left: 0;
   top: 0;
