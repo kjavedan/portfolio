@@ -3,7 +3,7 @@
  fonts
  ==============
  */
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courgette&family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courgette&family=Major+Mono+Display&family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap");
 /*
 ===================
 Global variables
@@ -59,12 +59,7 @@ body p {
   color: #313030;
 }
 
-.main {
-  height: 2000px;
-  overflow-x: hidden;
-}
-
-.main .loading-page .left-div__animation, .main .loading-page .right-div__animation {
+.left-div__animation, .right-div__animation {
   top: 0;
   left: 0;
   display: block;
@@ -78,26 +73,25 @@ body p {
   transition: all .4s ease-in-out;
 }
 
-.main .loading-page .left-div__animation.open, .main .loading-page .open.right-div__animation {
+.left-div__animation.open, .open.right-div__animation {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
 
-.main .loading-page .right-div__animation {
+.right-div__animation {
   background-color: #fcbe85;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
-  opacity: .9;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
 }
 
-.main .loading-page .right-div__animation.open {
+.right-div__animation.open {
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
 }
 
-.main .loading-page header {
+header {
   width: 100%;
   height: 60px;
   display: -webkit-box;
@@ -108,13 +102,13 @@ body p {
           align-items: flex-end;
 }
 
-.main .loading-page header .header-left {
+header .header-left {
   padding-top: .5rem;
   width: 150px;
   height: 50px;
 }
 
-.main .loading-page header .header-left .logo-nav {
+header .header-left .logo-nav {
   font-family: "Courgette", cursive;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -126,32 +120,32 @@ body p {
       justify-content: space-around;
 }
 
-.main .loading-page header .header-left .logo-nav .log-nav__icon {
+header .header-left .logo-nav .log-nav__icon {
   -webkit-animation: drop-in .5s;
           animation: drop-in .5s;
 }
 
-.main .loading-page header .header-left .logo-nav .log-nav__link {
-  -webkit-animation: fade-in 2s;
-          animation: fade-in 2s;
+header .header-left .logo-nav .log-nav__link {
+  -webkit-animation: slide-in-right .5s;
+          animation: slide-in-right .5s;
 }
 
-.main .loading-page header .header-left .logo-nav .log-nav__link a {
+header .header-left .logo-nav .log-nav__link a {
   font-size: 1rem;
   color: #000;
 }
 
-.main .loading-page header .nav {
+header .nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.main .loading-page header .nav-menu {
+header .nav-menu {
   display: none;
 }
 
-.main .loading-page header .nav-menu.open {
+header .nav-menu.open {
   padding-top: 8rem;
   display: block;
   width: 50vw;
@@ -162,28 +156,28 @@ body p {
   top: 0;
 }
 
-.main .loading-page header .nav-menu__item {
+header .nav-menu__item {
   font-family: "Bebas Neue", cursive;
   padding-left: 30%;
   font-size: large;
   padding-bottom: 3.5rem;
-  -webkit-animation: fade-in-motion 1s;
-          animation: fade-in-motion 1s;
+  -webkit-animation: fade-in-motion-up 1s;
+          animation: fade-in-motion-up 1s;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
 }
 
-.main .loading-page header .nav-menu__item.active a {
+header .nav-menu__item.active a {
   -webkit-text-decoration: underline 3px #fcbe85;
           text-decoration: underline 3px #fcbe85;
 }
 
-.main .loading-page header .nav-menu__item a {
+header .nav-menu__item a {
   color: #000;
   font-size: 1.5rem;
 }
 
-.main .loading-page header .nav-menu__item.social-media a {
+header .nav-menu__item.social-media a {
   padding: .1rem .25rem 0 .25rem;
   font-size: 1rem;
   border-radius: 4px;
@@ -191,27 +185,27 @@ body p {
   transition: all .4s ease-in-out;
 }
 
-.main .loading-page header .nav-menu__item.social-media .instagram:hover {
+header .nav-menu__item.social-media .instagram:hover {
   color: #fff;
   background: #f09433;
   background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
 }
 
-.main .loading-page header .nav-menu__item.social-media .linkdin i:hover {
+header .nav-menu__item.social-media .linkdin i:hover {
   color: #0072b1;
 }
 
-.main .loading-page header .nav-menu__item.social-media .whatsapp i:hover {
+header .nav-menu__item.social-media .whatsapp i:hover {
   color: #25D366;
 }
 
-.main .loading-page header .nav-menu__item.open {
+header .nav-menu__item.open {
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
 }
 
-.main .loading-page header .menu-btn {
+header .menu-btn {
   width: 40px;
   height: 40px;
   border-radius: 100%;
@@ -226,7 +220,7 @@ body p {
   transition: all .4s ease-in-out;
 }
 
-.main .loading-page header .menu-btn__burger {
+header .menu-btn__burger {
   content: '';
   position: absolute;
   top: 20px;
@@ -237,7 +231,7 @@ body p {
   transition: all .4s ease-in-out;
 }
 
-.main .loading-page header .menu-btn__burger::before {
+header .menu-btn__burger::before {
   content: '';
   position: absolute;
   background-color: #000;
@@ -246,7 +240,7 @@ body p {
   width: 22px;
 }
 
-.main .loading-page header .menu-btn__burger::after {
+header .menu-btn__burger::after {
   content: '';
   position: absolute;
   background-color: #000;
@@ -255,26 +249,26 @@ body p {
   height: 2px;
 }
 
-.main .loading-page header .menu-btn__burger.open {
+header .menu-btn__burger.open {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
   background: transparent;
 }
 
-.main .loading-page header .menu-btn__burger.open::before {
+header .menu-btn__burger.open::before {
   width: 28px;
   -webkit-transform: translate(-1px, 8px) rotate(45deg);
           transform: translate(-1px, 8px) rotate(45deg);
 }
 
-.main .loading-page header .menu-btn__burger.open::after {
+header .menu-btn__burger.open::after {
   width: 28px;
   height: 2px;
   -webkit-transform: translate(-1px, -8px) rotate(-45deg);
           transform: translate(-1px, -8px) rotate(-45deg);
 }
 
-@-webkit-keyframes fade-in-motion {
+@-webkit-keyframes fade-in-motion-up {
   0% {
     opacity: 0;
     -webkit-transform: translateY(0);
@@ -287,7 +281,7 @@ body p {
   }
 }
 
-@keyframes fade-in-motion {
+@keyframes fade-in-motion-up {
   0% {
     opacity: 0;
     -webkit-transform: translateY(0);
@@ -300,21 +294,29 @@ body p {
   }
 }
 
-@-webkit-keyframes fade-in {
+@-webkit-keyframes slide-in-right {
   0% {
+    -webkit-transform: translate(50%);
+            transform: translate(50%);
     opacity: 0;
   }
   100% {
     opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
   }
 }
 
-@keyframes fade-in {
+@keyframes slide-in-right {
   0% {
+    -webkit-transform: translate(50%);
+            transform: translate(50%);
     opacity: 0;
   }
   100% {
     opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
   }
 }
 
@@ -338,5 +340,50 @@ body p {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
   }
+}
+
+.loading-page {
+  height: 100vh;
+}
+
+.loading-page .profile__pic {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #fcbe85;
+  margin: 4rem auto .5rem;
+  border-radius: 50%;
+}
+
+.loading-page .profile__text {
+  width: 100%;
+  height: 20vh;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #000;
+}
+
+.loading-page .profile__text h1 {
+  font-size: 2rem;
+  font-family: "Major Mono Display", monospace;
+}
+
+.loading-page .profile__text h4 {
+  font-family: "Courgette", cursive;
+}
+
+.main {
+  height: 2000px;
+  overflow-x: hidden;
 }
 /*# sourceMappingURL=main.css.map */
