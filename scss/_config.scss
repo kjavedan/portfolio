@@ -20,7 +20,7 @@ $ff-primary-3 : 'Courgette', cursive;
 $primary-clr-1 : #fcbe85;
 $primary-clr-2 : #f8f8f8;
 $primary-clr-3 : #fff;
-$primary-clr-4 : #000;
+$primary-clr-4 : #000; 
 
 //my text color :
 $primary-text-clr-1: #000;
@@ -73,7 +73,7 @@ body{
 }
 //mixins
 @mixin transition-ease{
-    transition: all .5s ease-in-out;
+    transition: all .4s ease-in-out;
 }
 @mixin centralize{
     display: flex;
