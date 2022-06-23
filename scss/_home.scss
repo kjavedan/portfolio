@@ -37,7 +37,6 @@
                height: 60px;
                display: flex;
                align-items: flex-end;
-               background-color: brown;
 
                .header-left {
                    padding-top: .5rem;
@@ -45,7 +44,22 @@
                    height: 50px;
 
                    .logo-nav {
-                       @include centralize
+                    font-family: $ff-primary-3;
+                    
+
+                       @include centralize;
+                       .log-nav__icon {
+                        animation: drop-in .5s;         
+                       }
+                       .log-nav__link{
+                        animation: fade-in 2s;
+                        
+                        & a{
+                            font-size: 1rem;
+                            color: $primary-text-clr-1;
+                        }
+                        
+                       }
                    }
                }
 
@@ -55,6 +69,7 @@
 
                .nav-menu {
                    display: none;
+
                    &.open {
                        padding-top: 8rem;
                        display: block;
@@ -64,13 +79,51 @@
                        position: fixed;
                        left: 0;
                        top: 0;
+
                    }
 
                    &__item {
+                       font-family: $ff-primary-1;
+                       padding-left: 30%;
                        font-size: large;
-                       padding-bottom: 4rem;
-                       transform: translateY(0);
+                       padding-bottom: 3.5rem;
+                       animation: fade-in-motion 1s;
                        @include transition-ease;
+                        
+                       &.active a{
+                        text-decoration: underline 3px $primary-clr-1;
+                       }
+
+                       & a {
+                           color: $primary-text-clr-1;
+                           font-size: 1.5rem;    
+                       }
+
+                       &.social-media {
+                           & a {
+                               padding: .1rem .25rem 0 .25rem ;
+                               font-size: 1rem;
+                               border-radius: 4px;
+                               @include transition-ease;
+                           }
+
+                           .instagram:hover {
+                               color: $primary-text-clr-3;
+                               
+                               background: #f09433;
+                               background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+                               background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+                               background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+                               filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+                           }
+
+                           .linkdin i:hover {
+                            color:  #0072b1;                           }
+
+                           .whatsapp i:hover {
+                            color: #25D366;
+                           }
+                       }
 
                        &.open {
                            transform: translateY(-10px);
@@ -139,4 +192,33 @@
                }
            }
        }
+   }
+    @keyframes fade-in-motion{
+        0%{
+            opacity: 0;
+            transform: translateY(0);
+        }
+        100%{
+            transform: translateY(-11%);
+            opacity: 1;
+            
+        }
+   }
+    @keyframes fade-in{
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+            
+        }
+   }
+   @keyframes drop-in {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+    
    }
