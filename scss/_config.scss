@@ -80,6 +80,7 @@ body{
     align-items: center;
     justify-content: space-around;
 }
+
 @mixin media-md{
     @media  screen and (min-width:768px) {
         @content;
