@@ -357,7 +357,7 @@ header .menu-btn__burger.open::after {
 .loading-page .profile__text {
   width: 100%;
   height: 20vh;
-  margin: 0 auto;
+  margin: 2rem auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -382,7 +382,38 @@ header .menu-btn__burger.open::after {
   font-family: "Courgette", cursive;
 }
 
-.main {
+.loading-page .profile__text .name {
+  line-height: 2rem;
+  overflow: hidden;
+}
+
+.loading-page .profile__text .name .my-name, .loading-page .profile__text .name .my-job {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  display: inline-block;
+}
+
+.loading-page .profile__text .name .my-name {
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.loading-page .profile__text .name .my-name.open {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+.loading-page .profile__text .name .my-job {
+  -webkit-transition: all 1s .5s ease-in-out;
+  transition: all 1s .5s ease-in-out;
+}
+
+.loading-page .profile__text .name .my-job.open {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+main {
   height: 2000px;
   overflow-x: hidden;
 }
