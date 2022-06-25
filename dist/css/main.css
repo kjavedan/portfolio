@@ -406,7 +406,6 @@ header .menu-btn__burger.open::after {
 .landing-page .profile__text .name .my-name.open {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
-  z-index: 0;
 }
 
 .landing-page .profile__text .name .my-job {
@@ -442,7 +441,22 @@ header .menu-btn__burger.open::after {
 }
 
 .about-me .container__title .title {
-  margin-bottom: 1.5rem;
+  margin-bottom: .1rem;
+  line-height: 2.6rem;
+  overflow: hidden;
+}
+
+.about-me .container__title .title .my-title {
+  display: inline-block;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.about-me .container__title .title .my-title.open {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .about-me .container__subtitle {

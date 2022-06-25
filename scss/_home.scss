@@ -1,6 +1,6 @@
 .landing-page {
     height: 100vh;
-
+// the gif and text styling
     .profile {
 
         &__pic {
@@ -9,8 +9,7 @@
             margin: 4rem auto .5rem;
             background: url(/dist/img/say-hello.gif);
             background-size: cover;
-            background-position: center;
-            
+            background-position: center;  
         }
 
         &__text {
@@ -40,7 +39,7 @@
                     transition: all 1s ease-in-out;
                     &.open{
                         transform: translateY(0%);
-                        z-index: 0;
+                        // z-index: 0;
                     }
                 }
                 .my-job{
@@ -72,7 +71,18 @@
         &__title{
             margin-bottom: 2rem;
             .title{
-                margin-bottom: 1.5rem;
+                margin-bottom: .1rem;
+                line-height: 2.6rem;
+                overflow: hidden;
+                
+                .my-title{
+                    display: inline-block;
+                    @include transition-ease;
+                    transform: translateY(100%);
+                    &.open{
+                        transform: translateY(0);
+                    }
+                }
             }
         }
 
