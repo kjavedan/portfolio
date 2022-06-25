@@ -429,7 +429,7 @@ header .menu-btn__burger.open::after {
   padding: 6rem 0;
 }
 
-.about-me .container .animation-line {
+.about-me .container__animation-line {
   width: 60px;
   height: 3px;
   border-radius: 2px;
@@ -437,23 +437,23 @@ header .menu-btn__burger.open::after {
   margin-bottom: 2rem;
 }
 
-.about-me .container .about-me__title {
+.about-me .container__title {
   margin-bottom: 2rem;
 }
 
-.about-me .container .about-me__title .title {
+.about-me .container__title .title {
   margin-bottom: 1.5rem;
 }
 
-.about-me .container .about-me__subtitle {
+.about-me .container__subtitle {
   margin-bottom: 1.5rem;
 }
 
-.about-me .container .about-me__subtitle .subtitle {
+.about-me .container__subtitle .subtitle {
   margin-bottom: .5rem;
 }
 
-.about-me .container .more-container {
+.about-me .container__button {
   background-color: #fcbe85;
   padding: 0px 6px;
   display: -webkit-inline-box;
@@ -461,7 +461,7 @@ header .menu-btn__burger.open::after {
   display: inline-flex;
 }
 
-.about-me .container .more-container .more {
+.about-me .container__button .more {
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
   text-transform: uppercase;
@@ -472,11 +472,11 @@ header .menu-btn__burger.open::after {
   padding-right: 2rem;
 }
 
-.about-me .container .more-container:hover .more {
+.about-me .container__button:hover .more {
   padding-right: 0;
 }
 
-.about-me .container .more-container img {
+.about-me .container__button img {
   width: 1.5rem;
   margin-left: 3px;
   position: absolute;
@@ -484,7 +484,7 @@ header .menu-btn__burger.open::after {
   transition: all .2s ease-in-out;
 }
 
-.about-me .container .more-container:hover img {
+.about-me .container__button:hover img {
   margin-left: 1rem;
 }
 

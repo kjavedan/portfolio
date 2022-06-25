@@ -1,15 +1,12 @@
 .landing-page {
     height: 100vh;
-    // background-color: $primary-clr-1;
 
     .profile {
 
         &__pic {
             width: 200px;
             height: 200px;
-            // border: 1px solid $primary-clr-1;
             margin: 4rem auto .5rem;
-            // border-radius: 50%;
             background: url(/dist/img/say-hello.gif);
             background-size: cover;
             background-position: center;
@@ -32,7 +29,6 @@
             }
             
             .name{
-                // background-color: rgb(175, 121, 121);
                 line-height: 2rem;
                 overflow: hidden;
                 .my-name, .my-job{
@@ -65,7 +61,7 @@
         margin: 0 auto;
         padding: 6rem 0;
 
-        .animation-line{
+        &__animation-line{
             width: 60px;
             height: 3px;
             border-radius: 2px;
@@ -73,20 +69,20 @@
             margin-bottom: 2rem;
         }
 
-        .about-me__title{
+        &__title{
             margin-bottom: 2rem;
             .title{
                 margin-bottom: 1.5rem;
             }
         }
 
-        .about-me__subtitle{
+        &__subtitle{
             margin-bottom: 1.5rem;
             .subtitle{
                 margin-bottom: .5rem;
             }
         }
-        .more-container{
+        &__button{
             background-color: $primary-clr-1;
             padding: 0px 6px;
             display: inline-flex;
