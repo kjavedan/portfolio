@@ -31,11 +31,15 @@ body ul {
 
 body a {
   text-decoration: none;
+  color: #000;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1rem;
 }
 
 body h1, body h2, body h3, body h4 {
   letter-spacing: 0.1rem;
   line-height: 1.25rem;
+  color: #000;
 }
 
 body h1 {
@@ -45,18 +49,20 @@ body h1 {
 }
 
 body h2 {
-  font-size: 2rem;
+  font-size: 1.25rem;
   font-family: "Montserrat", sans-serif;
 }
 
 body h3 {
   font-size: 1.25rem;
   font-family: "Courgette", cursive;
+  font-weight: lighter;
 }
 
 body p {
   margin-bottom: 1.25rem;
   color: #313030;
+  line-height: 1.5rem;
 }
 
 .left-div__animation, .right-div__animation {
@@ -64,6 +70,7 @@ body p {
   left: 0;
   display: block;
   position: fixed;
+  z-index: 3;
   width: 100vw;
   height: 100vh;
   background-color: #fff;
@@ -82,6 +89,7 @@ body p {
   background-color: #fcbe85;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
+  z-index: 3;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
 }
@@ -130,11 +138,6 @@ header .header-left .logo-nav .log-nav__link {
           animation: slide-in-right .5s;
 }
 
-header .header-left .logo-nav .log-nav__link a {
-  font-size: 1rem;
-  color: #000;
-}
-
 header .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -154,6 +157,7 @@ header .nav-menu.open {
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 4;
 }
 
 header .nav-menu__item {
@@ -213,7 +217,7 @@ header .menu-btn {
   position: fixed;
   right: 2rem;
   top: 1.2rem;
-  z-index: 1;
+  z-index: 5;
   padding-left: 7px;
   cursor: pointer;
   -webkit-transition: all .4s ease-in-out;
@@ -342,19 +346,20 @@ header .menu-btn__burger.open::after {
   }
 }
 
-.loading-page {
+.landing-page {
   height: 100vh;
 }
 
-.loading-page .profile__pic {
+.landing-page .profile__pic {
   width: 200px;
   height: 200px;
-  border: 1px solid #fcbe85;
   margin: 4rem auto .5rem;
-  border-radius: 50%;
+  background: url(/dist/img/say-hello.gif);
+  background-size: cover;
+  background-position: center;
 }
 
-.loading-page .profile__text {
+.landing-page .profile__text {
   width: 100%;
   height: 20vh;
   margin: 2rem auto;
@@ -373,48 +378,117 @@ header .menu-btn__burger.open::after {
   color: #000;
 }
 
-.loading-page .profile__text h1 {
+.landing-page .profile__text h1 {
   font-size: 2rem;
   font-family: "Major Mono Display", monospace;
 }
 
-.loading-page .profile__text h4 {
+.landing-page .profile__text h4 {
   font-family: "Courgette", cursive;
 }
 
-.loading-page .profile__text .name {
+.landing-page .profile__text .name {
   line-height: 2rem;
   overflow: hidden;
 }
 
-.loading-page .profile__text .name .my-name, .loading-page .profile__text .name .my-job {
+.landing-page .profile__text .name .my-name, .landing-page .profile__text .name .my-job {
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
   display: inline-block;
 }
 
-.loading-page .profile__text .name .my-name {
+.landing-page .profile__text .name .my-name {
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
 
-.loading-page .profile__text .name .my-name.open {
+.landing-page .profile__text .name .my-name.open {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
+  z-index: 0;
 }
 
-.loading-page .profile__text .name .my-job {
+.landing-page .profile__text .name .my-job {
   -webkit-transition: all 1s .5s ease-in-out;
   transition: all 1s .5s ease-in-out;
 }
 
-.loading-page .profile__text .name .my-job.open {
+.landing-page .profile__text .name .my-job.open {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
 }
 
+.about-me {
+  background-color: #f8f8f8;
+}
+
+.about-me .container {
+  width: 80vw;
+  margin: 0 auto;
+  padding: 6rem 0;
+}
+
+.about-me .container .animation-line {
+  width: 60px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #fcbe85;
+  margin-bottom: 2rem;
+}
+
+.about-me .container .about-me__title {
+  margin-bottom: 2rem;
+}
+
+.about-me .container .about-me__title .title {
+  margin-bottom: 1.5rem;
+}
+
+.about-me .container .about-me__subtitle {
+  margin-bottom: 1.5rem;
+}
+
+.about-me .container .about-me__subtitle .subtitle {
+  margin-bottom: .5rem;
+}
+
+.about-me .container .more-container {
+  background-color: #fcbe85;
+  padding: 0px 6px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.about-me .container .more-container .more {
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  color: #fff;
+  padding-top: 4px;
+  padding-right: 2rem;
+}
+
+.about-me .container .more-container:hover .more {
+  padding-right: 0;
+}
+
+.about-me .container .more-container img {
+  width: 1.5rem;
+  margin-left: 3px;
+  position: absolute;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.about-me .container .more-container:hover img {
+  margin-left: 1rem;
+}
+
 main {
-  height: 2000px;
   overflow-x: hidden;
 }
 /*# sourceMappingURL=main.css.map */

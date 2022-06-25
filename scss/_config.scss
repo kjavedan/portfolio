@@ -48,10 +48,14 @@ body{
     }
     a{
         text-decoration: none;
+        color: $primary-text-clr-1;
+        font-family: $ff-primary-1;
+        font-size: 1rem;
     }
     h1,h2,h3,h4{
         letter-spacing: $spacing;
         line-height: 1.25rem;
+        color: $primary-text-clr-1;
     }
     h1{
         font-size: 3rem;
@@ -59,16 +63,18 @@ body{
         font-family: $ff-primary-1;
     }
     h2{
-        font-size: 2rem;
+        font-size: 1.25rem;
         font-family: $ff-primary-2;
     }
     h3{
         font-size: 1.25rem;
         font-family: $ff-primary-3;
+        font-weight: lighter;
     }
     p{
         margin-bottom: 1.25rem;
         color: $primary-text-clr-2;
+        line-height: 1.5rem;
     }
 }
 //mixins

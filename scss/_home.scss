@@ -1,15 +1,19 @@
-.loading-page {
+.landing-page {
     height: 100vh;
-    
+    // background-color: $primary-clr-1;
 
     .profile {
 
         &__pic {
             width: 200px;
             height: 200px;
-            border: 1px solid $primary-clr-1;
+            // border: 1px solid $primary-clr-1;
             margin: 4rem auto .5rem;
-            border-radius: 50%;
+            // border-radius: 50%;
+            background: url(/dist/img/say-hello.gif);
+            background-size: cover;
+            background-position: center;
+            
         }
 
         &__text {
@@ -34,11 +38,13 @@
                 .my-name, .my-job{
                     transform: translateY(100%);
                     display: inline-block;
+                    
                 }
                 .my-name{
                     transition: all 1s ease-in-out;
                     &.open{
                         transform: translateY(0%);
+                        z-index: 0;
                     }
                 }
                 .my-job{
@@ -50,4 +56,70 @@
             }
         }
     }
+}
+.about-me{
+    background-color: $primary-clr-2;
+    
+    .container{
+        width: 80vw;
+        margin: 0 auto;
+        padding: 6rem 0;
+
+        .animation-line{
+            width: 60px;
+            height: 3px;
+            border-radius: 2px;
+            background-color: $primary-clr-1;
+            margin-bottom: 2rem;
+        }
+
+        .about-me__title{
+            margin-bottom: 2rem;
+            .title{
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        .about-me__subtitle{
+            margin-bottom: 1.5rem;
+            .subtitle{
+                margin-bottom: .5rem;
+            }
+        }
+        .more-container{
+            background-color: $primary-clr-1;
+            padding: 0px 6px;
+            display: inline-flex;
+
+            .more{
+                transition: all .2s ease-in-out;
+                text-transform: uppercase;
+                font-size: 1.2rem;
+                letter-spacing: $spacing;
+                color: $primary-text-clr-3;
+                padding-top: 4px;
+                padding-right: 2rem;
+            }
+
+            &:hover{
+                .more{
+                    padding-right: 0;
+                }
+            }
+            img{
+                width: 1.5rem;
+                margin-left:3px;
+                position: absolute;
+                transition: all .2s ease-in-out;
+            }
+            &:hover{
+                img{
+                    margin-left: 1rem;
+                }
+            }
+           
+        }
+       
+    }
+
 }
