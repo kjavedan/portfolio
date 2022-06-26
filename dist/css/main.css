@@ -87,7 +87,7 @@ body p {
 }
 
 .right-div__animation {
-  background-color: #fcbe85;
+  background-color: #f8b21d;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   z-index: 3;
@@ -173,8 +173,8 @@ header .nav-menu__item {
 }
 
 header .nav-menu__item.active a {
-  -webkit-text-decoration: underline 3px #fcbe85;
-          text-decoration: underline 3px #fcbe85;
+  -webkit-text-decoration: underline 3px #f8b21d;
+          text-decoration: underline 3px #f8b21d;
 }
 
 header .nav-menu__item a {
@@ -349,7 +349,7 @@ header .menu-btn__burger.open::after {
 
 .landing-page {
   height: 100vh;
-  background-color: #fff;
+  background-color: #f8b21d;
 }
 
 .landing-page .profile__pic {
@@ -432,7 +432,7 @@ header .menu-btn__burger.open::after {
   padding: 0 30px;
   display: inline-block;
   border-radius: 2px;
-  background-color: #fcbe85;
+  background-color: #f8b21d;
   display: none;
 }
 
@@ -444,6 +444,8 @@ header .menu-btn__burger.open::after {
 
 .container__title {
   margin-top: 1rem;
+  position: relative;
+  z-index: 3;
 }
 
 .container__title .title {
@@ -492,7 +494,7 @@ header .menu-btn__burger.open::after {
 }
 
 .container__button {
-  background-color: #fcbe85;
+  background-color: #f8b21d;
   padding: 0px 6px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -537,13 +539,54 @@ header .menu-btn__burger.open::after {
 
 .container .icons {
   width: 100vw;
-  background-color: #fcbe85;
+  margin-left: -13%;
+  background-color: #f8b21d;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2fr;
-      grid-template-columns: 2fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   margin-top: -1.5rem;
   z-index: 0;
+  padding: 2rem;
+  position: relative;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: .8s ease-in-out;
+  transition: .8s ease-in-out;
+}
+
+.container .icons.open {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.container .icons .icons-container {
+  margin: 1rem auto;
+  text-align: center;
+  width: 120px;
+  display: none;
+}
+
+.container .icons .icons-container.open {
+  display: block;
+  -webkit-animation: fade-in-bottom 1s;
+          animation: fade-in-bottom 1s;
+}
+
+.container .icons .icons-container img {
+  width: 100px;
+}
+
+.container .icons .icons-container h4 {
+  font-size: 1.1rem;
+  color: #313030;
+}
+
+.container .icons .icons-container__underline {
+  margin-top: 1rem;
+  width: 40px;
+  height: 1px;
+  background-color: #000;
 }
 
 @-webkit-keyframes slide-in-left {

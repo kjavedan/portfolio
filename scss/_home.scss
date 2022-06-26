@@ -1,6 +1,6 @@
 .landing-page {
     height: 100vh;
-    background-color: $primary-clr-3;
+    background-color: $primary-clr-1;
     // loading (gif and my name) styling
     .profile {
 
@@ -87,6 +87,8 @@
     // section main title*************************************
     &__title {
         margin-top: 1rem;
+        position: relative;
+        z-index: 3;
 
         .title {
             margin-bottom: .1rem;
@@ -177,14 +179,57 @@
 // how I can help section
     .icons{
         width: 100vw;
+        margin-left: -13%;
         background-color: $primary-clr-1;
         display: grid;
-        grid-template-columns: 2fr;
+        grid-template-columns: 1fr 1fr;
         margin-top: -1.5rem;
         z-index: 0;
+        padding: 2rem;
+        position: relative;
+        transform: translateX(100%);
+        transition:  .8s ease-in-out;
+
+        &.open{
+            transform: translateX(0%);
+        }
+
+        .icons-container{
+            margin: 1rem auto;
+            text-align: center;
+            width: 120px;
+            display: none;
+            
+            
+
+            &.open{
+                display: block;
+                animation: fade-in-bottom 1s;
+            }
+            
+            img{
+                width: 100px;
+            }
+            h4{
+                font-size: 1.1rem;
+                color: $primary-text-clr-2;
+            }
+            &__underline{
+                margin-top: 1rem;
+                width: 40px;
+                height: 1px;
+                background-color: $primary-clr-4;
+            }
+        }
+        
     }
 
 }
+// @for $i from 1 through 4 {
+//     .icons:nth-child(#{$i}) {
+//         animation-delay: ($i * 0.1s) + 0.15s;
+//     }
+//   }
 
 @keyframes slide-in-left {
     0% {
