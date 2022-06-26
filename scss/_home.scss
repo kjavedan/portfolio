@@ -1,6 +1,7 @@
 .landing-page {
     height: 100vh;
-// loading (gif and my name) styling
+    background-color: $primary-clr-3;
+    // loading (gif and my name) styling
     .profile {
 
         &__pic {
@@ -9,8 +10,9 @@
             margin: 4rem auto .5rem;
             background: url(/dist/img/say-hello.gif);
             background-size: cover;
-            background-position: center;  
+            background-position: center;
         }
+
         &__text {
             width: 100%;
             height: 20vh;
@@ -18,32 +20,41 @@
             @include centralize;
             flex-direction: column;
             color: $primary-text-clr-1;
-            h1{
+
+            h1 {
                 font-size: 2rem;
                 font-family: $ff-primary-4;
             }
-            h4{
+
+            h4 {
                 font-family: $ff-primary-3;
             }
-// my name and skills appearing************************************
-            .name{
+
+            // my name and skills appearing************************************
+            .name {
                 line-height: 2rem;
                 overflow: hidden;
-                .my-name, .my-job{
+
+                .my-name,
+                .my-job {
                     transform: translateY(100%);
                     display: inline-block;
-                    
+
                 }
-                .my-name{
+
+                .my-name {
                     transition: all 1s ease-in-out;
-                    &.open{
+
+                    &.open {
                         transform: translateY(0%);
                         // z-index: 0;
                     }
                 }
-                .my-job{
+
+                .my-job {
                     transition: all 1s .5s ease-in-out;
-                    &.open{
+
+                    &.open {
                         transform: translateY(0%);
                     }
                 }
@@ -53,127 +64,148 @@
 }
 
 // about me section*****************************************
-.about-me{
-    background-color: $primary-clr-2;
-    
-    .container{
-        width: 80vw;
-        margin: 0 auto;
-        padding: 6rem 0;
-// the orange animated line********************************
-        &__animation-line{
-            height: 3px;
-            padding:0 30px;
+.container {
+    width: 80vw;
+    margin: 0 auto;
+    padding: 6rem 0 1rem 0;
+
+    // the orange animated line********************************
+    &__animation-line {
+        height: 3px;
+        padding: 0 30px;
+        display: inline-block;
+        border-radius: 2px;
+        background-color: $primary-clr-1;
+        display: none;
+
+        &.open {
             display: inline-block;
-            border-radius: 2px;
-            background-color: $primary-clr-1;
-            margin-bottom: 1rem;
-            display: none;
-            &.open{
+            animation: slide-in-left .5s;
+        }
+    }
+
+    // section main title*************************************
+    &__title {
+        margin-top: 1rem;
+
+        .title {
+            margin-bottom: .1rem;
+            line-height: 2.6rem;
+            overflow: hidden;
+
+            .my-title {
                 display: inline-block;
-                animation: slide-in-left .5s;
-            }
-        }
-// section main title*************************************
-        &__title{
-            margin-bottom: 2rem;
-            .title{
-                margin-bottom: .1rem;
-                line-height: 2.6rem;
-                overflow: hidden;
-                
-                .my-title{
-                    display: inline-block;
-                    @include transition-ease;
-                    transform: translateY(100%);
-                    &.open{
-                        transform: translateY(0);
-                    }
+                @include transition-ease;
+                transform: translateY(100%);
+
+                &.open {
+                    transform: translateY(0);
                 }
             }
         }
-// section subtitle**************************************
-        &__subtitle{
-            margin-bottom: 1.5rem;
-            display: none;
-            &.open{
-                animation: fade-in-bottom 1s ;
-                display: block;
-            }
-            .subtitle{
-                margin-bottom: .5rem;
-            }
+    }
+
+    // section subtitle**************************************
+    &__subtitle {
+        margin-top: 2rem;
+        display: none;
+
+        &.open {
+            animation: fade-in-bottom 1s;
+            display: block;
         }
-// section text******************************************
-        &__text{
-            display: none;
-            &.open{
-                animation: fade-in-bottom 1.3s;
-                display: block;
-            }
+
+        .subtitle {
+            margin-bottom: .5rem;
         }
-// section button
-        &__button{
-            background-color: $primary-clr-1;
-            padding: 0px 6px;
+    }
+
+    // section text******************************************
+    &__text {
+        display: none;
+        margin-top: 1.5rem;
+
+        &.open {
+            animation: fade-in-bottom 1.3s;
+            display: block;
+        }
+    }
+
+    // section button
+    &__button {
+        background-color: $primary-clr-1;
+        padding: 0px 6px;
+        display: inline-flex;
+        display: none;
+
+        &.open {
             display: inline-flex;
-            display: none;
-
-            &.open{
-                display: inline-flex;
-                animation: fade-in-bottom 1.6s;
-            }
-
-            .more{
-                transition: all .2s ease-in-out;
-                text-transform: uppercase;
-                font-size: 1.2rem;
-                letter-spacing: $spacing;
-                color: $primary-text-clr-3;
-                padding-top: 4px;
-                padding-right: 2rem;
-            }
-
-            &:hover{
-                .more{
-                    padding-right: 0;
-                }
-            }
-            img{
-                width: 1.5rem;
-                margin-left:3px;
-                position: absolute;
-                transition: all .2s ease-in-out;
-            }
-            &:hover{
-                img{
-                    margin-left: 1rem;
-                }
-            }
-           
+            animation: fade-in-bottom 1.6s;
         }
-       
+
+        .more {
+            transition: all .2s ease-in-out;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            letter-spacing: $spacing;
+            color: $primary-text-clr-3;
+            padding-top: 4px;
+            padding-right: 2rem;
+        }
+
+        &:hover {
+            .more {
+                padding-right: 0;
+            }
+        }
+
+        img {
+            width: 1.5rem;
+            margin-left: 3px;
+            position: absolute;
+            transition: all .2s ease-in-out;
+        }
+
+        &:hover {
+            img {
+                margin-left: 1rem;
+            }
+        }
+
+    }
+
+// how I can help section
+    .icons{
+        width: 100vw;
+        background-color: $primary-clr-1;
+        display: grid;
+        grid-template-columns: 2fr;
+        margin-top: -1.5rem;
+        z-index: 0;
     }
 
 }
-@keyframes slide-in-left{
-    0%{
+
+@keyframes slide-in-left {
+    0% {
         transform: translateX(-200%);
         padding-left: 160px;
     }
-    
-    100%{
+
+    100% {
         transform: translateX(0%);
         padding-left: 30px;
-       
+
     }
 }
-@keyframes fade-in-bottom{
-    0%{
+
+@keyframes fade-in-bottom {
+    0% {
         opacity: 0;
-        transform:translateY(100%)
+        transform: translateY(100%)
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateY(0);
     }

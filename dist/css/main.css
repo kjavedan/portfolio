@@ -19,6 +19,7 @@ Global variables
 }
 
 body {
+  background-color: #f8f8f8;
   font-family: "Montserrat", sans-serif;
   line-height: 1.5;
   font-size: .875rem;
@@ -348,6 +349,7 @@ header .menu-btn__burger.open::after {
 
 .landing-page {
   height: 100vh;
+  background-color: #fff;
 }
 
 .landing-page .profile__pic {
@@ -392,7 +394,8 @@ header .menu-btn__burger.open::after {
   overflow: hidden;
 }
 
-.landing-page .profile__text .name .my-name, .landing-page .profile__text .name .my-job {
+.landing-page .profile__text .name .my-name,
+.landing-page .profile__text .name .my-job {
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
   display: inline-block;
@@ -418,43 +421,38 @@ header .menu-btn__burger.open::after {
           transform: translateY(0%);
 }
 
-.about-me {
-  background-color: #f8f8f8;
-}
-
-.about-me .container {
+.container {
   width: 80vw;
   margin: 0 auto;
-  padding: 6rem 0;
+  padding: 6rem 0 1rem 0;
 }
 
-.about-me .container__animation-line {
+.container__animation-line {
   height: 3px;
   padding: 0 30px;
   display: inline-block;
   border-radius: 2px;
   background-color: #fcbe85;
-  margin-bottom: 1rem;
   display: none;
 }
 
-.about-me .container__animation-line.open {
+.container__animation-line.open {
   display: inline-block;
   -webkit-animation: slide-in-left .5s;
           animation: slide-in-left .5s;
 }
 
-.about-me .container__title {
-  margin-bottom: 2rem;
+.container__title {
+  margin-top: 1rem;
 }
 
-.about-me .container__title .title {
+.container__title .title {
   margin-bottom: .1rem;
   line-height: 2.6rem;
   overflow: hidden;
 }
 
-.about-me .container__title .title .my-title {
+.container__title .title .my-title {
   display: inline-block;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
@@ -462,37 +460,38 @@ header .menu-btn__burger.open::after {
           transform: translateY(100%);
 }
 
-.about-me .container__title .title .my-title.open {
+.container__title .title .my-title.open {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
 
-.about-me .container__subtitle {
-  margin-bottom: 1.5rem;
+.container__subtitle {
+  margin-top: 2rem;
   display: none;
 }
 
-.about-me .container__subtitle.open {
+.container__subtitle.open {
   -webkit-animation: fade-in-bottom 1s;
           animation: fade-in-bottom 1s;
   display: block;
 }
 
-.about-me .container__subtitle .subtitle {
+.container__subtitle .subtitle {
   margin-bottom: .5rem;
 }
 
-.about-me .container__text {
+.container__text {
   display: none;
+  margin-top: 1.5rem;
 }
 
-.about-me .container__text.open {
+.container__text.open {
   -webkit-animation: fade-in-bottom 1.3s;
           animation: fade-in-bottom 1.3s;
   display: block;
 }
 
-.about-me .container__button {
+.container__button {
   background-color: #fcbe85;
   padding: 0px 6px;
   display: -webkit-inline-box;
@@ -501,7 +500,7 @@ header .menu-btn__burger.open::after {
   display: none;
 }
 
-.about-me .container__button.open {
+.container__button.open {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -509,7 +508,7 @@ header .menu-btn__burger.open::after {
           animation: fade-in-bottom 1.6s;
 }
 
-.about-me .container__button .more {
+.container__button .more {
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
   text-transform: uppercase;
@@ -520,11 +519,11 @@ header .menu-btn__burger.open::after {
   padding-right: 2rem;
 }
 
-.about-me .container__button:hover .more {
+.container__button:hover .more {
   padding-right: 0;
 }
 
-.about-me .container__button img {
+.container__button img {
   width: 1.5rem;
   margin-left: 3px;
   position: absolute;
@@ -532,8 +531,19 @@ header .menu-btn__burger.open::after {
   transition: all .2s ease-in-out;
 }
 
-.about-me .container__button:hover img {
+.container__button:hover img {
   margin-left: 1rem;
+}
+
+.container .icons {
+  width: 100vw;
+  background-color: #fcbe85;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr;
+      grid-template-columns: 2fr;
+  margin-top: -1.5rem;
+  z-index: 0;
 }
 
 @-webkit-keyframes slide-in-left {

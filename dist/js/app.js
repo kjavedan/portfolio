@@ -11,10 +11,10 @@ const leftDiv = document.querySelector('.left-div__animation');
 const myName = document.querySelector('.my-name');
 const myJob = document.querySelector('.my-job');
 const myTitle = document.querySelectorAll('.my-title');
-const animationLine =document.querySelector('.container__animation-line');
-const sectionSubtitle = document.querySelector('.container__subtitle');
-const sectionText =document.querySelector('.container__text');
-const sectionButton = document.querySelector('.container__button');
+const animationLine =document.querySelectorAll('.container__animation-line');
+const sectionSubtitle = document.querySelectorAll('.container__subtitle');
+const sectionText =document.querySelectorAll('.container__text');
+const sectionButton = document.querySelectorAll('.container__button');
 window.addEventListener('DOMContentLoaded', ()=>{
     myName.classList.add('open');
     myJob.classList.add('open');
@@ -26,10 +26,10 @@ window.addEventListener('scroll', ()=>{
     console.log(aboutMePosition);
     if(scrollingPosition > aboutMePosition){
         setAboutMe();
-        animationLine.classList.add('open');
-        sectionSubtitle.classList.add('open');     
-        sectionText.classList.add('open');
-        sectionButton.classList.add('open');     
+        setSectionValues(animationLine);
+        setSectionValues(sectionSubtitle);
+        setSectionValues(sectionText);
+        setSectionValues(sectionButton);     
     }
   
 })
@@ -51,6 +51,14 @@ menuBtn.addEventListener('click', ()=>{
 function setAboutMe(){
     myTitle.forEach(item =>{
         console.log('added');
+        item.classList.add('open');
+    })
+    
+}
+// function to add the section list items
+function setSectionValues(items){
+    console.log(items);     
+    items.forEach(item =>{
         item.classList.add('open');
     })
     
