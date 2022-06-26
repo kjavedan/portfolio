@@ -1,6 +1,6 @@
 .landing-page {
     height: 100vh;
-// the gif and text styling
+// loading (gif and my name) styling
     .profile {
 
         &__pic {
@@ -11,7 +11,6 @@
             background-size: cover;
             background-position: center;  
         }
-
         &__text {
             width: 100%;
             height: 20vh;
@@ -26,7 +25,7 @@
             h4{
                 font-family: $ff-primary-3;
             }
-            
+// my name and skills appearing************************************
             .name{
                 line-height: 2rem;
                 overflow: hidden;
@@ -52,6 +51,8 @@
         }
     }
 }
+
+// about me section*****************************************
 .about-me{
     background-color: $primary-clr-2;
     
@@ -59,15 +60,21 @@
         width: 80vw;
         margin: 0 auto;
         padding: 6rem 0;
-
+// the orange animated line********************************
         &__animation-line{
-            width: 60px;
             height: 3px;
+            padding:0 30px;
+            display: inline-block;
             border-radius: 2px;
             background-color: $primary-clr-1;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
+            display: none;
+            &.open{
+                display: inline-block;
+                animation: slide-in-left .5s;
+            }
         }
-
+// section main title*************************************
         &__title{
             margin-bottom: 2rem;
             .title{
@@ -85,17 +92,37 @@
                 }
             }
         }
-
+// section subtitle**************************************
         &__subtitle{
             margin-bottom: 1.5rem;
+            display: none;
+            &.open{
+                animation: fade-in-bottom 1s ;
+                display: block;
+            }
             .subtitle{
                 margin-bottom: .5rem;
             }
         }
+// section text******************************************
+        &__text{
+            display: none;
+            &.open{
+                animation: fade-in-bottom 1.3s;
+                display: block;
+            }
+        }
+// section button
         &__button{
             background-color: $primary-clr-1;
             padding: 0px 6px;
             display: inline-flex;
+            display: none;
+
+            &.open{
+                display: inline-flex;
+                animation: fade-in-bottom 1.6s;
+            }
 
             .more{
                 transition: all .2s ease-in-out;
@@ -128,4 +155,26 @@
        
     }
 
+}
+@keyframes slide-in-left{
+    0%{
+        transform: translateX(-200%);
+        padding-left: 160px;
+    }
+    
+    100%{
+        transform: translateX(0%);
+        padding-left: 30px;
+       
+    }
+}
+@keyframes fade-in-bottom{
+    0%{
+        opacity: 0;
+        transform:translateY(100%)
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
