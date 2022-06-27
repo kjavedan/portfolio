@@ -442,19 +442,19 @@ header .menu-btn__burger.open::after {
           animation: slide-in-left .5s;
 }
 
-.container__title {
+.container__title, .container__title.open {
   margin-top: 1rem;
   position: relative;
   z-index: 3;
 }
 
-.container__title .title {
+.container__title .title, .container__title.open .title {
   margin-bottom: .1rem;
   line-height: 2.6rem;
   overflow: hidden;
 }
 
-.container__title .title .my-title {
+.container__title .title .my-title, .container__title.open .title .my-title {
   display: inline-block;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
@@ -462,7 +462,7 @@ header .menu-btn__burger.open::after {
           transform: translateY(100%);
 }
 
-.container__title .title .my-title.open {
+.container__title .title .my-title.open, .container__title.open .title .my-title.open {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
@@ -569,6 +569,8 @@ header .menu-btn__burger.open::after {
 
 .container .icons .icons-container.open {
   display: block;
+  -webkit-animation: fade-in-bottom 3s;
+          animation: fade-in-bottom 3s;
 }
 
 .container .icons .icons-container img {

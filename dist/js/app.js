@@ -1,7 +1,29 @@
 // getting the sections 
 const aboutMe = document.getElementById('about-me');
 const mySkills = document.getElementById('my-skills');
-console.log(mySkills);
+
+console.log(aboutMe.innerHTML);
+
+/*
+1. add .open to the section class when the user scroll to that area
+2. call a function to add .open to the section childs
+3. check if the child belong to the same parent section 
+4. if yes than add .open to the classes 
+5. if no than do nothing
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
 
 const burgerBtn = document.querySelector('.menu-btn__burger');
 const menuBtn = document.querySelector('.menu-btn');
@@ -11,6 +33,7 @@ const rightDiv = document.querySelector('.right-div__animation');
 const leftDiv = document.querySelector('.left-div__animation');
 const myName = document.querySelector('.my-name');
 const myJob = document.querySelector('.my-job');
+const containerTitle =document.querySelectorAll('.container__title');
 const myTitle = document.querySelectorAll('.my-title');
 const animationLine =document.querySelectorAll('.container__animation-line');
 const sectionSubtitle = document.querySelectorAll('.container__subtitle');
@@ -18,7 +41,9 @@ const sectionText =document.querySelectorAll('.container__text');
 const sectionButton = document.querySelectorAll('.container__button');
 const icons = document.querySelector('.icons');
 const IconContainer = document.querySelectorAll('.icons-container');
-console.log(icons);
+// console.log(icons);
+// animationLine.forEach(item =>{console.log(item.parentNode.parentElement)});
+// sectionButton.forEach(item =>{console.log(item.parentNode.parentElement)});
 
 
 window.addEventListener('DOMContentLoaded', ()=>{
@@ -32,20 +57,25 @@ window.addEventListener('scroll', ()=>{
     const mySkillPosition = mySkills.offsetTop;
     const screenHeight = screen.height;
     // console.log('about me ' + aboutMePosition);
-    console.log('scroll '+scrollingPosition);
-    console.log('screen height ' +screenHeight);
-    console.log('myskill ' +mySkillPosition);
-    console.log(mySkillPosition - screenHeight +300);
-    console.log('\n')
-    if(scrollingPosition >  250){
-        setAboutMe();
+    // console.log('scroll '+scrollingPosition);
+    // console.log('screen height ' +screenHeight);
+    // console.log('myskill ' +mySkillPosition);
+    // console.log(mySkillPosition - screenHeight +300);
+    // console.log('\n')
+ 
+
+    if(scrollingPosition >  250 ){
+        aboutMe.classList.add('open');
         setSectionValues(animationLine);
+        setSectionValues(containerTitle);
+        setSectionValues(myTitle);
         setSectionValues(sectionSubtitle);
         setSectionValues(sectionText);
         setSectionValues(sectionButton); 
-       
+        
     }
      if(scrollingPosition > (mySkillPosition - screenHeight + 500)){
+        mySkills.classList.add('open');
         icons.classList.add('open');
         setSectionValues(IconContainer);
     }
@@ -65,19 +95,12 @@ menuBtn.addEventListener('click', ()=>{
 
 // functions************************************
 
-// add .open to about me section when the the section position is reached;
-function setAboutMe(){
-    myTitle.forEach(item =>{
-        // console.log('added');
-        item.classList.add('open');
-    })
-    
-}
+
 // function to add the section list items
 function setSectionValues(items){
-    // console.log(items);     
-    items.forEach(item =>{
+
+    items.forEach(item =>{if(item.parentNode.parentNode.classList.contains('open')){
         item.classList.add('open');
-    })
-    
+    }});
+   
 }

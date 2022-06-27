@@ -85,7 +85,7 @@
     }
 
     // section main title*************************************
-    &__title {
+    &__title, &__title.open {
         margin-top: 1rem;
         position: relative;
         z-index: 3;
@@ -200,11 +200,9 @@
             width: 120px;
             display: none;
             
-            
-
             &.open{
                 display: block;
-                // animation: fade-in-bottom 1s;
+                animation: fade-in-bottom 3s;
             }
             
             img{
