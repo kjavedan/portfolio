@@ -1,12 +1,12 @@
 // getting the sections 
 const aboutMe = document.getElementById('about-me');
 const mySkills = document.getElementById('my-skills');
+const myProjects = document.getElementById('my-projects');
 
 console.log(aboutMe.innerHTML);
 
 /*
-1. get the array
-2. execute each item with a delay of .5s
+
 
 
 
@@ -52,14 +52,15 @@ window.addEventListener('scroll', ()=>{
     const scrollingPosition = window.pageYOffset;
     const aboutMePosition = aboutMe.offsetTop;
     const mySkillPosition = mySkills.offsetTop;
+    const myProjectsPosition = myProjects.offsetTop;
     const screenHeight = screen.height;
     // console.log('about me ' + aboutMePosition);
-    // console.log('scroll '+scrollingPosition);
-    // console.log('screen height ' +screenHeight);
+    console.log('scroll '+scrollingPosition);
+    console.log('screen height ' +screenHeight);
     // console.log('myskill ' +mySkillPosition);
     // console.log(mySkillPosition - screenHeight +300);
-    // console.log('\n')
- 
+    console.log('myProjectsPosition ' + myProjectsPosition);
+    console.log('\n')
 
     if(scrollingPosition >  250 ){
         aboutMe.classList.add('open');
@@ -75,6 +76,15 @@ window.addEventListener('scroll', ()=>{
         mySkills.classList.add('open');
         icons.classList.add('open');
         setIcons(iconContainer);
+    }
+     if(scrollingPosition > (myProjectsPosition - screenHeight +500)){
+        myProjects.classList.add('open');
+        setSectionValues(animationLine);
+        setSectionValues(containerTitle);
+        setSectionValues(myTitle);
+        setSectionValues(sectionSubtitle);
+        setSectionValues(sectionText);
+        setSectionValues(sectionButton);
     }
   
 })
@@ -102,9 +112,9 @@ function setSectionValues(items){
    
 }
 
-// set the icons container with .5s delay
+// add open class to each icon container with a .4s delay
 function setIcons(items){
-    let wait = 500;
+    let wait = 400;
     items.forEach((item,index)=>{
         setTimeout(()=>{
             item.classList.add('open');

@@ -71,7 +71,7 @@ body p {
   left: 0;
   display: block;
   position: fixed;
-  z-index: 3;
+  z-index: 9;
   width: 100vw;
   height: 100vh;
   background-color: #fff;
@@ -90,7 +90,7 @@ body p {
   background-color: #f8b21d;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
-  z-index: 3;
+  z-index: 9;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
 }
@@ -158,7 +158,7 @@ header .nav-menu.open {
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 4;
+  z-index: 10;
 }
 
 header .nav-menu__item {
@@ -218,7 +218,7 @@ header .menu-btn {
   position: fixed;
   right: 2rem;
   top: 1.2rem;
-  z-index: 5;
+  z-index: 15;
   padding-left: 7px;
   cursor: pointer;
   -webkit-transition: all .4s ease-in-out;
