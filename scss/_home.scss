@@ -179,6 +179,7 @@
 // how I can help section
     .icons{
         width: 100vw;
+        height: 420px;
         margin-left: -13%;
         background-color: $primary-clr-1;
         display: grid;
@@ -197,12 +198,13 @@
         .icons-container{
             margin: 1rem auto;
             text-align: center;
+            // height: 200px;
             width: 120px;
             display: none;
             
             &.open{
                 display: block;
-                animation: fade-in-bottom 3s;
+                animation: fade-in-bottom .5s;
             }
             
             img{

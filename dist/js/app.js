@@ -5,11 +5,8 @@ const mySkills = document.getElementById('my-skills');
 console.log(aboutMe.innerHTML);
 
 /*
-1. add .open to the section class when the user scroll to that area
-2. call a function to add .open to the section childs
-3. check if the child belong to the same parent section 
-4. if yes than add .open to the classes 
-5. if no than do nothing
+1. get the array
+2. execute each item with a delay of .5s
 
 
 
@@ -40,7 +37,7 @@ const sectionSubtitle = document.querySelectorAll('.container__subtitle');
 const sectionText =document.querySelectorAll('.container__text');
 const sectionButton = document.querySelectorAll('.container__button');
 const icons = document.querySelector('.icons');
-const IconContainer = document.querySelectorAll('.icons-container');
+const iconContainer = document.querySelectorAll('.icons-container');
 // console.log(icons);
 // animationLine.forEach(item =>{console.log(item.parentNode.parentElement)});
 // sectionButton.forEach(item =>{console.log(item.parentNode.parentElement)});
@@ -77,7 +74,7 @@ window.addEventListener('scroll', ()=>{
      if(scrollingPosition > (mySkillPosition - screenHeight + 500)){
         mySkills.classList.add('open');
         icons.classList.add('open');
-        setSectionValues(IconContainer);
+        setIcons(iconContainer);
     }
   
 })
@@ -103,4 +100,14 @@ function setSectionValues(items){
         item.classList.add('open');
     }});
    
+}
+
+// set the icons container with .5s delay
+function setIcons(items){
+    let wait = 500;
+    items.forEach((item,index)=>{
+        setTimeout(()=>{
+            item.classList.add('open');
+        }, index * wait)
+    })
 }

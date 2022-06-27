@@ -539,6 +539,7 @@ header .menu-btn__burger.open::after {
 
 .container .icons {
   width: 100vw;
+  height: 420px;
   margin-left: -13%;
   background-color: #f8b21d;
   display: -ms-grid;
@@ -569,8 +570,8 @@ header .menu-btn__burger.open::after {
 
 .container .icons .icons-container.open {
   display: block;
-  -webkit-animation: fade-in-bottom 3s;
-          animation: fade-in-bottom 3s;
+  -webkit-animation: fade-in-bottom .5s;
+          animation: fade-in-bottom .5s;
 }
 
 .container .icons .icons-container img {
