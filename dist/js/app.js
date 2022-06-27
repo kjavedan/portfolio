@@ -28,22 +28,27 @@ window.addEventListener('DOMContentLoaded', ()=>{
 })
 window.addEventListener('scroll', ()=>{
     const scrollingPosition = window.pageYOffset;
-    const aboutMePosition = aboutMe.getBoundingClientRect();
-    const mySkillPosition = mySkills.getBoundingClientRect();
-    // console.log(aboutMePosition);
-    // console.log(scrollingPosition);////////////
-    // if(aboutMePosition <= 100){
-    //     setAboutMe();
-    //     setSectionValues(animationLine);
-    //     setSectionValues(sectionSubtitle);
-    //     setSectionValues(sectionText);
-    //     setSectionValues(sectionButton); 
+    const aboutMePosition = aboutMe.offsetTop;
+    const mySkillPosition = mySkills.offsetTop;
+    const screenHeight = screen.height;
+    // console.log('about me ' + aboutMePosition);
+    console.log('scroll '+scrollingPosition);
+    console.log('screen height ' +screenHeight);
+    console.log('myskill ' +mySkillPosition);
+    console.log(mySkillPosition - screenHeight +300);
+    console.log('\n')
+    if(scrollingPosition >  250){
+        setAboutMe();
+        setSectionValues(animationLine);
+        setSectionValues(sectionSubtitle);
+        setSectionValues(sectionText);
+        setSectionValues(sectionButton); 
        
-    // }
-    //  if(mySkillPosition <=100){
-    //     icons.classList.add('open');
-    //     setSectionValues(IconContainer);
-    // }
+    }
+     if(scrollingPosition > (mySkillPosition - screenHeight + 500)){
+        icons.classList.add('open');
+        setSectionValues(IconContainer);
+    }
   
 })
 
