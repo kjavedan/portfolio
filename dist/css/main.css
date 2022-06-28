@@ -676,6 +676,11 @@ header .menu-btn__burger.open::after {
   transition: all .3s ease-in-out;
 }
 
+.container .projects .projects-item__link {
+  padding: 100%;
+  z-index: 10;
+}
+
 .container .projects .projects-item:hover {
   background-color: black;
   opacity: .8;
@@ -696,6 +701,10 @@ header .menu-btn__burger.open::after {
 
 .container .projects .projects-item:hover .project__btn:hover {
   color: #f8b21d;
+}
+
+.container .projects .project-container {
+  height: 300px;
 }
 
 .container .projects .project-container.open .projects-item {

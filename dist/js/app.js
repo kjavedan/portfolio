@@ -73,8 +73,11 @@ window.addEventListener('scroll', ()=>{
     // console.log('myskill ' +mySkillPosition);
     // console.log(mySkillPosition - screenHeight +300);
     // console.log('myProjectsPosition ' + myProjectsPosition);
-    // console.log('\n')
-    console.log(projectOnePosition);
+    console.log('\n')
+    console.log('p1: '+projectOnePosition);
+    console.log('p2: '+projectTwoPosition);
+    console.log('p3: '+projectThreePosition);
+    console.log('p4: '+projectFourPosition);
    
 
     if(scrollingPosition >  250 ){
@@ -103,6 +106,15 @@ window.addEventListener('scroll', ()=>{
         }
      if(scrollingPosition > (projectOnePosition - screenHeight + 300)){
         projectOne.classList.add('open');
+     }
+     if(scrollingPosition > (projectTwoPosition - screenHeight + 300)){
+        projectTwo.classList.add('open');
+     }
+     if(scrollingPosition > (projectThreePosition - screenHeight + 300)){
+        projectThree.classList.add('open');
+     }
+     if(scrollingPosition > (projectFourPosition - screenHeight + 300)){
+        projectFour.classList.add('open');
      }
     
   

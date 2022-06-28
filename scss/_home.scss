@@ -245,7 +245,7 @@
             background-color: rgb(183, 137, 81);
             display: none;
             @include transition-ease;
-            
+
 
             &__logo {
                 position: absolute;
@@ -305,6 +305,11 @@
 
             }
 
+            &__link{
+                padding: 100%;
+                z-index: 10;
+            }
+
             &:hover {
                 background-color: black;
                 opacity: .8;
@@ -317,21 +322,26 @@
                         color: $primary-clr-1;
                     }
                 }
-                .project__btn{
+
+                .project__btn {
                     display: block;
-                    
-                    &:hover{
+
+                    &:hover {
                         color: $primary-clr-1;
                     }
                 }
             }
         }
-       
-        .project-container.open{
-                .projects-item{
+
+        .project-container {
+            height: 300px;
+
+            &.open {
+                .projects-item {
                     display: block;
                     animation: fade-in-bottom 1s;
                 }
+            }
         }
 
     }
