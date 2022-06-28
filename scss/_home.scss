@@ -1,6 +1,7 @@
 .landing-page {
     height: 100vh;
     background-color: $primary-clr-1;
+
     // loading (gif and my name) styling
     .profile {
 
@@ -85,7 +86,8 @@
     }
 
     // section main title*************************************
-    &__title, &__title.open {
+    &__title,
+    &__title.open {
         margin-top: 1rem;
         position: relative;
         z-index: 3;
@@ -176,8 +178,8 @@
 
     }
 
-// how I can help section
-    .icons{
+    // how I can help section
+    .icons {
         width: 100vw;
         height: 420px;
         margin-left: -13%;
@@ -189,47 +191,144 @@
         padding: 2rem;
         position: relative;
         transform: translateX(100%);
-        transition:  .8s ease-in-out;
+        transition: .8s ease-in-out;
 
-        &.open{
+        &.open {
             transform: translateX(0%);
         }
 
-        .icons-container{
+        .icons-container {
             margin: 1rem auto;
             text-align: center;
             // height: 200px;
             width: 120px;
             display: none;
-            
-            &.open{
+
+            &.open {
                 display: block;
                 animation: fade-in-bottom .5s;
             }
-            
-            img{
+
+            img {
                 width: 100px;
             }
-            h4{
+
+            h4 {
                 font-size: 1.1rem;
                 color: $primary-text-clr-2;
             }
-            &__underline{
+
+            &__underline {
                 margin-top: 1rem;
                 width: 40px;
                 height: 1px;
                 background-color: $primary-clr-4;
             }
         }
-        
+
+    }
+
+    // the projects in  my project section
+    .projects {
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100vw;
+        margin-left: -13%;
+
+        .projects-item {
+            position: relative;
+            height: 300px;
+            width: 100%;
+            overflow: hidden;
+            border-bottom: 1px solid black;
+            background-color: rgb(183, 137, 81);
+            @include transition-ease;
+
+            &__logo {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 30%;
+                height: 30%;
+                background-color: red;
+
+            }
+
+            &__info {
+                position: absolute;
+                bottom: -20%;
+                left: 0;
+                width: 100%;
+                height: 60%;
+                // background-color: blue;
+                padding: 1.5rem;
+
+                @include transition-ease;
+
+                .project-title {
+                    font-size: 1.5rem;
+                    color: $primary-text-clr-3;
+                    @include transition-ease;
+                }
+
+                .project-subtitle {
+                    margin-top: 1rem;
+                    color: $primary-text-clr-3;
+                    font-family: $ff-primary-3;
+                }
+
+                .project-category {
+                    padding-top: 3rem;
+                    color: $primary-text-clr-3;
+                    font-size: 1.5rem;
+                }
+            }
+
+
+            &__btns {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 30%;
+                height: 25%;
+                @include centralize;
+                @include transition-ease;
+
+                .project__btn {
+                    color: $primary-text-clr-3;
+                    display: none;
+                    @include transition-ease;
+                }
+
+            }
+
+            &:hover {
+                background-color: black;
+                opacity: .8;
+                cursor: pointer;
+
+                .projects-item__info {
+                    bottom: 0;
+
+                    .project-title {
+                        color: $primary-clr-1;
+                    }
+                }
+                .project__btn{
+                    display: block;
+                    
+                    &:hover{
+                        color: $primary-clr-1;
+                    }
+                }
+            }
+
+        }
     }
 
 }
-// @for $i from 1 through 4 {
-//     .icons:nth-child(#{$i}) {
-//         animation-delay: ($i * 0.1s) + 0.15s;
-//     }
-//   }
+
 
 @keyframes slide-in-left {
     0% {
