@@ -607,6 +607,7 @@ header .menu-btn__burger.open::after {
   overflow: hidden;
   border-bottom: 1px solid black;
   background-color: #b78951;
+  display: none;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
@@ -625,7 +626,7 @@ header .menu-btn__burger.open::after {
   bottom: -20%;
   left: 0;
   width: 100%;
-  height: 60%;
+  height: 50%;
   padding: 1.5rem;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
@@ -645,7 +646,7 @@ header .menu-btn__burger.open::after {
 }
 
 .container .projects .projects-item__info .project-category {
-  padding-top: 3rem;
+  padding-top: 2rem;
   color: #fff;
   font-size: 1.5rem;
 }
@@ -695,6 +696,12 @@ header .menu-btn__burger.open::after {
 
 .container .projects .projects-item:hover .project__btn:hover {
   color: #f8b21d;
+}
+
+.container .projects .project-container.open .projects-item {
+  display: block;
+  -webkit-animation: fade-in-bottom 1s;
+          animation: fade-in-bottom 1s;
 }
 
 @-webkit-keyframes slide-in-left {

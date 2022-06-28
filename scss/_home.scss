@@ -243,7 +243,9 @@
             overflow: hidden;
             border-bottom: 1px solid black;
             background-color: rgb(183, 137, 81);
+            display: none;
             @include transition-ease;
+            
 
             &__logo {
                 position: absolute;
@@ -260,7 +262,7 @@
                 bottom: -20%;
                 left: 0;
                 width: 100%;
-                height: 60%;
+                height: 50%;
                 // background-color: blue;
                 padding: 1.5rem;
 
@@ -279,7 +281,7 @@
                 }
 
                 .project-category {
-                    padding-top: 3rem;
+                    padding-top: 2rem;
                     color: $primary-text-clr-3;
                     font-size: 1.5rem;
                 }
@@ -323,8 +325,15 @@
                     }
                 }
             }
-
         }
+       
+        .project-container.open{
+                .projects-item{
+                    display: block;
+                    animation: fade-in-bottom 1s;
+                }
+        }
+
     }
 
 }

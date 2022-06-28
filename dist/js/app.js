@@ -2,10 +2,19 @@
 const aboutMe = document.getElementById('about-me');
 const mySkills = document.getElementById('my-skills');
 const myProjects = document.getElementById('my-projects');
+const projectOne = document.getElementById('project-1');
+const projectTwo = document.getElementById('project-2');
+const projectThree = document.getElementById('project-3');
+const projectFour = document.getElementById('project-4');
 
-console.log(aboutMe.innerHTML);
 
 /*
+I want to display each project when the user scroll to its position on the page
+
+1. get each project value
+2. get each project postion
+3. hide project in the default mode
+4. display the project once the user scroll to its position
 
 
 
@@ -54,13 +63,19 @@ window.addEventListener('scroll', ()=>{
     const mySkillPosition = mySkills.offsetTop;
     const myProjectsPosition = myProjects.offsetTop;
     const screenHeight = screen.height;
+    const projectOnePosition = projectOne.offsetTop;
+    const projectTwoPosition = projectTwo.offsetTop;
+    const projectThreePosition = projectThree.offsetTop;
+    const projectFourPosition = projectFour.offsetTop;
     // console.log('about me ' + aboutMePosition);
-    console.log('scroll '+scrollingPosition);
-    console.log('screen height ' +screenHeight);
+    // console.log('scroll '+scrollingPosition);
+    // console.log('screen height ' +screenHeight);
     // console.log('myskill ' +mySkillPosition);
     // console.log(mySkillPosition - screenHeight +300);
-    console.log('myProjectsPosition ' + myProjectsPosition);
-    console.log('\n')
+    // console.log('myProjectsPosition ' + myProjectsPosition);
+    // console.log('\n')
+    console.log(projectOnePosition);
+   
 
     if(scrollingPosition >  250 ){
         aboutMe.classList.add('open');
@@ -85,7 +100,11 @@ window.addEventListener('scroll', ()=>{
         setSectionValues(sectionSubtitle);
         setSectionValues(sectionText);
         setSectionValues(sectionButton);
-    }
+        }
+     if(scrollingPosition > (projectOnePosition - screenHeight + 300)){
+        projectOne.classList.add('open');
+     }
+    
   
 })
 
