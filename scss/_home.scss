@@ -196,9 +196,9 @@
         width: 100vw;
         height: 450px;
         margin-left: -13%;
-        // background-color: $primary-clr-1;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 3fr 1fr 2fr 2fr 2fr;
+        grid-template-rows: 1fr 1fr 1fr;
         margin-top: -1.5rem;
         z-index: 0;
         padding: 2rem;
@@ -207,8 +207,8 @@
         // height: 0;
         // visibility: hidden;
         transition: .8s ease-in-out;
-
-        .test{
+// the animation div that slide in from the top
+        &__animation-div{
             position: absolute;
             top: -5%;
             left: 2%;
@@ -223,7 +223,7 @@
             // visibility: visible;
             // height: auto;
             // transform: translateY(0%);
-            .test{
+            .icons__animation-div{
                 padding-bottom: 450px;
                 background-color: $primary-clr-1;
             }
@@ -231,32 +231,34 @@
        
 
         // each icon container *************************
-
         .icons-container {
             position: relative;
-            margin: 1rem auto;
+            margin: 0 auto;
             text-align: center;
-            height: 170px;
-            width: 120px;
             display: none;
+            width: 100%;
 
             &.open {
-                display: block;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
                 animation: fade-in-bottom .5s;
             }
 
-            img {
-                width: 100px;
-            }
-
             h4 {
-                font-size: 1.1rem;
+                font-size: .7rem;
                 color: $primary-text-clr-2;
+            }
+            p{
+                font-size: .8rem;
+                color: $primary-text-clr-4;
             }
 
             &__underline {
                 position: absolute;
-                bottom: 10%;
+                left: 0;
+                bottom: 5%;
                 width: 40px;
                 height: 1px;
                 background-color: $primary-clr-4;

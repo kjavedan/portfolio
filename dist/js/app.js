@@ -145,7 +145,7 @@ function setSectionValues(items){
 
 // add open class to each icon container with a .4s delay
 function setIcons(items){
-    let wait = 400;
+    let wait = 300;
     items.forEach((item,index)=>{
         setTimeout(()=>{
             item.classList.add('open');

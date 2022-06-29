@@ -535,8 +535,10 @@ header .menu-btn__burger.open::after {
   margin-left: -13%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 3fr 1fr 2fr 2fr 2fr;
+      grid-template-columns: 3fr 1fr 2fr 2fr 2fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
   margin-top: -1.5rem;
   z-index: 0;
   padding: 2rem;
@@ -545,7 +547,7 @@ header .menu-btn__burger.open::after {
   transition: .8s ease-in-out;
 }
 
-.container .icons .test {
+.container .icons__animation-div {
   position: absolute;
   top: -5%;
   left: 2%;
@@ -558,38 +560,51 @@ header .menu-btn__burger.open::after {
   transition: all 1s ease-in-out;
 }
 
-.container .icons.open .test {
+.container .icons.open .icons__animation-div {
   padding-bottom: 450px;
   background-color: #FFC26A;
 }
 
 .container .icons .icons-container {
   position: relative;
-  margin: 1rem auto;
+  margin: 0 auto;
   text-align: center;
-  height: 170px;
-  width: 120px;
   display: none;
+  width: 100%;
 }
 
 .container .icons .icons-container.open {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-animation: fade-in-bottom .5s;
           animation: fade-in-bottom .5s;
 }
 
-.container .icons .icons-container img {
-  width: 100px;
+.container .icons .icons-container h4 {
+  font-size: .7rem;
+  color: #313030;
 }
 
-.container .icons .icons-container h4 {
-  font-size: 1.1rem;
-  color: #313030;
+.container .icons .icons-container p {
+  font-size: .8rem;
+  color: #676767;
 }
 
 .container .icons .icons-container__underline {
   position: absolute;
-  bottom: 10%;
+  left: 0;
+  bottom: 5%;
   width: 40px;
   height: 1px;
   background-color: #000;
