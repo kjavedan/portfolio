@@ -87,7 +87,7 @@ body p {
 }
 
 .right-div__animation {
-  background-color: #f8b21d;
+  background-color: #FFC26A;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   z-index: 9;
@@ -173,8 +173,8 @@ header .nav-menu__item {
 }
 
 header .nav-menu__item.active a {
-  -webkit-text-decoration: underline 3px #f8b21d;
-          text-decoration: underline 3px #f8b21d;
+  -webkit-text-decoration: underline 3px #FFC26A;
+          text-decoration: underline 3px #FFC26A;
 }
 
 header .nav-menu__item a {
@@ -349,44 +349,36 @@ header .menu-btn__burger.open::after {
 
 .landing-page {
   height: 100vh;
-  background-color: #f8b21d;
+  background-color: #fff;
+}
+
+.landing-page .profile {
+  position: relative;
+  height: 70vh;
 }
 
 .landing-page .profile__pic {
-  width: 200px;
-  height: 200px;
+  position: absolute;
+  top: 0;
+  right: 10%;
+  width: 60%;
+  height: 80%;
   margin: 4rem auto .5rem;
-  background: url(/dist/img/say-hello.gif);
-  background-size: cover;
-  background-position: center;
+  background-color: black;
 }
 
 .landing-page .profile__text {
-  width: 100%;
+  position: absolute;
+  bottom: -30%;
+  left: 5%;
   height: 20vh;
   margin: 2rem auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   color: #000;
 }
 
 .landing-page .profile__text h1 {
-  font-size: 2rem;
-  font-family: "Major Mono Display", monospace;
-}
-
-.landing-page .profile__text h4 {
-  font-family: "Courgette", cursive;
+  font-size: 1.4rem;
+  margin-top: 1rem;
 }
 
 .landing-page .profile__text .name {
@@ -432,7 +424,7 @@ header .menu-btn__burger.open::after {
   padding: 0 30px;
   display: inline-block;
   border-radius: 2px;
-  background-color: #f8b21d;
+  background-color: #FFC26A;
   display: none;
 }
 
@@ -494,7 +486,7 @@ header .menu-btn__burger.open::after {
 }
 
 .container__button {
-  background-color: #f8b21d;
+  background-color: #FFC26A;
   padding: 0px 6px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -539,9 +531,8 @@ header .menu-btn__burger.open::after {
 
 .container .icons {
   width: 100vw;
-  height: 420px;
+  height: 450px;
   margin-left: -13%;
-  background-color: #f8b21d;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -550,20 +541,33 @@ header .menu-btn__burger.open::after {
   z-index: 0;
   padding: 2rem;
   position: relative;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
   -webkit-transition: .8s ease-in-out;
   transition: .8s ease-in-out;
 }
 
-.container .icons.open {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
+.container .icons .test {
+  position: absolute;
+  top: -5%;
+  left: 2%;
+  padding-bottom: 0;
+  padding-right: 40%;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.container .icons.open .test {
+  padding-bottom: 450px;
+  background-color: #FFC26A;
 }
 
 .container .icons .icons-container {
+  position: relative;
   margin: 1rem auto;
   text-align: center;
+  height: 170px;
   width: 120px;
   display: none;
 }
@@ -584,7 +588,8 @@ header .menu-btn__burger.open::after {
 }
 
 .container .icons .icons-container__underline {
-  margin-top: 1rem;
+  position: absolute;
+  bottom: 10%;
   width: 40px;
   height: 1px;
   background-color: #000;
@@ -654,9 +659,9 @@ header .menu-btn__burger.open::after {
 .container .projects .projects-item__btns {
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: 5%;
   width: 30%;
-  height: 25%;
+  height: 18%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -692,7 +697,7 @@ header .menu-btn__burger.open::after {
 }
 
 .container .projects .projects-item:hover .projects-item__info .project-title {
-  color: #f8b21d;
+  color: #FFC26A;
 }
 
 .container .projects .projects-item:hover .project__btn {
@@ -700,7 +705,7 @@ header .menu-btn__burger.open::after {
 }
 
 .container .projects .projects-item:hover .project__btn:hover {
-  color: #f8b21d;
+  color: #FFC26A;
 }
 
 .container .projects .project-container {

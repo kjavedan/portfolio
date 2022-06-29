@@ -10,27 +10,27 @@
 Global variables
 ===================
 */
-// my fonts
+// my fonts****************************************
 $ff-primary-1 :'Bebas Neue', cursive;
 $ff-primary-2 : 'Montserrat', sans-serif;
 $ff-primary-3 : 'Courgette', cursive;
 $ff-primary-4 : 'Major Mono Display', monospace;
 
-//my colors
-$primary-clr-1 : #f8b21d;
+//my colors****************************************
+$primary-clr-1 : #FFC26A;
 $primary-clr-2 : #f8f8f8;
 $primary-clr-3 : #fff;
 $primary-clr-4 : #000; 
 
-//my text color :
+//my text color************************************
 $primary-text-clr-1: #000;
 $primary-text-clr-2: #313030;
 $primary-text-clr-3: #fff;
 
-// text style
+// text style**************************************
 $spacing : .1rem;
 
-//global style
+//global style*************************************
 *,
 ::before,
 ::after{
@@ -78,7 +78,7 @@ body{
         line-height: 1.5rem;
     }
 }
-//mixins
+//mixins*******************************************
 @mixin transition-ease{
     transition: all .3s ease-in-out;
 }

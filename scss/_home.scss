@@ -1,34 +1,45 @@
 .landing-page {
     height: 100vh;
-    background-color: $primary-clr-1;
+    background-color: $primary-clr-3;
 
     // loading (gif and my name) styling
     .profile {
-
+        position: relative;
+        // background-color:rgb(183, 137, 81);
+        height: 70vh;
         &__pic {
-            width: 200px;
-            height: 200px;
+            position: absolute;
+            top: 0;
+            right: 10%;
+            width: 60%;
+            height: 80%;
             margin: 4rem auto .5rem;
-            background: url(/dist/img/say-hello.gif);
-            background-size: cover;
-            background-position: center;
+            background-color: rgb(0, 0, 0);
+            // background-size: cover;
+            // background-position: center;
         }
 
         &__text {
-            width: 100%;
+            // background-color: red;
+            position: absolute;
+            bottom: -30%;
+            left: 5%;
+            // width: 100%;
             height: 20vh;
             margin: 2rem auto;
-            @include centralize;
-            flex-direction: column;
+            // @include centralize;
+            // flex-direction: column;
             color: $primary-text-clr-1;
 
             h1 {
-                font-size: 2rem;
-                font-family: $ff-primary-4;
+                font-size: 1.4rem;
+                margin-top: 1rem;
+                // font-family: $ff-primary-4;
             }
 
             h4 {
-                font-family: $ff-primary-3;
+                
+                // font-family: $ff-primary-3;
             }
 
             // my name and skills appearing************************************
@@ -43,6 +54,7 @@
 
                 }
 
+                // landing page name ****************************************
                 .my-name {
                     transition: all 1s ease-in-out;
 
@@ -52,6 +64,7 @@
                     }
                 }
 
+                // landing page job ****************************************
                 .my-job {
                     transition: all 1s .5s ease-in-out;
 
@@ -85,7 +98,7 @@
         }
     }
 
-    // section main title*************************************
+    //  main title*************************************
     &__title,
     &__title.open {
         margin-top: 1rem;
@@ -109,7 +122,7 @@
         }
     }
 
-    // section subtitle**************************************
+    // subtitle**************************************
     &__subtitle {
         margin-top: 2rem;
         display: none;
@@ -124,7 +137,7 @@
         }
     }
 
-    // section text******************************************
+    //  text******************************************
     &__text {
         display: none;
         margin-top: 1.5rem;
@@ -135,7 +148,7 @@
         }
     }
 
-    // section button
+    //  button************************************************
     &__button {
         background-color: $primary-clr-1;
         padding: 0px 6px;
@@ -178,29 +191,52 @@
 
     }
 
-    // how I can help section
+    // how I can help section************************************
     .icons {
         width: 100vw;
-        height: 420px;
+        height: 450px;
         margin-left: -13%;
-        background-color: $primary-clr-1;
+        // background-color: $primary-clr-1;
         display: grid;
         grid-template-columns: 1fr 1fr;
         margin-top: -1.5rem;
         z-index: 0;
         padding: 2rem;
         position: relative;
-        transform: translateX(100%);
+        // transform: translateY(-100%);
+        // height: 0;
+        // visibility: hidden;
         transition: .8s ease-in-out;
 
-        &.open {
-            transform: translateX(0%);
+        .test{
+            position: absolute;
+            top: -5%;
+            left: 2%;
+            padding-bottom: 0;
+            padding-right: 40%;
+            border-radius: 5px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);;
+            transition: all 1s ease-in-out;
         }
 
+        &.open {
+            // visibility: visible;
+            // height: auto;
+            // transform: translateY(0%);
+            .test{
+                padding-bottom: 450px;
+                background-color: $primary-clr-1;
+            }
+        }
+       
+
+        // each icon container *************************
+
         .icons-container {
+            position: relative;
             margin: 1rem auto;
             text-align: center;
-            // height: 200px;
+            height: 170px;
             width: 120px;
             display: none;
 
@@ -219,7 +255,8 @@
             }
 
             &__underline {
-                margin-top: 1rem;
+                position: absolute;
+                bottom: 10%;
                 width: 40px;
                 height: 1px;
                 background-color: $primary-clr-4;
@@ -228,7 +265,7 @@
 
     }
 
-    // the projects in  my project section
+    // projects section*************************************
     .projects {
         margin-top: 3rem;
         display: grid;
@@ -236,6 +273,7 @@
         width: 100vw;
         margin-left: -13%;
 
+        // each project ***************************************
         .projects-item {
             position: relative;
             height: 300px;
@@ -246,7 +284,7 @@
             display: none;
             @include transition-ease;
 
-
+            // project logo*****************************************
             &__logo {
                 position: absolute;
                 top: 0;
@@ -257,6 +295,7 @@
 
             }
 
+            // project info****************************************
             &__info {
                 position: absolute;
                 bottom: -20%;
@@ -268,18 +307,21 @@
 
                 @include transition-ease;
 
+                // project title ***************************************
                 .project-title {
                     font-size: 1.5rem;
                     color: $primary-text-clr-3;
                     @include transition-ease;
                 }
 
+                // project subtitle ***************************************
                 .project-subtitle {
                     margin-top: 1rem;
                     color: $primary-text-clr-3;
                     font-family: $ff-primary-3;
                 }
 
+                // project category ***************************************
                 .project-category {
                     padding-top: 2rem;
                     color: $primary-text-clr-3;
@@ -287,13 +329,13 @@
                 }
             }
 
-
+            // project buttons ***************************************
             &__btns {
                 position: absolute;
                 bottom: 0;
-                right: 0;
+                right: 5%;
                 width: 30%;
-                height: 25%;
+                height: 18%;
                 @include centralize;
                 @include transition-ease;
 
@@ -305,7 +347,8 @@
 
             }
 
-            &__link{
+            // project link to the project page ***************************************
+            &__link {
                 padding: 100%;
                 z-index: 10;
             }
@@ -348,7 +391,7 @@
 
 }
 
-
+// animations **********************************
 @keyframes slide-in-left {
     0% {
         transform: translateX(-200%);
