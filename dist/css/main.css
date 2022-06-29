@@ -19,7 +19,7 @@ Global variables
 }
 
 body {
-  background-color: #f8f8f8;
+  background-color: #fff;
   font-family: "Montserrat", sans-serif;
   line-height: 1.5;
   font-size: .875rem;
@@ -349,7 +349,7 @@ header .menu-btn__burger.open::after {
 
 .landing-page {
   height: 100vh;
-  background-color: #fff;
+  background-color: #FFC26A;
 }
 
 .landing-page .profile {
@@ -364,7 +364,6 @@ header .menu-btn__burger.open::after {
   width: 60%;
   height: 80%;
   margin: 4rem auto .5rem;
-  background-color: black;
 }
 
 .landing-page .profile__text {
@@ -432,6 +431,42 @@ header .menu-btn__burger.open::after {
   display: inline-block;
   -webkit-animation: slide-in-left .5s;
           animation: slide-in-left .5s;
+}
+
+.container__animation-div {
+  position: absolute;
+  z-index: -1;
+  margin-top: -3rem;
+  height: 300px;
+  background-color: #f8f8f8;
+  width: 100vw;
+  margin-left: -13%;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.container__animation-div.open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.container__animation-div .text {
+  width: 70%;
+  background-color: #fff;
+  padding: 2rem;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
 }
 
 .container__title, .container__title.open {
@@ -598,6 +633,8 @@ header .menu-btn__burger.open::after {
 
 .container .icons .icons-container p {
   font-size: .8rem;
+  line-height: 0;
+  padding-top: .7rem;
   color: #676767;
 }
 

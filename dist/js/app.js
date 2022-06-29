@@ -6,7 +6,7 @@ const projectOne = document.getElementById('project-1');
 const projectTwo = document.getElementById('project-2');
 const projectThree = document.getElementById('project-3');
 const projectFour = document.getElementById('project-4');
-
+const contactMe = document.getElementById('contact-me');
 
 /*
 I want to display each project when the user scroll to its position on the page
@@ -15,20 +15,6 @@ I want to display each project when the user scroll to its position on the page
 2. get each project postion
 3. hide project in the default mode
 4. display the project once the user scroll to its position
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 */
 
 const burgerBtn = document.querySelector('.menu-btn__burger');
@@ -47,9 +33,8 @@ const sectionText =document.querySelectorAll('.container__text');
 const sectionButton = document.querySelectorAll('.container__button');
 const icons = document.querySelector('.icons');
 const iconContainer = document.querySelectorAll('.icons-container');
-// console.log(icons);
-// animationLine.forEach(item =>{console.log(item.parentNode.parentElement)});
-// sectionButton.forEach(item =>{console.log(item.parentNode.parentElement)});
+const animationDiv = document.querySelector('.container__animation-div');
+
 
 
 window.addEventListener('DOMContentLoaded', ()=>{
@@ -58,8 +43,8 @@ window.addEventListener('DOMContentLoaded', ()=>{
     
 })
 window.addEventListener('scroll', ()=>{
+// getting sctions position while scrolling the page
     const scrollingPosition = window.pageYOffset;
-    const aboutMePosition = aboutMe.offsetTop;
     const mySkillPosition = mySkills.offsetTop;
     const myProjectsPosition = myProjects.offsetTop;
     const screenHeight = screen.height;
@@ -67,19 +52,10 @@ window.addEventListener('scroll', ()=>{
     const projectTwoPosition = projectTwo.offsetTop;
     const projectThreePosition = projectThree.offsetTop;
     const projectFourPosition = projectFour.offsetTop;
-    // console.log('about me ' + aboutMePosition);
-    // console.log('scroll '+scrollingPosition);
-    // console.log('screen height ' +screenHeight);
-    // console.log('myskill ' +mySkillPosition);
-    // console.log(mySkillPosition - screenHeight +300);
-    // console.log('myProjectsPosition ' + myProjectsPosition);
-    console.log('\n')
-    console.log('p1: '+projectOnePosition);
-    console.log('p2: '+projectTwoPosition);
-    console.log('p3: '+projectThreePosition);
-    console.log('p4: '+projectFourPosition);
+    const contactMePosition = contactMe.offsetTop;
+  
    
-
+// displaying about me section
     if(scrollingPosition >  250 ){
         aboutMe.classList.add('open');
         setSectionValues(animationLine);
@@ -88,13 +64,14 @@ window.addEventListener('scroll', ()=>{
         setSectionValues(sectionSubtitle);
         setSectionValues(sectionText);
         setSectionValues(sectionButton); 
-        
+// displaying my skills section
     }
      if(scrollingPosition > (mySkillPosition - screenHeight + 500)){
         mySkills.classList.add('open');
         icons.classList.add('open');
         setIcons(iconContainer);
     }
+// displaying my projects section
      if(scrollingPosition > (myProjectsPosition - screenHeight +500)){
         myProjects.classList.add('open');
         setSectionValues(animationLine);
@@ -103,6 +80,7 @@ window.addEventListener('scroll', ()=>{
         setSectionValues(sectionSubtitle);
         setSectionValues(sectionText);
         setSectionValues(sectionButton);
+// displaying each project once the user scroll to its position
         }
      if(scrollingPosition > (projectOnePosition - screenHeight + 300)){
         projectOne.classList.add('open');
@@ -116,10 +94,15 @@ window.addEventListener('scroll', ()=>{
      if(scrollingPosition > (projectFourPosition - screenHeight + 300)){
         projectFour.classList.add('open');
      }
+// displaying contact me sectoin 
+     if(scrollingPosition > (contactMePosition - screenHeight + 500)){
+        contactMe.classList.add('open');
+        animationDiv.classList.add('open');
+     }
     
   
 })
-
+// displaying the nav-bar once it is clicked
 menuBtn.addEventListener('click', ()=>{
     burgerBtn.classList.toggle('open');
     navMenu.classList.toggle('open');
@@ -145,7 +128,7 @@ function setSectionValues(items){
 
 // add open class to each icon container with a .4s delay
 function setIcons(items){
-    let wait = 300;
+    let wait = 200;
     items.forEach((item,index)=>{
         setTimeout(()=>{
             item.classList.add('open');
