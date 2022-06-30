@@ -34,7 +34,7 @@ const sectionButton = document.querySelectorAll('.container__button');
 const icons = document.querySelector('.icons');
 const iconContainer = document.querySelectorAll('.icons-container');
 const animationDiv = document.querySelector('.container__animation-div');
-
+const contactMethods = document.querySelectorAll('.contact-method');
 
 
 window.addEventListener('DOMContentLoaded', ()=>{
@@ -95,9 +95,10 @@ window.addEventListener('scroll', ()=>{
         projectFour.classList.add('open');
      }
 // displaying contact me sectoin 
-     if(scrollingPosition > (contactMePosition - screenHeight + 500)){
+     if(scrollingPosition > (contactMePosition - screenHeight + 400)){
         contactMe.classList.add('open');
         animationDiv.classList.add('open');
+        setIcons(contactMethods);
      }
     
   
