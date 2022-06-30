@@ -274,123 +274,9 @@
         margin-left: -13%;
 
         // each project ***************************************
-        .projects-item {
-            position: relative;
-            height: 300px;
-            width: 100%;
-            overflow: hidden;
-            z-index: 0;
-            // border-bottom: 1px solid black;
-            
-            display: none;
-            @include transition-ease;
-
-            // project logo*****************************************
-            &__logo {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 30%;
-                height: 30%;
-                // background-color: red;
-
-                img{
-                    padding: 1rem;
-                    width: 70%;
-                    // background-color: blue;
-                }
-
-            }
-            // project image
-            &__image{
-                position: absolute;
-                // background-color: red;
-                top: 0;
-                left: 0;
-                width: 100%;
-                z-index: 0;
-            }
-
-            // project info****************************************
-            &__info {
-                position: absolute;
-                bottom: -20%;
-                left: 0;
-                width: 100%;
-                height: 50%;
-                // background-color: blue;
-                padding: 1.5rem;
-
-                @include transition-ease;
-
-                // project title ***************************************
-                .project-title {
-                    font-size: 1.5rem;
-                    color: $primary-text-clr-3;
-                    @include transition-ease;
-                }
-
-                // project subtitle ***************************************
-                .project-subtitle {
-                    margin-top: 1rem;
-                    color: $primary-text-clr-3;
-                    font-family: $ff-primary-3;
-                }
-
-                // project category ***************************************
-                .project-category {
-                    padding-top: 2rem;
-                    color: $primary-text-clr-3;
-                    font-size: 1.5rem;
-                }
-            }
-
-            // project buttons ***************************************
-            &__btns {
-                position: absolute;
-                bottom: 0;
-                right: 5%;
-                width: 30%;
-                height: 18%;
-                @include centralize;
-                @include transition-ease;
-
-                .project__btn {
-                    color: $primary-text-clr-3;
-                    display: none;
-                    @include transition-ease;
-                }
-
-            }
-
-            // project link to the project page ***************************************
-            &__link {
-                padding: 100%;
-                z-index: 10;
-            }
-
-            &:hover {
-                cursor: pointer;
-
-                .projects-item__info {
-                    bottom: 0;
-                    .project-title {
-                        color: $primary-clr-1;
-                    }
-                }
-
-                .project__btn {
-                    display: block;
-
-                    &:hover {
-                        color: $primary-clr-1;
-                    }
-                }
-            }
-        }
-
         .project-container {
-            height: 300px;
+            height: 350px;
+            background-color: red;
 
             &.open {
                 .projects-item {
@@ -398,8 +284,135 @@
                     animation: fade-in-bottom 1s;
                 }
             }
+            .projects-item {
+                position: relative;
+                height: 100%;
+                width: 100%;
+                overflow: hidden;
+                z-index: 0;
+                display: none;
+                @include transition-ease;
+                // @include large-mobile{
+                //     height: 350px;
+                // }
+                // @include mini-tablet{
+                //     height: 100%;
+                // }
+    
+                // project logo*****************************************
+                &__logo {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 30%;
+                    height: 30%;
+                    // background-color: red;
+    
+                    img{
+                        padding: 1rem;
+                        width: 70%;
+                        // background-color: blue;
+                    }
+    
+                }
+                // project image
+                &__image{
+                    position: absolute;
+                    top: 0;
+                    left: -15%;
+                    height: 100%;
+                    z-index: 0;
+
+                    @include mobile{
+                        left: -35%;
+                    }
+                }
+    
+                // project info****************************************
+                &__info {
+                    position: absolute;
+                    bottom: -20%;
+                    left: 0;
+                    width: 100%;
+                    height: 50%;
+                    // background-color: blue;
+                    padding: 1.5rem;
+    
+                    @include transition-ease;
+    
+                    // project title ***************************************
+                    .project-title {
+                        font-size: 1.5rem;
+                        color: $primary-text-clr-3;
+                        @include transition-ease;
+                    }
+    
+                    // project subtitle ***************************************
+                    .project-subtitle {
+                        margin-top: 1rem;
+                        color: $primary-text-clr-3;
+                        font-family: $ff-primary-3;
+                    }
+    
+                    // project category ***************************************
+                    .project-category {
+                        padding-top: 2rem;
+                        color: $primary-text-clr-3;
+                        font-size: 1.5rem;
+                    }
+                }
+    
+                // project buttons ***************************************
+                &__btns {
+                    position: absolute;
+                    bottom: 0;
+                    right: 5%;
+                    width: 30%;
+                    height: 18%;
+                    @include centralize;
+                    @include transition-ease;
+    
+                    .project__btn {
+                        color: $primary-text-clr-3;
+                        display: none;
+                        @include transition-ease;
+                    }
+    
+                }
+    
+                // project link to the project page ***************************************
+                &__link {
+                    padding: 100%;
+                    z-index: 10;
+                }
+    
+                &:hover {
+                    cursor: pointer;
+    
+                    .projects-item__info {
+                        bottom: 0;
+                        .project-title {
+                            color: $primary-clr-1;
+                        }
+                    }
+    
+                    .project__btn {
+                        display: block;
+    
+                        &:hover {
+                            color: $primary-clr-1;
+                        }
+                    }
+                }
+            }
+    
+
+
+
         }
 
+        
+    
     }
      // animation div************************************
      &__animation-div{
