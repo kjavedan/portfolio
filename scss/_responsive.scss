@@ -15,17 +15,28 @@
     }
 }
 @mixin mini-tablet{
-    @media screen and (min-width:450px) {
+    @media screen and (min-width:489px) {
         @content;
     }
 }
 @mixin tablet{
-    @media screen and (max-width:420px) {
+    @media screen and (min-width:660px) {
         @content;
     }
 }
-@mixin laptop{
-    @media screen and (max-width:359px) {
+@mixin large-tablet{
+    @media screen and (min-width:900px) {
         @content;
     }
+}
+@mixin  small-screen {
+    @media screen and (min-width:980px) {
+        @content;
+    }
+}
+@mixin  laptop {
+    @media screen and (min-width:1200px) {
+        @content;
+    }
+    
 }

@@ -273,6 +273,17 @@
         width: 100vw;
         margin-left: -13%;
 
+        @include tablet{
+            grid-template-columns: 1fr 1fr;
+        }
+        @include small-screen{
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        @include laptop{
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        }
+
         // each project ***************************************
         .project-container {
             height: 350px;
@@ -319,13 +330,34 @@
                 &__image{
                     position: absolute;
                     top: 0;
-                    left: -15%;
-                    height: 100%;
-                    z-index: 0;
+                    left: 0;
+                    margin-left: auto;
+                    margin-right: auto;
 
                     @include mobile{
-                        left: -35%;
+                        left: -15%;
+                        height: 100%;
                     }
+                    @include large-mobile{
+                        height: 100%;
+                    }
+                    @include mini-tablet{
+                    max-width: 100%;
+                    height: auto;
+                    }
+                    @include tablet{
+                        height: 100%;
+                        max-width: fit-content;
+                        left: -8%;
+                    }
+                    @include large-tablet{
+                        left: 0;
+                    }
+                    @include small-screen{
+                        left: -15%;
+                    }
+                    
+
                 }
     
                 // project info****************************************
