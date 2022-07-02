@@ -287,6 +287,100 @@ body p {
   position: relative;
   -webkit-transition: .8s ease-in-out;
   transition: .8s ease-in-out;
+      grid-template-areas: 'computer design team' 'arrow1 arrow2 arrow3' 'js figma git' 'react xd github' 'scss empty1 empty2';
+}
+
+@media screen and (min-width: 660px) {
+  .container .icons {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1.5fr .5fr 1fr 1fr 1fr;
+        grid-template-rows: 1.5fr .5fr 1fr 1fr 1fr;
+  }
+  .container .icons .computer {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: computer;
+  }
+  .container .icons .design {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: design;
+  }
+  .container .icons .team {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: team;
+  }
+  .container .icons .arrow1, .container .icons .arrow2, .container .icons .arrow3 {
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    -webkit-transform: rotate(450deg);
+            transform: rotate(450deg);
+  }
+  .container .icons .arrow1 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: arrow1;
+  }
+  .container .icons .arrow2 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: arrow2;
+  }
+  .container .icons .arrow3 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    grid-area: arrow3;
+  }
+  .container .icons .js {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: js;
+  }
+  .container .icons .figma {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: figma;
+  }
+  .container .icons .git {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+    grid-area: git;
+  }
+  .container .icons .react {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: react;
+  }
+  .container .icons .xd {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+    grid-area: xd;
+  }
+  .container .icons .github {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+    grid-area: github;
+  }
+  .container .icons .scss {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: scss;
+  }
+  .container .icons .empty1 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+    grid-area: empty1;
+  }
+  .container .icons .empty2 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+    grid-area: empty2;
+  }
+  .container .icons .icons-container {
+    padding: 1rem;
+  }
 }
 
 .container .icons__animation-div {
@@ -302,9 +396,24 @@ body p {
   transition: all 1s ease-in-out;
 }
 
+@media screen and (min-width: 660px) {
+  .container .icons__animation-div {
+    left: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
 .container .icons.open .icons__animation-div {
   padding-bottom: 450px;
   background-color: #FFC26A;
+}
+
+@media screen and (min-width: 660px) {
+  .container .icons.open .icons__animation-div {
+    padding-bottom: 220px;
+    padding-right: 100%;
+  }
 }
 
 .container .icons .icons-container {

@@ -203,8 +203,75 @@
         z-index: 0;
         padding: 2rem;
         position: relative;
-       
         transition: .8s ease-in-out;
+
+        grid-template-areas: 'computer design team'
+        'arrow1 arrow2 arrow3'
+        'js figma git'
+        'react xd github'
+        'scss empty1 empty2';
+
+        @include tablet{
+            // background-color: blue;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1.5fr .5fr 1fr 1fr 1fr;
+           
+
+            .computer{
+                grid-area: computer;
+            }
+            .design{
+                grid-area: design;
+            }
+            .team{
+                grid-area: team;
+            }
+            .arrow1,.arrow2,.arrow3{
+                transition: all 1s ease-in-out;
+                transform: rotate(450deg);
+            }
+            .arrow1{
+                grid-area: arrow1;
+                
+            }
+            .arrow2{
+                grid-area: arrow2;
+            }
+            .arrow3{
+                grid-area: arrow3;
+            }
+            .js{
+                grid-area: js;
+            }
+            .figma{
+                grid-area: figma;
+            }
+            .git{
+                grid-area: git;
+            }
+            .react{
+                grid-area: react;
+            }
+            .xd{
+                grid-area: xd;
+            }
+            .github{
+                grid-area: github;
+            }
+            .scss{
+                grid-area: scss;
+            }
+            .empty1{
+                grid-area: empty1;
+            }
+            .empty2{
+                grid-area: empty2;
+            }
+            .icons-container{
+                padding: 1rem;
+            }
+        }
+
 // the animation div that slide in from the top
         &__animation-div{
             position: absolute;
@@ -215,6 +282,12 @@
             border-radius: 5px;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             transition: all 1s ease-in-out;
+
+            @include tablet{
+                left: 0;
+                box-shadow: none;
+
+            }
         }
 
         &.open {
@@ -222,6 +295,11 @@
             .icons__animation-div{
                 padding-bottom: 450px;
                 background-color: $primary-clr-1;
+
+                @include tablet{
+                    padding-bottom: 220px;
+                    padding-right: 100%;
+                }
             }
         }
        
