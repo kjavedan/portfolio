@@ -107,7 +107,7 @@
 
         .title {
             margin-bottom: .1rem;
-            line-height: 2.6rem;
+            line-height: 3rem;
             overflow: hidden;
 
             .my-title {
@@ -210,12 +210,10 @@
         'js figma git'
         'react xd github'
         'scss empty1 empty2';
-
+    // displaying icons in tablet screen size ********************
         @include tablet{
-            // background-color: blue;
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: 1.5fr .5fr 1fr 1fr 1fr;
-           
 
             .computer{
                 grid-area: computer;
@@ -275,7 +273,7 @@
 // the animation div that slide in from the top
         &__animation-div{
             position: absolute;
-            top: -5%;
+            top: -7%;   
             left: 2%;
             padding-bottom: 0;
             padding-right: 40%;

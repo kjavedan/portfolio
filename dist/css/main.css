@@ -184,7 +184,7 @@ body p {
 
 .container__title .title, .container__title.open .title {
   margin-bottom: .1rem;
-  line-height: 2.6rem;
+  line-height: 3rem;
   overflow: hidden;
 }
 
@@ -385,7 +385,7 @@ body p {
 
 .container .icons__animation-div {
   position: absolute;
-  top: -5%;
+  top: -7%;
   left: 2%;
   padding-bottom: 0;
   padding-right: 40%;
@@ -994,7 +994,7 @@ header .menu-btn__burger::before {
   content: '';
   position: absolute;
   background-color: #000;
-  height: 1.5px;
+  height: 2px;
   top: -8px;
   width: 22px;
 }
