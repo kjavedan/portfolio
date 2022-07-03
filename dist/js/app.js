@@ -42,6 +42,10 @@ const contactMethods = document.querySelectorAll('.contact-method');
 window.addEventListener('DOMContentLoaded', () => {
     myName.classList.add('open');
     myJob.classList.add('open');
+    // navMenuItem.forEach(item =>{
+    //     item.classList.add('open');
+    // })
+    setItems(navMenuItem);
 
 })
 window.addEventListener('scroll', () => {

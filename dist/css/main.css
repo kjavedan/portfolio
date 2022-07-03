@@ -767,6 +767,22 @@ body p {
   border-top: 1px solid #d0cece;
 }
 
+@media screen and (min-width: 1200px) {
+  .copy {
+    z-index: 20;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: left;
+    padding-left: 3rem;
+    border: none;
+  }
+}
+
 @-webkit-keyframes slide-in-left {
   0% {
     -webkit-transform: translateX(-200%);
@@ -909,6 +925,7 @@ header .header-left {
 
 @media screen and (min-width: 1200px) {
   header .header-left {
+    padding-top: .2rem;
     width: 200px;
     padding-left: 5%;
   }
@@ -936,6 +953,10 @@ header .header-left .logo-nav .log-nav__link {
           animation: slide-in-right .5s;
 }
 
+header .header-left .logo-nav .log-nav__link > a {
+  font-family: "Courgette", cursive;
+}
+
 header .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -955,25 +976,6 @@ header .nav {
   display: none;
 }
 
-@media screen and (min-width: 1200px) {
-  .nav-menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 40%;
-    position: fixed;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    right: 8%;
-    height: 50px;
-    top: 0;
-  }
-}
-
 .nav-menu.open {
   padding-top: 8rem;
   display: block;
@@ -984,6 +986,22 @@ header .nav {
   left: 0;
   top: 0;
   z-index: 10;
+}
+
+@media screen and (min-width: 1200px) {
+  .nav-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 37%;
+    position: fixed;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    right: 4%;
+    height: 50px;
+    top: 0;
+  }
 }
 
 .nav-menu__item {
@@ -1000,10 +1018,26 @@ header .nav {
 @media screen and (min-width: 1200px) {
   .nav-menu__item {
     padding: 0;
+    padding-left: 4rem;
+    -webkit-animation: none;
+            animation: none;
+    display: none;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+  }
+  .nav-menu__item.open {
+    display: block;
+    -webkit-animation: slide-in-left 1s;
+            animation: slide-in-left 1s;
   }
 }
 
-.nav-menu__item.active a {
+.nav-menu__item.active > a {
+  -webkit-text-decoration: underline 3px #FFC26A;
+          text-decoration: underline 3px #FFC26A;
+}
+
+.nav-menu__item.active > a:hover {
   -webkit-text-decoration: underline 3px #FFC26A;
           text-decoration: underline 3px #FFC26A;
 }
@@ -1011,6 +1045,17 @@ header .nav {
 .nav-menu__item a {
   color: #000;
   font-size: 1.5rem;
+}
+
+.nav-menu__item a:hover {
+  -webkit-text-decoration: underline 3px wavy #FFC26A;
+          text-decoration: underline 3px wavy #FFC26A;
+}
+
+@media screen and (min-width: 1200px) {
+  .nav-menu__item a {
+    font-size: 1.2rem;
+  }
 }
 
 .nav-menu__item.social-media a {
@@ -1047,14 +1092,10 @@ header .nav {
 @media screen and (min-width: 1200px) {
   .nav-menu__item.social-media {
     position: fixed;
-    bottom: 2%;
-    right: 4%;
+    bottom: 1%;
+    right: 3%;
+    z-index: 30;
   }
-}
-
-.nav-menu__item.open {
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
 }
 
 .menu-btn {
@@ -1070,6 +1111,12 @@ header .nav {
   cursor: pointer;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
+}
+
+@media screen and (min-width: 1200px) {
+  .menu-btn {
+    display: none;
+  }
 }
 
 .menu-btn__burger {
@@ -1172,6 +1219,19 @@ header .nav {
   }
 }
 
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
 @-webkit-keyframes drop-in {
   0% {
     -webkit-transform: translateY(-100%);
@@ -1196,12 +1256,15 @@ header .nav {
 
 main {
   overflow-x: hidden;
+  margin: 0 auto;
+  width: 100%;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 @media screen and (min-width: 1200px) {
   main {
-    width: 93vw;
-    margin: 0 auto;
+    width: 93%;
   }
 }
 /*# sourceMappingURL=main.css.map */

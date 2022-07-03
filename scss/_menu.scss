@@ -48,6 +48,7 @@ header {
         height: 50px;
 
         @include laptop {
+            padding-top: .2rem;
             width: 200px;
             padding-left: 5%;
         }
@@ -65,6 +66,9 @@ header {
             .log-nav__link {
                 animation: slide-in-right .5s;
 
+                &>a {
+                    font-family: $ff-primary-3;
+                }
             }
         }
     }
@@ -86,17 +90,7 @@ header {
 .nav-menu {
     display: none;
 
-    @include laptop {
-        display: flex;
-        width: 40%;
-        position: fixed;
-        align-items: center;
-        justify-content: space-between;
-        right: 8%;
-        height: 50px;
-        top: 0;
-    }
-
+    // displaying the nav for mobile and tablet screen once the burger button is clicked
     &.open {
         padding-top: 8rem;
         display: block;
@@ -110,6 +104,19 @@ header {
 
     }
 
+    // displaying the navbar  laptop screen
+    @include laptop {
+        display: flex;
+        width: 37%;
+        position: fixed;
+        align-items: center;
+        right: 4%;
+        height: 50px;
+        top: 0;
+        // background-color: blue;
+    }
+
+    // styling list items mobile screen size
     &__item {
         font-family: $ff-primary-1;
         padding-left: 30%;
@@ -118,17 +125,39 @@ header {
         animation: fade-in-motion-up 1s;
         @include transition-ease;
 
+        // styling list items laptop screen size
         @include laptop {
             padding: 0;
+            padding-left: 4rem;
+            // background-color: rebeccapurple;
+            animation: none;
+            display: none;
+            @include transition-ease;
+
+            &.open {
+                display: block;
+                animation: slide-in-left 1s;
+            }
         }
 
-        &.active a {
+        &.active > a {
             text-decoration: underline 3px $primary-clr-1;
+            &:hover{
+                text-decoration: underline 3px  $primary-clr-1;
+            }
         }
 
         & a {
             color: $primary-text-clr-1;
             font-size: 1.5rem;
+            
+            &:hover{
+                text-decoration: underline 3px wavy $primary-clr-1;
+            }
+
+            @include laptop {
+                font-size: 1.2rem;
+            }
         }
 
         &.social-media {
@@ -138,7 +167,7 @@ header {
                 border-radius: 4px;
                 @include transition-ease;
 
-                @include laptop{
+                @include laptop {
                     font-size: 1.2rem;
                     transition: none;
                 }
@@ -162,15 +191,12 @@ header {
                 color: #25D366;
             }
 
-            @include laptop{
+            @include laptop {
                 position: fixed;
-                bottom: 2%;
-                right: 4%;
+                bottom: 1%;
+                right: 3%;
+                z-index: 30;
             }
-        }
-
-        &.open {
-            transform: translateY(-10px);
         }
     }
 }
@@ -187,6 +213,10 @@ header {
     padding-left: 7px;
     cursor: pointer;
     @include transition-ease;
+
+    @include laptop {
+        display: none;
+    }
 
     &__burger {
         content: '';
@@ -259,6 +289,18 @@ header {
     100% {
         opacity: 1;
         transform: translate(0);
+    }
+}
+
+@keyframes slide-in-left {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 

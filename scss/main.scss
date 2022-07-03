@@ -5,9 +5,11 @@
 
 main {
     overflow-x: hidden;
+    margin: 0 auto;
+    width: 100%;
+    transition: all 1s ease-in-out;
 
     @include laptop{
-        width: 93vw;
-        margin: 0 auto;
+        width: 93%;
     }
 }
