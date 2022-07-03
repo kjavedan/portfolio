@@ -100,6 +100,7 @@ window.addEventListener('scroll', () => {
             projectFour.classList.add('open');
         }
     }
+    // displaying each project on large screen with a delay
     if(screenWidth >= 660 ){
         if(scrollingPosition > (projectOnePosition - screenHeight + 300)){
         setItems(projectsContainer);

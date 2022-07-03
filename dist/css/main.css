@@ -639,6 +639,16 @@ body p {
   z-index: 10;
 }
 
+@media screen and (min-width: 1200px) {
+  .container .projects .project-container .projects-item__link {
+    padding: 50%;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
 .container .projects .project-container .projects-item:hover {
   cursor: pointer;
 }
@@ -717,6 +727,21 @@ body p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media screen and (min-width: 980px) {
+  .container__contact-info {
+    font-size: 1.2rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 5rem;
+  }
+  .container__contact-info .email {
+    font-size: 1.6rem;
+    text-transform: lowercase;
+  }
 }
 
 .container__contact-info .contact-method {
@@ -865,10 +890,28 @@ header {
           align-items: flex-end;
 }
 
+@media screen and (min-width: 1200px) {
+  header {
+    height: 50px;
+    z-index: 25;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+  }
+}
+
 header .header-left {
   padding-top: .5rem;
   width: 150px;
   height: 50px;
+}
+
+@media screen and (min-width: 1200px) {
+  header .header-left {
+    width: 200px;
+    padding-left: 5%;
+  }
 }
 
 header .header-left .logo-nav {
@@ -899,11 +942,39 @@ header .nav {
   display: flex;
 }
 
-header .nav-menu {
+@media screen and (min-width: 1200px) {
+  header .nav {
+    height: 60px;
+    position: fixed;
+    right: 5%;
+    top: 0;
+  }
+}
+
+.nav-menu {
   display: none;
 }
 
-header .nav-menu.open {
+@media screen and (min-width: 1200px) {
+  .nav-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 40%;
+    position: fixed;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    right: 8%;
+    height: 50px;
+    top: 0;
+  }
+}
+
+.nav-menu.open {
   padding-top: 8rem;
   display: block;
   width: 50vw;
@@ -915,7 +986,7 @@ header .nav-menu.open {
   z-index: 10;
 }
 
-header .nav-menu__item {
+.nav-menu__item {
   font-family: "Bebas Neue", cursive;
   padding-left: 30%;
   font-size: large;
@@ -926,17 +997,23 @@ header .nav-menu__item {
   transition: all .3s ease-in-out;
 }
 
-header .nav-menu__item.active a {
+@media screen and (min-width: 1200px) {
+  .nav-menu__item {
+    padding: 0;
+  }
+}
+
+.nav-menu__item.active a {
   -webkit-text-decoration: underline 3px #FFC26A;
           text-decoration: underline 3px #FFC26A;
 }
 
-header .nav-menu__item a {
+.nav-menu__item a {
   color: #000;
   font-size: 1.5rem;
 }
 
-header .nav-menu__item.social-media a {
+.nav-menu__item.social-media a {
   padding: .1rem .25rem 0 .25rem;
   font-size: 1rem;
   border-radius: 4px;
@@ -944,27 +1021,43 @@ header .nav-menu__item.social-media a {
   transition: all .3s ease-in-out;
 }
 
-header .nav-menu__item.social-media .instagram:hover {
+@media screen and (min-width: 1200px) {
+  .nav-menu__item.social-media a {
+    font-size: 1.2rem;
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.nav-menu__item.social-media .instagram:hover {
   color: #fff;
   background: #f09433;
   background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
 }
 
-header .nav-menu__item.social-media .linkdin i:hover {
+.nav-menu__item.social-media .linkdin i:hover {
   color: #0072b1;
 }
 
-header .nav-menu__item.social-media .whatsapp i:hover {
+.nav-menu__item.social-media .whatsapp i:hover {
   color: #25D366;
 }
 
-header .nav-menu__item.open {
+@media screen and (min-width: 1200px) {
+  .nav-menu__item.social-media {
+    position: fixed;
+    bottom: 2%;
+    right: 4%;
+  }
+}
+
+.nav-menu__item.open {
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
 }
 
-header .menu-btn {
+.menu-btn {
   width: 40px;
   height: 40px;
   border-radius: 100%;
@@ -979,7 +1072,7 @@ header .menu-btn {
   transition: all .3s ease-in-out;
 }
 
-header .menu-btn__burger {
+.menu-btn__burger {
   content: '';
   position: absolute;
   top: 20px;
@@ -990,7 +1083,7 @@ header .menu-btn__burger {
   transition: all .3s ease-in-out;
 }
 
-header .menu-btn__burger::before {
+.menu-btn__burger::before {
   content: '';
   position: absolute;
   background-color: #000;
@@ -999,7 +1092,7 @@ header .menu-btn__burger::before {
   width: 22px;
 }
 
-header .menu-btn__burger::after {
+.menu-btn__burger::after {
   content: '';
   position: absolute;
   background-color: #000;
@@ -1008,19 +1101,19 @@ header .menu-btn__burger::after {
   height: 2px;
 }
 
-header .menu-btn__burger.open {
+.menu-btn__burger.open {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
   background: transparent;
 }
 
-header .menu-btn__burger.open::before {
+.menu-btn__burger.open::before {
   width: 28px;
   -webkit-transform: translate(-1px, 8px) rotate(45deg);
           transform: translate(-1px, 8px) rotate(45deg);
 }
 
-header .menu-btn__burger.open::after {
+.menu-btn__burger.open::after {
   width: 28px;
   height: 2px;
   -webkit-transform: translate(-1px, -8px) rotate(-45deg);
@@ -1103,5 +1196,12 @@ header .menu-btn__burger.open::after {
 
 main {
   overflow-x: hidden;
+}
+
+@media screen and (min-width: 1200px) {
+  main {
+    width: 93vw;
+    margin: 0 auto;
+  }
 }
 /*# sourceMappingURL=main.css.map */

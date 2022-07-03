@@ -5,4 +5,9 @@
 
 main {
     overflow-x: hidden;
+
+    @include laptop{
+        width: 93vw;
+        margin: 0 auto;
+    }
 }

@@ -492,6 +492,14 @@
                 &__link {
                     padding: 100%;
                     z-index: 10;
+
+                    @include laptop{
+                        padding: 50%;
+                        z-index: 10;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
                 }
     
                 &:hover {
@@ -564,6 +572,18 @@
         display: flex;
         justify-content: space-around;
         flex-direction: column;
+
+        @include small-screen{
+            font-size: 1.2rem;
+            flex-direction: row;
+            margin-top: 5rem;
+
+            .email{
+                font-size: 1.6rem;
+                text-transform: lowercase;
+            }
+
+        }
 
         .contact-method{
             transform: translateY(-100%);
