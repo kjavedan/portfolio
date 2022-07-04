@@ -568,6 +568,7 @@ body p {
     width: 75%;
     margin-left: auto;
     margin-top: 10%;
+    margin-bottom: 10%;
   }
 }
 
@@ -697,7 +698,6 @@ body p {
 
 .container .projects .project-container {
   height: 350px;
-  background-color: red;
 }
 
 .container .projects .project-container.open .projects-item {
@@ -870,6 +870,17 @@ body p {
   color: #FCE38A;
 }
 
+@media screen and (min-width: 980px) {
+  .container .my-porjects-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .container .my-porjects-wrapper .sub-wrapper {
+    width: 50%;
+  }
+}
+
 .container__animation-div {
   position: relative;
   z-index: -2;
@@ -966,7 +977,7 @@ body p {
     display: -ms-flexbox;
     display: flex;
   }
-  .container.about .container-wrapper {
+  .container.about .wrapper {
     width: 50%;
   }
 }

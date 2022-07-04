@@ -64,7 +64,7 @@
         <section class="about-me" id="about-me">
             <div class="container about">
                 <!-- div to wrap the title and the animation line in the large screen size -->
-                <div class="container-wrapper">
+                <div class="wrapper">
                     <!-- slide-in line  -->
                     <div class="container__animation-line"></div>
                     <!-- container main title -->
@@ -78,7 +78,7 @@
                     </div>
                 </div>
                 <!-- div to wrap the subtitle, text and the button in the large screen size -->
-                <div class="container-wrapper" style="margin-top:15%">
+                <div class="wrapper" style="margin-top:15%">
                     <!-- container subtitle -->
                     <div class="container__subtitle">
                         <h2 class="subtitle">
@@ -106,7 +106,7 @@
         <!-- What I do section -->
         <section class="my-skills" id="my-skills">
             <div class="container">
-                <!-- <div class="container-wrapper"> -->
+                <!-- <div class="wrapper"> -->
                 <!-- slide-in line  -->
                 <div class="container__animation-line"></div>
                 <!-- container main title -->
@@ -189,32 +189,45 @@
         <!-- projects section -->
         <section class="my-projects" id="my-projects">
             <div class="container">
-                <!-- slide-in line  -->
-                <div class="container__animation-line"></div>
-                <!-- container main title -->
-                <div class="container__title">
-                    <h1 class="title">
-                        <span class="my-title">my</span>
-                    </h1>
-                    <h1 class="title">
-                        <span class="my-title">projects</span>
-                    </h1>
-                </div>
-                <!-- container subtitle -->
-                <div class="container__subtitle">
-                    <h2 class="subtitle">
-                        I Love
-                    </h2>
-                    <h3 class="subtitle">
-                        What I do
-                    </h3>
-                </div>
-                <!-- container text -->
-                <div class="container__text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque placeat repellendus soluta minus
-                        magnam rem animi recusandae fugit amet consectetur. Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Sint ab soluta consequuntur dolor adipisci ipsa recusandae suscipit
-                        dignissimos reiciendis nostrum?</p>
+                <!-- wrapping to div with one container in order to apply flex on large screen -->
+                <div class="my-porjects-wrapper">
+                    <div class="sub-wrapper">
+                        <!-- slide-in line  -->
+                        <div class="container__animation-line"></div>
+                        <!-- container main title -->
+                        <div class="container__title">
+                            <h1 class="title">
+                                <span class="my-title">my</span>
+                            </h1>
+                            <h1 class="title">
+                                <span class="my-title">projects</span>
+                            </h1>
+                        </div>
+                    </div>
+                    <!-- container to wrapp the subtitle and the text -->
+                    <div class="sub-wrapper" style="margin-top: 15%;">
+                        <!-- container subtitle -->
+                        <div class="container__subtitle">
+                            <h2 class="subtitle">
+                                I Love
+                            </h2>
+                            <h3 class="subtitle">
+                                What I do
+                            </h3>
+                        </div>
+                        <!-- container text -->
+                        <div class="container__text">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque placeat repellendus soluta
+                                minus
+                                magnam rem animi recusandae fugit amet consectetur. Lorem ipsum dolor sit amet
+                                consectetur
+                                adipisicing elit. Sint ab soluta consequuntur dolor adipisci ipsa recusandae suscipit
+                                dignissimos reiciendis nostrum?</p>
+                        </div>
+                        <!-- button -->
+                        <div class="container__button"><a class="more" href="">All projects <img
+                                    src="/dist/img/svg/right-arrow.svg" alt=""> </a></div>
+                    </div>
                 </div>
                 <!-- projects -->
                 <div class="projects">
@@ -309,9 +322,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- button -->
-                <div class="container__button" style="margin-top: 2rem;"><a class="more" href="">All projects <img
-                            src="/dist/img/svg/right-arrow.svg" alt=""> </a></div>
             </div>
         </section>
         <!-- contact me section -->

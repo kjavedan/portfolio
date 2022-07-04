@@ -40,8 +40,10 @@ const contactMethods = document.querySelectorAll('.contact-method');
 
 // get the containers of all sections
 const sectionContainer = document.querySelectorAll('.container');
-// get the containers wrappers in all sections
-const containerWrapper = document.querySelectorAll('.container-wrapper');
+// get the about me and project wrapper in order to flex them in larger screen size
+const wrapper = document.querySelectorAll('.wrapper');
+const myProjectsWrapper = document.querySelector('.my-porjects-wrapper');
+const subWrapper = document.querySelectorAll('.sub-wrapper');
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -72,7 +74,7 @@ window.addEventListener('scroll', () => {
     if (scrollingPosition > 250) {
         aboutMe.classList.add('open');
         setSectionValues(sectionContainer);
-        setSectionValues(containerWrapper);
+        setSectionValues(wrapper);
         setSectionValues(animationLine);
         setSectionValues(containerTitle);
         setSectionValues(mainTitle);
@@ -86,10 +88,13 @@ window.addEventListener('scroll', () => {
         mySkills.classList.add('open');
         icons.classList.add('open');
         setItems(iconContainer);
+    
     }
     // displaying my projects section
     if (scrollingPosition > (myProjectsPosition - screenHeight + 500)) {
         myProjects.classList.add('open');
+        myProjectsWrapper.classList.add('open');
+        setSectionValues(subWrapper);
         setSectionValues(animationLine);
         setSectionValues(containerTitle);
         setSectionValues(myTitle);
