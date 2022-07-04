@@ -7,6 +7,7 @@
         position: relative;
         // background-color:rgb(183, 137, 81);
         height: 70vh;
+
         &__pic {
             position: absolute;
             top: 0;
@@ -38,7 +39,7 @@
             }
 
             h4 {
-                
+
                 // font-family: $ff-primary-3;
             }
 
@@ -91,12 +92,13 @@
         border-radius: 2px;
         background-color: $primary-clr-1;
         display: none;
+
         &.open {
             display: inline-block;
             animation: slide-in-left .5s;
         }
     }
-   
+
 
     //  main title*************************************
     &__title,
@@ -206,74 +208,93 @@
         transition: .8s ease-in-out;
 
         grid-template-areas: 'computer design team'
-        'arrow1 arrow2 arrow3'
-        'js figma git'
-        'react xd github'
-        'scss empty1 empty2';
-    // displaying icons in tablet screen size ********************
-        @include tablet{
+            'arrow1 arrow2 arrow3'
+            'js figma git'
+            'react xd github'
+            'scss empty1 empty2';
+
+        // displaying icons in tablet screen size ********************
+        @include tablet {
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: 1.5fr .5fr 1fr 1fr 1fr;
 
-            .computer{
+            .computer {
                 grid-area: computer;
             }
-            .design{
+
+            .design {
                 grid-area: design;
             }
-            .team{
+
+            .team {
                 grid-area: team;
             }
-            .arrow1,.arrow2,.arrow3{
+
+            .arrow1,
+            .arrow2,
+            .arrow3 {
                 transition: all 1s ease-in-out;
                 transform: rotate(450deg);
             }
-            .arrow1{
+
+            .arrow1 {
                 grid-area: arrow1;
-                
+
             }
-            .arrow2{
+
+            .arrow2 {
                 grid-area: arrow2;
             }
-            .arrow3{
+
+            .arrow3 {
                 grid-area: arrow3;
             }
-            .js{
+
+            .js {
                 grid-area: js;
             }
-            .figma{
+
+            .figma {
                 grid-area: figma;
             }
-            .git{
+
+            .git {
                 grid-area: git;
             }
-            .react{
+
+            .react {
                 grid-area: react;
             }
-            .xd{
+
+            .xd {
                 grid-area: xd;
             }
-            .github{
+
+            .github {
                 grid-area: github;
             }
-            .scss{
+
+            .scss {
                 grid-area: scss;
             }
-            .empty1{
+
+            .empty1 {
                 grid-area: empty1;
             }
-            .empty2{
+
+            .empty2 {
                 grid-area: empty2;
             }
-            .icons-container{
+
+            .icons-container {
                 padding: 1rem;
             }
         }
 
-// the animation div that slide in from the top
-        &__animation-div{
+        // the animation div that slide in from the top
+        &__animation-div {
             position: absolute;
-            top: -7%;   
+            top: -7%;
             left: 2%;
             padding-bottom: 0;
             padding-right: 40%;
@@ -281,7 +302,7 @@
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             transition: all 1s ease-in-out;
 
-            @include tablet{
+            @include tablet {
                 left: 0;
                 box-shadow: none;
 
@@ -289,18 +310,18 @@
         }
 
         &.open {
-            
-            .icons__animation-div{
+
+            .icons__animation-div {
                 padding-bottom: 450px;
                 background-color: $primary-clr-1;
 
-                @include tablet{
+                @include tablet {
                     padding-bottom: 220px;
                     padding-right: 100%;
                 }
             }
         }
-       
+
 
         // each icon container *************************
         .icons-container {
@@ -322,7 +343,8 @@
                 font-size: .7rem;
                 color: $primary-text-clr-2;
             }
-            p{
+
+            p {
                 font-size: .8rem;
                 line-height: 0;
                 padding-top: .7rem;
@@ -349,13 +371,15 @@
         width: 100vw;
         margin-left: -13%;
 
-        @include tablet{
+        @include tablet {
             grid-template-columns: 1fr 1fr;
         }
-        @include small-screen{
+
+        @include small-screen {
             grid-template-columns: 1fr 1fr 1fr;
         }
-        @include laptop{
+
+        @include laptop {
             grid-template-columns: 1fr 1fr 1fr 1fr;
 
         }
@@ -371,6 +395,7 @@
                     animation: fade-in-bottom 1s;
                 }
             }
+
             .projects-item {
                 position: relative;
                 height: 100%;
@@ -385,7 +410,7 @@
                 // @include mini-tablet{
                 //     height: 100%;
                 // }
-    
+
                 // project logo*****************************************
                 &__logo {
                     position: absolute;
@@ -394,48 +419,54 @@
                     width: 30%;
                     height: 30%;
                     // background-color: red;
-    
-                    img{
+
+                    img {
                         padding: 1rem;
                         width: 70%;
                         // background-color: blue;
                     }
-    
+
                 }
+
                 // project image
-                &__image{
+                &__image {
                     position: absolute;
                     top: 0;
                     left: 0;
                     margin-left: auto;
                     margin-right: auto;
 
-                    @include mobile{
+                    @include mobile {
                         left: -15%;
                         height: 100%;
                     }
-                    @include large-mobile{
+
+                    @include large-mobile {
                         height: 100%;
                     }
-                    @include mini-tablet{
-                    max-width: 100%;
-                    height: auto;
+
+                    @include mini-tablet {
+                        max-width: 100%;
+                        height: auto;
                     }
-                    @include tablet{
+
+                    @include tablet {
                         height: 100%;
                         max-width: fit-content;
                         left: -8%;
                     }
-                    @include large-tablet{
+
+                    @include large-tablet {
                         left: 0;
                     }
-                    @include small-screen{
+
+                    @include small-screen {
                         left: -15%;
                     }
-                    
+
 
                 }
-    
+
                 // project info****************************************
                 &__info {
                     position: absolute;
@@ -445,23 +476,23 @@
                     height: 50%;
                     // background-color: blue;
                     padding: 1.5rem;
-    
+
                     @include transition-ease;
-    
+
                     // project title ***************************************
                     .project-title {
                         font-size: 1.5rem;
                         color: $primary-text-clr-3;
                         @include transition-ease;
                     }
-    
+
                     // project subtitle ***************************************
                     .project-subtitle {
                         margin-top: 1rem;
                         color: $primary-text-clr-3;
                         font-family: $ff-primary-3;
                     }
-    
+
                     // project category ***************************************
                     .project-category {
                         padding-top: 2rem;
@@ -469,7 +500,7 @@
                         font-size: 1.5rem;
                     }
                 }
-    
+
                 // project buttons ***************************************
                 &__btns {
                     position: absolute;
@@ -479,21 +510,21 @@
                     height: 18%;
                     @include centralize;
                     @include transition-ease;
-    
+
                     .project__btn {
                         color: $primary-text-clr-3;
                         display: none;
                         @include transition-ease;
                     }
-    
+
                 }
-    
+
                 // project link to the project page ***************************************
                 &__link {
                     padding: 100%;
                     z-index: 10;
 
-                    @include laptop{
+                    @include laptop {
                         padding: 50%;
                         z-index: 10;
                         position: absolute;
@@ -501,37 +532,35 @@
                         left: 0;
                     }
                 }
-    
+
                 &:hover {
                     cursor: pointer;
-    
+
                     .projects-item__info {
                         bottom: 0;
+
                         .project-title {
                             color: $primary-clr-1;
                         }
                     }
-    
+
                     .project__btn {
                         display: block;
-    
+
                         &:hover {
                             color: $primary-clr-1;
                         }
                     }
                 }
             }
-    
-
-
 
         }
 
-        
-    
     }
-     // animation div************************************
-     &__animation-div{
+    
+
+    // animation div************************************
+    &__animation-div {
         position: relative;
         z-index: -2;
         margin-top: -3rem;
@@ -543,8 +572,8 @@
         transform: translateX(100%);
         transition: all .5s ease-in-out;
         @include centralize;
-        
-        .div-1{
+
+        .div-1 {
             position: absolute;
             top: 0;
             z-index: -1;
@@ -553,11 +582,11 @@
             background-color: $primary-clr-1;
         }
 
-        &.open{
+        &.open {
             transform: translateX(0);
         }
 
-        .text{
+        .text {
             width: 70%;
             background-color: $primary-clr-3;
             padding: 2rem;
@@ -566,32 +595,33 @@
 
         }
     }
-    &__contact-info{
+
+    &__contact-info {
         margin-top: 1rem;
         height: 250px;
         display: flex;
         justify-content: space-around;
         flex-direction: column;
 
-        @include small-screen{
+        @include small-screen {
             font-size: 1.2rem;
             flex-direction: row;
             margin-top: 5rem;
 
-            .email{
+            .email {
                 font-size: 1.6rem;
                 text-transform: lowercase;
             }
 
         }
 
-        .contact-method{
+        .contact-method {
             transform: translateY(-100%);
             animation: slide-in-top;
             transition: all 1s ease-in-out;
 
-            &.open{
-                
+            &.open {
+
                 display: block;
                 transform: translateY(0);
             }
@@ -599,60 +629,33 @@
     }
 
 }
-// copy right section *****************
-    .copy{
-        text-align: center;
-        padding-top: .7rem;
-        height: 3rem;
-        background-color: $primary-clr-2;
-        border-top: 1px solid rgb(208, 206, 206);
-
-        @include laptop{
-            z-index: 20;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            display: flex;
-            text-align: left;
-            padding-left: 3rem;
-            border: none;
+@include small-screen {
+    .container.about {
+        display: flex;
+        .container-wrapper {
+            width: 50%;
         }
     }
 
-// animations **********************************
-@keyframes slide-in-left {
-    0% {
-        transform: translateX(-200%);
-        padding-left: 160px;
-    }
-
-    100% {
-        transform: translateX(0%);
-        padding-left: 30px;
-
-    }
 }
 
-@keyframes fade-in-bottom {
-    0% {
-        opacity: 0;
-        transform: translateY(100%)
-    }
+// copy right section *****************
+.copy {
+    text-align: center;
+    padding-top: .7rem;
+    height: 3rem;
+    background-color: $primary-clr-2;
+    border-top: 1px solid rgb(208, 206, 206);
 
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-@keyframes slide-in-top {
-    0% {
-        opacity: 0;
-        transform: translateY(-100%)
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
+    @include laptop {
+        z-index: 20;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        text-align: left;
+        padding-left: 3rem;
+        border: none;
     }
 }

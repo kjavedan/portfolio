@@ -99,10 +99,96 @@ body{
 
 //mixins*******************************************
 @mixin transition-ease{
-    transition: all .3s ease-in-out;
+    transition: all .4s ease-in-out;
 }
 @mixin centralize{
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+
+// animations **********************************
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-200%);
+        padding-left: 160px;
+    }
+
+    100% {
+        transform: translateX(0%);
+        padding-left: 30px;
+
+    }
+}
+
+@keyframes fade-in-bottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100%)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slide-in-top {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+//-----------------------------
+@keyframes fade-in-motion-up {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-11%);
+        opacity: 1;
+
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        transform: translate(50%);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes fade-in-left {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes drop-in {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+
 }

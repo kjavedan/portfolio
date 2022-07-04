@@ -10,12 +10,11 @@ const contactMe = document.getElementById('contact-me');
 
 
 /*
-I want to display each project when the user scroll to its position on the page
+I wnat to open each section in flex style when the user scroll to the specefic section
 
-1. get each project value
-2. get each project postion
-3. hide project in the default mode
-4. display the project once the user scroll to its position
+1. recognize the section
+2. add class open to the section
+3. add class open to the section children elements
 */
 
 const burgerBtn = document.querySelector('.menu-btn__burger');
@@ -27,6 +26,7 @@ const leftDiv = document.querySelector('.left-div__animation');
 const myName = document.querySelector('.my-name');
 const myJob = document.querySelector('.my-job');
 const containerTitle = document.querySelectorAll('.container__title');
+const mainTitle = document.querySelectorAll('.title');
 const myTitle = document.querySelectorAll('.my-title');
 const animationLine = document.querySelectorAll('.container__animation-line');
 const sectionSubtitle = document.querySelectorAll('.container__subtitle');
@@ -37,6 +37,11 @@ const iconContainer = document.querySelectorAll('.icons-container');
 const animationDiv = document.querySelector('.container__animation-div');
 const projectsContainer = document.querySelectorAll('.project-container');
 const contactMethods = document.querySelectorAll('.contact-method');
+
+// get the containers of all sections
+const sectionContainer = document.querySelectorAll('.container');
+// get the containers wrappers in all sections
+const containerWrapper = document.querySelectorAll('.container-wrapper');
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -66,8 +71,11 @@ window.addEventListener('scroll', () => {
     // displaying about me section
     if (scrollingPosition > 250) {
         aboutMe.classList.add('open');
+        setSectionValues(sectionContainer);
+        setSectionValues(containerWrapper);
         setSectionValues(animationLine);
         setSectionValues(containerTitle);
+        setSectionValues(mainTitle);
         setSectionValues(myTitle);
         setSectionValues(sectionSubtitle);
         setSectionValues(sectionText);
@@ -139,7 +147,7 @@ menuBtn.addEventListener('click', () => {
 function setSectionValues(items) {
 
     items.forEach(item => {
-        if (item.parentNode.parentNode.classList.contains('open')) {
+        if (item.parentNode.classList.contains('open')) {
             item.classList.add('open');
         }
     });
