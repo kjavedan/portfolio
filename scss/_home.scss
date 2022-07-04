@@ -82,7 +82,7 @@
 .container {
     width: 80vw;
     margin: 0 auto;
-    padding: 6rem 0 1rem 0;
+    padding: 4rem 0 0 0;
 
     // the orange animated line********************************
     &__animation-line {
@@ -289,6 +289,12 @@
             .icons-container {
                 padding: 1rem;
             }
+
+            @include small-screen{
+                width: 75%;
+                margin-left: auto;
+                margin-top: 10%;
+            }
         }
 
         // the animation div that slide in from the top
@@ -319,6 +325,11 @@
                     padding-bottom: 220px;
                     padding-right: 100%;
                 }
+
+                @include small-screen{
+                    box-shadow: #FCE38A 5px 5px, #fae28a 10px 10px, #fae597 15px 15px, #f7e6a6 20px 20px, #f9eab5 25px 25px;
+
+                }
             }
         }
 
@@ -338,7 +349,7 @@
                 flex-direction: column;
                 animation: fade-in-bottom .5s;
             }
-
+            
             h4 {
                 font-size: .7rem;
                 color: $primary-text-clr-2;
@@ -358,6 +369,12 @@
                 width: 40px;
                 height: 1px;
                 background-color: $primary-clr-4;
+            }
+
+            @include small-screen{
+                img{
+                        width: 50px;
+                }
             }
         }
 
@@ -629,6 +646,7 @@
     }
 
 }
+// flexing the about me section on large screen
 @include small-screen {
     .container.about {
         display: flex;

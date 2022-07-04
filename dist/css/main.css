@@ -270,7 +270,7 @@ body p {
 
 .landing-page {
   height: 100vh;
-  background-color: #FFC26A;
+  background-color: #FCE38A;
 }
 
 .landing-page .profile {
@@ -336,7 +336,7 @@ body p {
 .container {
   width: 80vw;
   margin: 0 auto;
-  padding: 6rem 0 1rem 0;
+  padding: 4rem 0 0 0;
 }
 
 .container__animation-line {
@@ -344,7 +344,7 @@ body p {
   padding: 0 30px;
   display: inline-block;
   border-radius: 2px;
-  background-color: #FFC26A;
+  background-color: #FCE38A;
   display: none;
 }
 
@@ -406,7 +406,7 @@ body p {
 }
 
 .container__button {
-  background-color: #FFC26A;
+  background-color: #FCE38A;
   padding: 0px 6px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -563,6 +563,14 @@ body p {
   }
 }
 
+@media screen and (min-width: 660px) and (min-width: 980px) {
+  .container .icons {
+    width: 75%;
+    margin-left: auto;
+    margin-top: 10%;
+  }
+}
+
 .container .icons__animation-div {
   position: absolute;
   top: -7%;
@@ -586,13 +594,20 @@ body p {
 
 .container .icons.open .icons__animation-div {
   padding-bottom: 450px;
-  background-color: #FFC26A;
+  background-color: #FCE38A;
 }
 
 @media screen and (min-width: 660px) {
   .container .icons.open .icons__animation-div {
     padding-bottom: 220px;
     padding-right: 100%;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  .container .icons.open .icons__animation-div {
+    -webkit-box-shadow: #FCE38A 5px 5px, #fae28a 10px 10px, #fae597 15px 15px, #f7e6a6 20px 20px, #f9eab5 25px 25px;
+            box-shadow: #FCE38A 5px 5px, #fae28a 10px 10px, #fae597 15px 15px, #f7e6a6 20px 20px, #f9eab5 25px 25px;
   }
 }
 
@@ -641,6 +656,12 @@ body p {
   width: 40px;
   height: 1px;
   background-color: #000;
+}
+
+@media screen and (min-width: 980px) {
+  .container .icons .icons-container img {
+    width: 50px;
+  }
 }
 
 .container .projects {
@@ -838,7 +859,7 @@ body p {
 }
 
 .container .projects .project-container .projects-item:hover .projects-item__info .project-title {
-  color: #FFC26A;
+  color: #FCE38A;
 }
 
 .container .projects .project-container .projects-item:hover .project__btn {
@@ -846,7 +867,7 @@ body p {
 }
 
 .container .projects .project-container .projects-item:hover .project__btn:hover {
-  color: #FFC26A;
+  color: #FCE38A;
 }
 
 .container__animation-div {
@@ -878,7 +899,7 @@ body p {
   z-index: -1;
   width: 100%;
   height: 60%;
-  background-color: #FFC26A;
+  background-color: #FCE38A;
 }
 
 .container__animation-div.open {
@@ -995,7 +1016,7 @@ body p {
 }
 
 .right-div__animation {
-  background-color: #FFC26A;
+  background-color: #FCE38A;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   z-index: 9;
@@ -1146,13 +1167,13 @@ header .nav {
 }
 
 .nav-menu__item.active > a {
-  -webkit-text-decoration: underline 3px #FFC26A;
-          text-decoration: underline 3px #FFC26A;
+  -webkit-text-decoration: underline 3px #FCE38A;
+          text-decoration: underline 3px #FCE38A;
 }
 
 .nav-menu__item.active > a:hover {
-  -webkit-text-decoration: underline 3px #FFC26A;
-          text-decoration: underline 3px #FFC26A;
+  -webkit-text-decoration: underline 3px #FCE38A;
+          text-decoration: underline 3px #FCE38A;
 }
 
 .nav-menu__item a {
@@ -1161,8 +1182,8 @@ header .nav {
 }
 
 .nav-menu__item a:hover {
-  -webkit-text-decoration: underline 3px wavy #FFC26A;
-          text-decoration: underline 3px wavy #FFC26A;
+  -webkit-text-decoration: underline 3px wavy #FCE38A;
+          text-decoration: underline 3px wavy #FCE38A;
 }
 
 @media screen and (min-width: 1200px) {
