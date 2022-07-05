@@ -871,6 +871,21 @@ body p {
 }
 
 @media screen and (min-width: 980px) {
+  .container .projects {
+    height: 530px;
+  }
+  .container .projects > .project-container:nth-child(2) {
+    margin-top: 17%;
+  }
+  .container .projects > .project-container:nth-child(3) {
+    margin-top: 35%;
+  }
+  .container .projects > .project-container:nth-child(4) {
+    margin-top: auto;
+  }
+}
+
+@media screen and (min-width: 980px) {
   .container .my-porjects-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
