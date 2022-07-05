@@ -421,12 +421,7 @@
                 z-index: 0;
                 display: none;
                 @include transition-ease;
-                // @include large-mobile{
-                //     height: 350px;
-                // }
-                // @include mini-tablet{
-                //     height: 100%;
-                // }
+               
 
                 // project logo*****************************************
                 &__logo {
@@ -571,8 +566,11 @@
 
         }
 
-        @include small-screen{
+        @include laptop{
             height: 530px;
+            width: 100%;
+            margin: 10rem auto 5rem;
+            // margin: 5rem auto;
 
             & > .project-container:nth-child(2){
                 margin-top: 17%;
@@ -581,9 +579,10 @@
                 margin-top: 35%;
             }
             & > .project-container:nth-child(4){
-                margin-top: auto;
+                margin-top: 53%;
             }
         }
+
     }
     
     @include small-screen{

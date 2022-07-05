@@ -870,9 +870,11 @@ body p {
   color: #FCE38A;
 }
 
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 1200px) {
   .container .projects {
     height: 530px;
+    width: 100%;
+    margin: 10rem auto 5rem;
   }
   .container .projects > .project-container:nth-child(2) {
     margin-top: 17%;
@@ -881,7 +883,7 @@ body p {
     margin-top: 35%;
   }
   .container .projects > .project-container:nth-child(4) {
-    margin-top: auto;
+    margin-top: 53%;
   }
 }
 
@@ -1039,6 +1041,12 @@ body p {
 .left-div__animation.open, .open.right-div__animation {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+@media screen and (min-width: 1200px) {
+  .left-div__animation, .right-div__animation {
+    display: none;
+  }
 }
 
 .right-div__animation {

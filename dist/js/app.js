@@ -68,7 +68,7 @@ window.addEventListener('scroll', () => {
     const projectFourPosition = projectFour.offsetTop;
     const contactMePosition = contactMe.offsetTop;
 
-    console.log(screen.width);
+    // console.log(screen.width);
 
     // displaying about me section
     if (scrollingPosition > 250) {
@@ -121,7 +121,7 @@ window.addEventListener('scroll', () => {
     if(screenWidth >= 660 ){
         if(scrollingPosition > (projectOnePosition - screenHeight + 300)){
         setItems(projectsContainer);
-        console.log(projectsContainer);
+        // console.log(projectsContainer);
         }
     }
     // displaying contact me sectoin 
@@ -144,6 +144,19 @@ menuBtn.addEventListener('click', () => {
     })
 })
 
+//-----------------------------------------------------
+// display the nav items on large screen when the user try to expan the nav from the moile screen size untill the large screen
+window.onresize = ()=>{
+    if(screen.width > 1200){
+        navMenu.classList.remove('open');
+        setItems(navMenuItem);
+        burgerBtn.classList.remove('open');
+        rightDiv.classList.remove('open');
+        leftDiv.classList.remove('open');
+    }
+}
+//-----------------------------------------------------
+
 
 // functions************************************
 
@@ -161,7 +174,7 @@ function setSectionValues(items) {
 
 // add open class to each  container with a .4s delay
 function setItems(items) {
-    let wait = 200;
+    let wait = 300;
     items.forEach((item, index) => {
         setTimeout(() => {
             item.classList.add('open');
