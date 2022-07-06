@@ -8,7 +8,6 @@ const projectThree = document.getElementById('project-3');
 const projectFour = document.getElementById('project-4');
 const contactMe = document.getElementById('contact-me');
 
-
 /*
 I wnat to open each section in flex style when the user scroll to the specefic section
 
@@ -37,6 +36,8 @@ const iconContainer = document.querySelectorAll('.icons-container');
 const animationDiv = document.querySelector('.container__animation-div');
 const projectsContainer = document.querySelectorAll('.project-container');
 const contactMethods = document.querySelectorAll('.contact-method');
+const toTopBtn = document.querySelector('.to-top-wrapper');
+
 
 // get the containers of all sections
 const sectionContainer = document.querySelectorAll('.container');
@@ -65,7 +66,7 @@ window.addEventListener('scroll', () => {
     const projectFourPosition = projectFour.offsetTop;
     const contactMePosition = contactMe.offsetTop;
 
-    // console.log(screen.width);
+   
 
     // displaying about me section
     if (scrollingPosition > 250) {
@@ -79,8 +80,13 @@ window.addEventListener('scroll', () => {
         setSectionValues(sectionSubtitle);
         setSectionValues(sectionText);
         setSectionValues(sectionButton);
-        // displaying my skills section
+        toTopBtn.classList.add('open');
     }
+    //remove to top btn when the user go back to the landing page
+    if ( scrollingPosition < 250 ){
+        toTopBtn.classList.remove('open');
+    }
+
     if (scrollingPosition > (mySkillPosition - screenHeight + 500)) {
         mySkills.classList.add('open');
         icons.classList.add('open');
@@ -140,7 +146,10 @@ menuBtn.addEventListener('click', () => {
         item.classList.toggle('open');
     })
 })
-
+// scrolling to the top when the user click the to top btn
+toTopBtn.addEventListener('click', ()=>{
+    scrollTo( 0 , 0)
+})
 //-----------------------------------------------------
 // display the nav items on large screen when the user try to expan the nav from the moile screen size untill the large screen
 window.onresize = ()=>{
@@ -171,7 +180,7 @@ function setSectionValues(items) {
 
 // add open class to each  container with a .4s delay
 function setItems(items) {
-    let wait = 300;
+    let wait = 200;
     items.forEach((item, index) => {
         setTimeout(() => {
             item.classList.add('open');

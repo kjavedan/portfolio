@@ -18,6 +18,10 @@ Global variables
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #fff;
   font-family: "Montserrat", sans-serif;
@@ -113,6 +117,24 @@ body p {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
     padding-left: 30px;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -1491,6 +1513,32 @@ main {
 @media screen and (min-width: 1200px) {
   main {
     width: 93%;
+  }
+  main .to-top-wrapper {
+    width: auto;
+    height: 20px;
+    position: fixed;
+    bottom: 5px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 30;
+    font-size: 1rem;
+    display: none;
+    -webkit-animation: fade-in 1s;
+            animation: fade-in 1s;
+  }
+  main .to-top-wrapper i {
+    padding-left: .5rem;
+  }
+  main .to-top-wrapper a {
+    cursor: pointer;
+  }
+  main .to-top-wrapper:hover {
+    border-bottom: 2px solid orange;
+  }
+  main .to-top-wrapper.open {
+    display: block;
   }
 }
 /*# sourceMappingURL=main.css.map */

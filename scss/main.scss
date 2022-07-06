@@ -12,5 +12,33 @@ main {
 
     @include laptop{
         width: 93%;
+
+        .to-top-wrapper{
+            width: auto;
+            height: 20px;
+            position: fixed;
+            bottom: 5px;
+            left:50%;
+            transform: translate(-50% , -50%);
+            z-index: 30;
+            font-size: 1rem; 
+            display: none;
+            animation: fade-in 1s;
+            
+            i{
+                padding-left: .5rem;
+            }
+            a{
+                cursor: pointer;
+            }
+            &:hover{
+               border-bottom:2px solid orange;
+            }
+            
+            &.open{
+                display: block;
+            }
+        }
     }
+
 }
