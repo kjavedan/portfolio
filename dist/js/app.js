@@ -49,9 +49,6 @@ const subWrapper = document.querySelectorAll('.sub-wrapper');
 window.addEventListener('DOMContentLoaded', () => {
     myName.classList.add('open');
     myJob.classList.add('open');
-    // navMenuItem.forEach(item =>{
-    //     item.classList.add('open');
-    // })
     setItems(navMenuItem);
 
 })

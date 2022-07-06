@@ -2,10 +2,8 @@
     height: 100vh;
     background-color: $primary-clr-1;
 
-    // loading (gif and my name) styling
     .profile {
         position: relative;
-        // background-color:rgb(183, 137, 81);
         height: 70vh;
 
         &__pic {
@@ -15,27 +13,20 @@
             width: 60%;
             height: 80%;
             margin: 4rem auto .5rem;
-            // background-color: rgb(0, 0, 0);
-            // background-size: cover;
-            // background-position: center;
         }
 
         &__text {
-            // background-color: red;
             position: absolute;
             bottom: -30%;
             left: 5%;
-            // width: 100%;
             height: 20vh;
             margin: 2rem auto;
-            // @include centralize;
-            // flex-direction: column;
             color: $primary-text-clr-1;
 
             h1 {
+            
                 font-size: 1.4rem;
                 margin-top: 1rem;
-                // font-family: $ff-primary-4;
             }
 
             h4 {
@@ -76,6 +67,61 @@
             }
         }
     }
+    // mouse animation on the bottom of the landing page
+    .mouse-animation{
+        width:100px;
+        height: 100px;
+        margin: 0 auto;
+        
+          .mouse{
+            overflow: hidden;
+            width: 32px;
+            height: 50px;
+            // background-color: white;
+            border-radius: 100px;
+            position: relative;
+            margin: 10% auto;
+            animation : mouse-down 2s infinite;
+            z-index:0;
+            
+            &::before, &::after{
+               content:'';
+               top:0;
+               left: 0;
+               right: 0;
+               bottom: 0;
+               border-radius:100px;
+            }
+            &::before{
+                z-index: 1;
+                position: absolute;
+                height: 46px;
+                width: 26px;
+                margin: auto;
+                background-color:#FFC15C;
+            }
+            &::after{
+                z-index:3;
+                margin: 0 auto;
+                position: absolute;
+                background-color: #ffffff;
+                width: 8px;
+                height: 8px;
+                animation: dot-down 2s ease-in-out infinite;
+                top: 10px;
+            }
+            &__cover{
+              position: absolute;
+              bottom: 0;
+              border-radius: 100px;
+              width:100%;
+              background-color: white;
+              // padding-top:50px;
+              animation: disappear 2s infinite;
+              z-index: 0;
+            }
+          }
+       }
 }
 
 // about me section*****************************************

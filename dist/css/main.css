@@ -268,6 +268,92 @@ body p {
   }
 }
 
+@-webkit-keyframes dot-down {
+  0% {
+    top: 10px;
+    opacity: 1;
+  }
+  20% {
+    top: 5px;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    top: 30px;
+    opacity: 0;
+    width: 7px;
+    height: 7px;
+  }
+}
+
+@keyframes dot-down {
+  0% {
+    top: 10px;
+    opacity: 1;
+  }
+  20% {
+    top: 5px;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    top: 30px;
+    opacity: 0;
+    width: 7px;
+    height: 7px;
+  }
+}
+
+@-webkit-keyframes mouse-down {
+  0% {
+    top: 10px;
+  }
+  20% {
+    top: 0px;
+  }
+  100% {
+    top: 25px;
+  }
+}
+
+@keyframes mouse-down {
+  0% {
+    top: 10px;
+  }
+  20% {
+    top: 0px;
+  }
+  100% {
+    top: 25px;
+  }
+}
+
+@-webkit-keyframes disappear {
+  0% {
+    padding-top: 40px;
+  }
+  20% {
+    padding-top: 50px;
+  }
+  100% {
+    padding-top: 0;
+  }
+}
+
+@keyframes disappear {
+  0% {
+    padding-top: 40px;
+  }
+  20% {
+    padding-top: 50px;
+  }
+  100% {
+    padding-top: 0;
+  }
+}
+
 .landing-page {
   height: 100vh;
   background-color: #FCE38A;
@@ -331,6 +417,65 @@ body p {
 .landing-page .profile__text .name .my-job.open {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
+}
+
+.landing-page .mouse-animation {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.landing-page .mouse-animation .mouse {
+  overflow: hidden;
+  width: 32px;
+  height: 50px;
+  border-radius: 100px;
+  position: relative;
+  margin: 10% auto;
+  -webkit-animation: mouse-down 2s infinite;
+          animation: mouse-down 2s infinite;
+  z-index: 0;
+}
+
+.landing-page .mouse-animation .mouse::before, .landing-page .mouse-animation .mouse::after {
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 100px;
+}
+
+.landing-page .mouse-animation .mouse::before {
+  z-index: 1;
+  position: absolute;
+  height: 46px;
+  width: 26px;
+  margin: auto;
+  background-color: #FFC15C;
+}
+
+.landing-page .mouse-animation .mouse::after {
+  z-index: 3;
+  margin: 0 auto;
+  position: absolute;
+  background-color: #ffffff;
+  width: 8px;
+  height: 8px;
+  -webkit-animation: dot-down 2s ease-in-out infinite;
+          animation: dot-down 2s ease-in-out infinite;
+  top: 10px;
+}
+
+.landing-page .mouse-animation .mouse__cover {
+  position: absolute;
+  bottom: 0;
+  border-radius: 100px;
+  width: 100%;
+  background-color: white;
+  -webkit-animation: disappear 2s infinite;
+          animation: disappear 2s infinite;
+  z-index: 0;
 }
 
 .container {
