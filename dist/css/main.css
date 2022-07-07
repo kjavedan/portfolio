@@ -1502,12 +1502,25 @@ header .nav {
           transform: translate(-1px, -8px) rotate(-45deg);
 }
 
+#preloader {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  background: url(/dist/img/preloader-3.gif) no-repeat center #fff;
+  background-size: 30%;
+}
+
 main {
   overflow-x: hidden;
   margin: 0 auto;
   width: 100%;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
+}
+
+main .to-top-wrapper {
+  display: none;
 }
 
 @media screen and (min-width: 1200px) {

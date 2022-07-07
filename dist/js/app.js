@@ -15,7 +15,7 @@ I wnat to open each section in flex style when the user scroll to the specefic s
 2. add class open to the section
 3. add class open to the section children elements
 */
-
+const preloaer = document.getElementById('preloader');
 const burgerBtn = document.querySelector('.menu-btn__burger');
 const menuBtn = document.querySelector('.menu-btn');
 const navMenu = document.querySelector('.nav-menu');
@@ -46,6 +46,11 @@ const wrapper = document.querySelectorAll('.wrapper');
 const myProjectsWrapper = document.querySelector('.my-porjects-wrapper');
 const subWrapper = document.querySelectorAll('.sub-wrapper');
 
+
+// showing preloader until the page completely load
+window.addEventListener('load',()=>{
+    preloaer.style.display = "none";
+})
 
 window.addEventListener('DOMContentLoaded', () => {
     myName.classList.add('open');
