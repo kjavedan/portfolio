@@ -157,18 +157,6 @@ body{
     }
 }
 //-----------------------------
-@keyframes fade-in-motion-up {
-    0% {
-        opacity: 0;
-        transform: translateY(0);
-    }
-
-    100% {
-        transform: translateY(-11%);
-        opacity: 1;
-
-    }
-}
 
 @keyframes slide-in-right {
     0% {
@@ -196,10 +184,12 @@ body{
 
 @keyframes drop-in {
     0% {
+        opacity: 0;
         transform: translateY(-100%);
     }
 
     100% {
+        opacity: 1;
         transform: translateY(0%);
     }
 

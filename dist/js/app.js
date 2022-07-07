@@ -1,4 +1,4 @@
-// getting the sections 
+// getting main page sections  
 const aboutMe = document.getElementById('about-me');
 const mySkills = document.getElementById('my-skills');
 const myProjects = document.getElementById('my-projects');
@@ -8,22 +8,21 @@ const projectThree = document.getElementById('project-3');
 const projectFour = document.getElementById('project-4');
 const contactMe = document.getElementById('contact-me');
 
-/*
-I wnat to open each section in flex style when the user scroll to the specefic section
+// getting the home page variables
+const preloader = document.getElementById('preloader');
 
-1. recognize the section
-2. add class open to the section
-3. add class open to the section children elements
-*/
-const preloaer = document.getElementById('preloader');
+// menu variables ---------------------------------------------------
 const burgerBtn = document.querySelector('.menu-btn__burger');
 const menuBtn = document.querySelector('.menu-btn');
 const navMenu = document.querySelector('.nav-menu');
 const navMenuItem = document.querySelectorAll('.nav-menu__item');
-const rightDiv = document.querySelector('.right-div__animation');
-const leftDiv = document.querySelector('.left-div__animation');
+
+// landing page text variables --------------------------------------
 const myName = document.querySelector('.my-name');
 const myJob = document.querySelector('.my-job');
+
+// getting sections container variables which are simillar for most sections -------
+const sectionContainer = document.querySelectorAll('.container');
 const containerTitle = document.querySelectorAll('.container__title');
 const mainTitle = document.querySelectorAll('.title');
 const myTitle = document.querySelectorAll('.my-title');
@@ -31,6 +30,8 @@ const animationLine = document.querySelectorAll('.container__animation-line');
 const sectionSubtitle = document.querySelectorAll('.container__subtitle');
 const sectionText = document.querySelectorAll('.container__text');
 const sectionButton = document.querySelectorAll('.container__button');
+
+// variable related to my skill section ----------------------------------
 const icons = document.querySelector('.icons');
 const iconContainer = document.querySelectorAll('.icons-container');
 const animationDiv = document.querySelector('.container__animation-div');
@@ -38,44 +39,41 @@ const projectsContainer = document.querySelectorAll('.project-container');
 const contactMethods = document.querySelectorAll('.contact-method');
 const toTopBtn = document.querySelector('.to-top-wrapper');
 
+// used for nav animation mobile and tablet screen size-------------------
+const rightDiv = document.querySelector('.right-div__animation');
+const leftDiv = document.querySelector('.left-div__animation');
 
-// get the containers of all sections
-const sectionContainer = document.querySelectorAll('.container');
 // get the about me and project wrapper in order to flex them in larger screen size
 const wrapper = document.querySelectorAll('.wrapper');
 const myProjectsWrapper = document.querySelector('.my-porjects-wrapper');
 const subWrapper = document.querySelectorAll('.sub-wrapper');
 
-
-// showing preloader until the page completely load
-window.addEventListener('load',()=>{
-    preloaer.style.display = "none";
+// display preloader until the page completely load then load landing page content
+window.addEventListener('load', () => {
+    preloader.style.display = "none";
+    addClassOpenTo(myName);
+    addClassOpenTo(myJob);
+    setItems(navMenuItem)
 })
 
-window.addEventListener('DOMContentLoaded', () => {
-    myName.classList.add('open');
-    myJob.classList.add('open');
-    setItems(navMenuItem);
-
-})
 window.addEventListener('scroll', () => {
-    // getting sctions position while scrolling the page
     const scrollingPosition = window.pageYOffset;
-    const mySkillPosition = mySkills.offsetTop;
-    const myProjectsPosition = myProjects.offsetTop;
     const screenHeight = screen.height;
     const screenWidth = screen.width;
+    // getting sctions position while scrolling the page
+    const mySkillPosition = mySkills.offsetTop;
+    const myProjectsPosition = myProjects.offsetTop;
     const projectOnePosition = projectOne.offsetTop;
     const projectTwoPosition = projectTwo.offsetTop;
     const projectThreePosition = projectThree.offsetTop;
     const projectFourPosition = projectFour.offsetTop;
     const contactMePosition = contactMe.offsetTop;
 
-   
+
 
     // displaying about me section
     if (scrollingPosition > 250) {
-        aboutMe.classList.add('open');
+        addClassOpenTo(aboutMe);
         setSectionValues(sectionContainer);
         setSectionValues(wrapper);
         setSectionValues(animationLine);
@@ -85,18 +83,18 @@ window.addEventListener('scroll', () => {
         setSectionValues(sectionSubtitle);
         setSectionValues(sectionText);
         setSectionValues(sectionButton);
-        toTopBtn.classList.add('open');
+        addClassOpenTo(toTopBtn);
     }
     //remove to top btn when the user go back to the landing page
-    if ( scrollingPosition < 250 ){
-        toTopBtn.classList.remove('open');
+    if (scrollingPosition < 250) {
+        removeClassOpenFrom(toTopBtn);
     }
 
     if (scrollingPosition > (mySkillPosition - screenHeight + 500)) {
-        mySkills.classList.add('open');
-        icons.classList.add('open');
+        addClassOpenTo(mySkills);
+        addClassOpenTo(icons);
         setItems(iconContainer);
-    
+
     }
     // displaying my projects section
     if (scrollingPosition > (myProjectsPosition - screenHeight + 500)) {
@@ -111,76 +109,86 @@ window.addEventListener('scroll', () => {
         setSectionValues(sectionButton);
     }
     // displaying each project once the user scroll to its position on mobile screen size
-    if (screenWidth < 660) {
-        if (scrollingPosition > (projectOnePosition - screenHeight + 300)) {
-            projectOne.classList.add('open');
-        }
-        if (scrollingPosition > (projectTwoPosition - screenHeight + 300)) {
-            projectTwo.classList.add('open');
-        }
-        if (scrollingPosition > (projectThreePosition - screenHeight + 300)) {
-            projectThree.classList.add('open');
-        }
-        if (scrollingPosition > (projectFourPosition - screenHeight + 300)) {
-            projectFour.classList.add('open');
-        }
-    }
-    // displaying each project on large screen with a delay
-    if(screenWidth >= 660 ){
-        if(scrollingPosition > (projectOnePosition - screenHeight + 300)){
-        setItems(projectsContainer);
-        // console.log(projectsContainer);
-        }
-    }
+    // if (screenWidth < 660) {
+    //     if (scrollingPosition > (projectOnePosition - screenHeight + 300)) {
+    //         projectOne.classList.add('open');
+    //     }
+    //     if (scrollingPosition > (projectTwoPosition - screenHeight + 300)) {
+    //         projectTwo.classList.add('open');
+    //     }
+    //     if (scrollingPosition > (projectThreePosition - screenHeight + 300)) {
+    //         projectThree.classList.add('open');
+    //     }
+    //     if (scrollingPosition > (projectFourPosition - screenHeight + 300)) {
+    //         projectFour.classList.add('open');
+    //     }
+    // }
+    // // displaying each project on large screen with a delay
+    // if (screenWidth >= 660) {
+    //     if (scrollingPosition > (projectOnePosition - screenHeight + 300)) {
+    //         setItems(projectsContainer);
+    //         // console.log(projectsContainer);
+    //     }
+    // }
     // displaying contact me sectoin 
     if (scrollingPosition > (contactMePosition - screenHeight + 400)) {
-        contactMe.classList.add('open');
-        animationDiv.classList.add('open');
+        addClassOpenTo(contactMe);
+        addClassOpenTo(animationDiv);
         setItems(contactMethods);
     }
 
 
 })
-// displaying the nav-bar once it is clicked
-menuBtn.addEventListener('click', () => {
-    burgerBtn.classList.toggle('open');
-    navMenu.classList.toggle('open');
-    rightDiv.classList.toggle('open');
-    leftDiv.classList.toggle('open');
-    navMenuItem.forEach(item => {
-        item.classList.toggle('open');
-    })
-})
+
+
+
 // scrolling to the top when the user click the to top btn
-toTopBtn.addEventListener('click', ()=>{
-    scrollTo( 0 , 0)
+toTopBtn.addEventListener('click', () => {
+    scrollTo(0, 0)
 })
 //-----------------------------------------------------
 // display the nav items on large screen when the user try to expan the nav from the moile screen size untill the large screen
-window.onresize = ()=>{
-    if(screen.width > 1200){
+window.onresize = () => {
+    if (screen.width > 1200) {
         navMenu.classList.remove('open');
         setItems(navMenuItem);
         burgerBtn.classList.remove('open');
         rightDiv.classList.remove('open');
         leftDiv.classList.remove('open');
     }
+ 
+        
 }
+// displaying the nav-bar once it is clicked
+menuBtn.addEventListener('click', () => {
+    toggleClassOpen(burgerBtn);
+    toggleClassOpen(navMenu);
+    toggleClassOpen(rightDiv);
+    toggleClassOpen(leftDiv);
+   
+})
 //-----------------------------------------------------
 
 
 // functions************************************
+function addClassOpenTo(item) {
+    item.classList.add('open');
+}
 
+function removeClassOpenFrom(item){
+    item.classList.remove('open');
+}
+function toggleClassOpen(item){
+    item.classList.toggle('open');
+}
 
-// function to add the section list items
+// function to add the section items when the user scroll to their position
 function setSectionValues(items) {
-
     items.forEach(item => {
         if (item.parentNode.classList.contains('open')) {
             item.classList.add('open');
         }
     });
-
 }
 
 // add open class to each  container with a .4s delay
