@@ -130,6 +130,13 @@
     margin: 0 auto;
     padding: 4rem 0 0 0;
 
+    // adding margin to the container wrapper in the 980px scale
+    @include small-screen{
+        & > .wrapper:nth-child(2){
+            margin-top: 15%;
+        }
+    }
+
     // the orange animated line********************************
     &__animation-line {
         height: 3px;
@@ -455,7 +462,7 @@
             &.open {
                 .projects-item {
                     display: block;
-                    animation: fade-in-bottom 1s;
+                    animation: fade-in-bottom .7s;
                 }
             }
 
@@ -637,6 +644,7 @@
 
             .sub-wrapper{
                 width: 50%;
+                    &:nth-child(2){margin-top: 15%;}
             }
         }
     }

@@ -64,9 +64,6 @@ window.addEventListener('scroll', () => {
     const mySkillPosition = mySkills.offsetTop;
     const myProjectsPosition = myProjects.offsetTop;
     const projectOnePosition = projectOne.offsetTop;
-    const projectTwoPosition = projectTwo.offsetTop;
-    const projectThreePosition = projectThree.offsetTop;
-    const projectFourPosition = projectFour.offsetTop;
     const contactMePosition = contactMe.offsetTop;
 
 
@@ -108,28 +105,27 @@ window.addEventListener('scroll', () => {
         setSectionValues(sectionText);
         setSectionValues(sectionButton);
     }
-    // displaying each project once the user scroll to its position on mobile screen size
-    // if (screenWidth < 660) {
-    //     if (scrollingPosition > (projectOnePosition - screenHeight + 300)) {
-    //         projectOne.classList.add('open');
-    //     }
-    //     if (scrollingPosition > (projectTwoPosition - screenHeight + 300)) {
-    //         projectTwo.classList.add('open');
-    //     }
-    //     if (scrollingPosition > (projectThreePosition - screenHeight + 300)) {
-    //         projectThree.classList.add('open');
-    //     }
-    //     if (scrollingPosition > (projectFourPosition - screenHeight + 300)) {
-    //         projectFour.classList.add('open');
-    //     }
-    // }
-    // // displaying each project on large screen with a delay
-    // if (screenWidth >= 660) {
-    //     if (scrollingPosition > (projectOnePosition - screenHeight + 300)) {
-    //         setItems(projectsContainer);
-    //         // console.log(projectsContainer);
-    //     }
-    // }
+    // displaying the projects; 
+    /* *** note *** I have retyped the setItems function
+     here because if the user scroll pass my skills section
+     and reach my projects section the function is steel working at
+     my skills( reason : we have added some delay to display the items),
+     therefore we should wait until it finish executing there so the project section
+     can call it again. As a result it causes the computer to regiment.
+     now projects section has its own function which means that it doesn't need to wait.
+    */
+        if (scrollingPosition > (projectOnePosition - screenHeight + 300)) {
+            projectsContainer.forEach((project, index) =>{
+                setTimeout(()=>{
+                    project.classList.add('open');
+                }, 200 * index);
+            })
+        }
+           
+        
+    
+
+
     // displaying contact me sectoin 
     if (scrollingPosition > (contactMePosition - screenHeight + 400)) {
         addClassOpenTo(contactMe);
@@ -200,3 +196,4 @@ function setItems(items) {
         }, index * wait)
     })
 }
+
