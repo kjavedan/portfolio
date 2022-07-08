@@ -59,7 +59,6 @@ window.addEventListener('load', () => {
 window.addEventListener('scroll', () => {
     const scrollingPosition = window.pageYOffset;
     const screenHeight = screen.height;
-    const screenWidth = screen.width;
     // getting sctions position while scrolling the page
     const mySkillPosition = mySkills.offsetTop;
     const myProjectsPosition = myProjects.offsetTop;
@@ -118,7 +117,7 @@ window.addEventListener('scroll', () => {
             projectsContainer.forEach((project, index) =>{
                 setTimeout(()=>{
                     project.classList.add('open');
-                }, 200 * index);
+                }, 100 * index);
             })
         }
            

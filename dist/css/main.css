@@ -141,8 +141,8 @@ body p {
 @-webkit-keyframes fade-in-bottom {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%);
+    -webkit-transform: translateY(15%);
+            transform: translateY(15%);
   }
   100% {
     opacity: 1;
@@ -154,8 +154,8 @@ body p {
 @keyframes fade-in-bottom {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%);
+    -webkit-transform: translateY(15%);
+            transform: translateY(15%);
   }
   100% {
     opacity: 1;
@@ -853,8 +853,8 @@ body p {
 
 .container .projects .project-container.open .projects-item {
   display: block;
-  -webkit-animation: fade-in-bottom .7s;
-          animation: fade-in-bottom .7s;
+  -webkit-animation: fade-in-bottom .4s;
+          animation: fade-in-bottom .4s;
 }
 
 .container .projects .project-container .projects-item {
