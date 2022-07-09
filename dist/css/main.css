@@ -369,22 +369,48 @@ body p {
   top: 0;
   right: 10%;
   width: 60%;
-  height: 80%;
   margin: 4rem auto .5rem;
 }
 
 .landing-page .profile__text {
   position: absolute;
-  bottom: -30%;
   left: 5%;
   height: 20vh;
   margin: 2rem auto;
   color: #000;
+  bottom: -10%;
+}
+
+@media screen and (min-width: 980px) {
+  .landing-page .profile__text {
+    bottom: -30%;
+  }
 }
 
 .landing-page .profile__text h1 {
-  font-size: 1.4rem;
   margin-top: 1rem;
+  color: white;
+}
+
+.landing-page .profile__text h1 span {
+  line-height: 3rem;
+}
+
+@media screen and (min-width: 980px) {
+  .landing-page .profile__text h1 span {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  .landing-page .profile__text h4 {
+    color: #000;
+  }
+  .landing-page .profile__text h4 span {
+    line-height: 3rem;
+    font-size: 1.75rem;
+  }
 }
 
 .landing-page .profile__text .name {
@@ -525,6 +551,13 @@ body p {
           transform: translateY(100%);
 }
 
+@media screen and (min-width: 980px) {
+  .container__title .title .my-title, .container__title.open .title .my-title {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+}
+
 .container__title .title .my-title.open, .container__title.open .title .my-title.open {
   -webkit-transform: translateY(0);
           transform: translateY(0);
@@ -545,6 +578,13 @@ body p {
   margin-bottom: .5rem;
 }
 
+@media screen and (min-width: 980px) {
+  .container__subtitle .subtitle {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+}
+
 .container__text {
   display: none;
   margin-top: 1.5rem;
@@ -554,6 +594,15 @@ body p {
   -webkit-animation: fade-in-bottom 1.3s;
           animation: fade-in-bottom 1.3s;
   display: block;
+}
+
+@media screen and (min-width: 980px) {
+  .container__text.open {
+    font-size: .9rem;
+  }
+  .container__text.open p {
+    color: #676767;
+  }
 }
 
 .container__button {
