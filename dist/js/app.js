@@ -48,6 +48,10 @@ const wrapper = document.querySelectorAll('.wrapper');
 const myProjectsWrapper = document.querySelector('.my-porjects-wrapper');
 const subWrapper = document.querySelectorAll('.sub-wrapper');
 
+// getting the date and display in the footer
+const date = new Date();
+document.getElementById('date').textContent = date.getFullYear();
+
 // display preloader until the page completely load then load landing page content
 window.addEventListener('load', () => {
     preloader.style.display = "none";

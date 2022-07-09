@@ -619,6 +619,15 @@ body p {
       grid-template-areas: 'computer design team' 'arrow1 arrow2 arrow3' 'js figma git' 'react xd github' 'scss empty1 empty2';
 }
 
+.container .icons .arrow1,
+.container .icons .arrow2,
+.container .icons .arrow3 {
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
 @media screen and (min-width: 660px) {
   .container .icons {
     -ms-grid-columns: 1fr 1fr 1fr;
@@ -644,10 +653,10 @@ body p {
   .container .icons .arrow1,
   .container .icons .arrow2,
   .container .icons .arrow3 {
+    -webkit-transform: rotate(495deg);
+            transform: rotate(495deg);
     -webkit-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
-    -webkit-transform: rotate(450deg);
-            transform: rotate(450deg);
   }
   .container .icons .arrow1 {
     -ms-grid-row: 2;
@@ -1395,7 +1404,7 @@ header .nav {
 
 @media screen and (min-width: 1200px) {
   .nav-menu__item.social-media a {
-    font-size: 1.2rem;
+    font-size: 1rem;
     -webkit-transition: none;
     transition: none;
   }
@@ -1419,7 +1428,7 @@ header .nav {
 @media screen and (min-width: 1200px) {
   .nav-menu__item.social-media {
     position: fixed;
-    bottom: 1%;
+    bottom: .7rem;
     right: 3%;
     z-index: 30;
   }
@@ -1523,7 +1532,7 @@ main .to-top-wrapper {
     width: auto;
     height: 20px;
     position: fixed;
-    bottom: 5px;
+    bottom: .5rem;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);

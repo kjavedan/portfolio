@@ -174,7 +174,7 @@ header {
                 @include transition-ease;
 
                 @include laptop {
-                    font-size: 1.2rem;
+                    font-size: 1rem;
                     transition: none;
                 }
             }
@@ -199,7 +199,7 @@ header {
 
             @include laptop {
                 position: fixed;
-                bottom: 1%;
+                bottom: .7rem;
                 right: 3%;
                 z-index: 30;
             }

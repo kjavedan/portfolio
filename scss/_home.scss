@@ -266,6 +266,13 @@
             'react xd github'
             'scss empty1 empty2';
 
+            .arrow1,
+            .arrow2,
+            .arrow3 {
+                transition: all 1s ease-in-out;
+                transform: rotate(0deg);
+            }
+
         // displaying icons in tablet screen size ********************
         @include tablet {
             grid-template-columns: 1fr 1fr 1fr;
@@ -282,17 +289,16 @@
             .team {
                 grid-area: team;
             }
-
+            
             .arrow1,
             .arrow2,
             .arrow3 {
+                transform: rotate(495deg);
                 transition: all 1s ease-in-out;
-                transform: rotate(450deg);
             }
 
             .arrow1 {
                 grid-area: arrow1;
-
             }
 
             .arrow2 {
@@ -736,7 +742,7 @@
     height: 3rem;
     background-color: $primary-clr-2;
     border-top: 1px solid rgb(208, 206, 206);
-
+    
     @include laptop {
         z-index: 20;
         position: fixed;
@@ -747,5 +753,8 @@
         text-align: left;
         padding-left: 3rem;
         border: none;
+
+        p{
+        }
     }
 }
