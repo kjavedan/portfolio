@@ -57,7 +57,7 @@ window.addEventListener('load', () => {
     preloader.style.display = "none";
     addClassOpenTo(myName);
     addClassOpenTo(myJob);
-    setItems(navMenuItem)
+    setItems(navMenuItem);
 })
 
 window.addEventListener('scroll', () => {
