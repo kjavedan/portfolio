@@ -1,11 +1,17 @@
+// choosing the active page to display on the left-header
+const activePage = document.getElementById('active-page');
+const path = window.location.pathname;
+const page = path.split('/').pop().split('.');
+let currentPage = page[0];
+if(currentPage == "index") currentPage = "Home";
+activePage.textContent = currentPage;
+
+
 // getting main page sections  
 const aboutMe = document.getElementById('about-me');
 const mySkills = document.getElementById('my-skills');
 const myProjects = document.getElementById('my-projects');
 const projectOne = document.getElementById('project-1');
-const projectTwo = document.getElementById('project-2');
-const projectThree = document.getElementById('project-3');
-const projectFour = document.getElementById('project-4');
 const contactMe = document.getElementById('contact-me');
 
 // getting the home page variables
@@ -54,10 +60,10 @@ document.getElementById('date').textContent = date.getFullYear();
 
 // display preloader until the page completely load then load landing page content
 window.addEventListener('load', () => {
-    preloader.style.display = "none";
     addClassOpenTo(myName);
     addClassOpenTo(myJob);
     setItems(navMenuItem);
+    preloader.style.display = "none";
 })
 
 window.addEventListener('scroll', () => {

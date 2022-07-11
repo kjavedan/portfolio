@@ -1444,7 +1444,7 @@ header .nav {
 }
 
 .nav-menu__item.social-media a {
-  padding: .1rem .25rem 0 .25rem;
+  padding: .1rem .5rem 0 .5rem;
   font-size: 1rem;
   border-radius: 4px;
   -webkit-transition: all .4s ease-in-out;
