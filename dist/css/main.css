@@ -37,7 +37,6 @@ body ul {
 body a {
   text-decoration: none;
   color: #000;
-  font-family: "Bebas Neue", cursive;
   font-size: 1rem;
 }
 
@@ -1182,6 +1181,7 @@ body p {
   .container__contact-info .email {
     font-size: 1.6rem;
     text-transform: lowercase;
+    font-family: "Bebas Neue", cursive;
   }
 }
 
@@ -1323,17 +1323,17 @@ header .header-left .logo-nav {
       justify-content: space-around;
 }
 
-header .header-left .logo-nav .log-nav__icon {
+header .header-left .logo-nav__icon {
   -webkit-animation: drop-in .5s;
           animation: drop-in .5s;
 }
 
-header .header-left .logo-nav .log-nav__link {
+header .header-left .logo-nav__link {
   -webkit-animation: slide-in-right .5s;
           animation: slide-in-right .5s;
 }
 
-header .header-left .logo-nav .log-nav__link > a {
+header .header-left .logo-nav__link > a {
   font-family: "Courgette", cursive;
 }
 
@@ -1559,6 +1559,22 @@ header .nav {
   z-index: 100;
   background: url(/dist/img/preloader-3.gif) no-repeat center #fff;
   background-size: 30%;
+}
+
+#preloader .close-btn {
+  cursor: pointer;
+  position: fixed;
+  right: 3rem;
+  top: 2rem;
+  font-size: 2rem;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+#preloader .close-btn:hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  color: #FCE38A;
 }
 
 main {

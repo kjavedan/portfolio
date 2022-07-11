@@ -63,11 +63,11 @@ header {
 
             @include centralize;
 
-            .log-nav__icon {
+            &__icon {
                 animation: drop-in .5s;
             }
 
-            .log-nav__link {
+            &__link {
                 animation: slide-in-right .5s;
 
                 &>a {

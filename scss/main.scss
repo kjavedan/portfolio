@@ -11,6 +11,20 @@
     z-index: 100;
     background: url(/dist/img/preloader-3.gif) no-repeat center $primary-clr-3;
     background-size: 30%;
+
+    .close-btn{
+        cursor: pointer;
+        position: fixed;
+        right: 3rem;
+        top: 2rem;
+        font-size: 2rem;
+        @include transition-ease;
+
+        &:hover{
+            transform: translateY(-2px);
+            color: $primary-clr-1;
+        }
+    }
 }
 
 main {

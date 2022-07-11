@@ -1,12 +1,3 @@
-// choosing the active page to display on the left-header
-const activePage = document.getElementById('active-page');
-const path = window.location.pathname;
-const page = path.split('/').pop().split('.');
-let currentPage = page[0];
-if(currentPage == "index") currentPage = "Home";
-activePage.textContent = currentPage;
-
-
 // getting main page sections  
 const aboutMe = document.getElementById('about-me');
 const mySkills = document.getElementById('my-skills');
@@ -22,6 +13,21 @@ const burgerBtn = document.querySelector('.menu-btn__burger');
 const menuBtn = document.querySelector('.menu-btn');
 const navMenu = document.querySelector('.nav-menu');
 const navMenuItem = document.querySelectorAll('.nav-menu__item');
+// choosing the active page to display on the left-header
+const activePage = document.getElementById('active-page');
+const path = window.location.pathname;
+const page = path.split('/').pop();
+let currentPage = page.split('.')[0];
+if (currentPage == "index") currentPage = "Home";
+activePage.textContent = currentPage;
+//adding class active for the active page and removing the class active from the un active page
+navMenuItem.forEach(item => {
+    const link = item.firstChild.href
+    if (typeof (link) == 'string') {
+        const linkText = link.split('/').pop();
+        linkText == page ? item.classList.add("active") : item.classList.remove("active");
+    }
+})
 
 // landing page text variables --------------------------------------
 const myName = document.querySelector('.my-name');
@@ -63,6 +69,10 @@ window.addEventListener('load', () => {
     addClassOpenTo(myName);
     addClassOpenTo(myJob);
     setItems(navMenuItem);
+    preloader.style.display = "none";
+})
+// close preloader with a button 
+document.querySelector('.close-btn').addEventListener('click', ()=>{
     preloader.style.display = "none";
 })
 
@@ -123,16 +133,16 @@ window.addEventListener('scroll', () => {
      can call it again. As a result it causes the computer to regiment.
      now projects section has its own function which means that it doesn't need to wait.
     */
-        if (scrollingPosition > (projectOnePosition - screenHeight + 300)) {
-            projectsContainer.forEach((project, index) =>{
-                setTimeout(()=>{
-                    project.classList.add('open');
-                }, 100 * index);
-            })
-        }
-           
-        
-    
+    if (scrollingPosition > (projectOnePosition - screenHeight + 300)) {
+        projectsContainer.forEach((project, index) => {
+            setTimeout(() => {
+                project.classList.add('open');
+            }, 100 * index);
+        })
+    }
+
+
+
 
 
     // displaying contact me sectoin 
@@ -161,8 +171,8 @@ window.onresize = () => {
         rightDiv.classList.remove('open');
         leftDiv.classList.remove('open');
     }
- 
-        
+
+
 }
 // displaying the nav-bar once it is clicked
 menuBtn.addEventListener('click', () => {
@@ -170,7 +180,7 @@ menuBtn.addEventListener('click', () => {
     toggleClassOpen(navMenu);
     toggleClassOpen(rightDiv);
     toggleClassOpen(leftDiv);
-   
+
 })
 //-----------------------------------------------------
 
@@ -180,10 +190,10 @@ function addClassOpenTo(item) {
     item.classList.add('open');
 }
 
-function removeClassOpenFrom(item){
+function removeClassOpenFrom(item) {
     item.classList.remove('open');
 }
-function toggleClassOpen(item){
+function toggleClassOpen(item) {
     item.classList.toggle('open');
 }
 
