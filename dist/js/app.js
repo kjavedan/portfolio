@@ -15,14 +15,19 @@ const navMenu = document.querySelector('.nav-menu');
 const navMenuItem = document.querySelectorAll('.nav-menu__item');
 // choosing the active page to display on the left-header
 const activePage = document.getElementById('active-page');
+console.log(activePage); 
 const path = window.location.pathname;
+console.log(path); 
 const page = path.split('/').pop();
+console.log(page);
 let currentPage = page.split('.')[0];
 if (currentPage == "index") currentPage = "Home";
+console.log(currentPage); 
 activePage.textContent = currentPage;
 //adding class active for the active page and removing the class active from the un active page
 navMenuItem.forEach(item => {
     const link = item.firstChild.href
+    console.log(link);
     if (typeof (link) == 'string') {
         const linkText = link.split('/').pop();
         linkText == page ? item.classList.add("active") : item.classList.remove("active");
