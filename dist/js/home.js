@@ -5,34 +5,7 @@ const myProjects = document.getElementById('my-projects');
 const projectOne = document.getElementById('project-1');
 const contactMe = document.getElementById('contact-me');
 
-// getting the home page variables
-const preloader = document.getElementById('preloader');
 
-// menu variables ---------------------------------------------------
-const burgerBtn = document.querySelector('.menu-btn__burger');
-const menuBtn = document.querySelector('.menu-btn');
-const navMenu = document.querySelector('.nav-menu');
-const navMenuItem = document.querySelectorAll('.nav-menu__item');
-// choosing the active page to display on the left-header
-const activePage = document.getElementById('active-page');
-console.log(activePage); 
-const path = window.location.pathname;
-console.log(path); 
-const page = path.split('/').pop();
-console.log(page);
-let currentPage = page.split('.')[0];
-if (currentPage == "index") currentPage = "Home";
-console.log(currentPage); 
-activePage.textContent = currentPage;
-//adding class active for the active page and removing the class active from the un active page
-navMenuItem.forEach(item => {
-    const link = item.firstChild.href
-    console.log(link);
-    if (typeof (link) == 'string') {
-        const linkText = link.split('/').pop();
-        linkText == page ? item.classList.add("active") : item.classList.remove("active");
-    }
-})
 
 // landing page text variables --------------------------------------
 const myName = document.querySelector('.my-name');
@@ -56,30 +29,20 @@ const projectsContainer = document.querySelectorAll('.project-container');
 const contactMethods = document.querySelectorAll('.contact-method');
 const toTopBtn = document.querySelector('.to-top-wrapper');
 
-// used for nav animation mobile and tablet screen size-------------------
-const rightDiv = document.querySelector('.right-div__animation');
-const leftDiv = document.querySelector('.left-div__animation');
+
 
 // get the about me and project wrapper in order to flex them in larger screen size
 const wrapper = document.querySelectorAll('.wrapper');
 const myProjectsWrapper = document.querySelector('.my-porjects-wrapper');
 const subWrapper = document.querySelectorAll('.sub-wrapper');
 
-// getting the date and display in the footer
-const date = new Date();
-document.getElementById('date').textContent = date.getFullYear();
 
 // display preloader until the page completely load then load landing page content
 window.addEventListener('load', () => {
     addClassOpenTo(myName);
     addClassOpenTo(myJob);
-    setItems(navMenuItem);
-    preloader.style.display = "none";
 })
-// close preloader with a button 
-document.querySelector('.close-btn').addEventListener('click', ()=>{
-    preloader.style.display = "none";
-})
+
 
 window.addEventListener('scroll', () => {
     const scrollingPosition = window.pageYOffset;
@@ -159,36 +122,10 @@ window.addEventListener('scroll', () => {
 
 
 })
-
-
-
 // scrolling to the top when the user click the to top btn
 toTopBtn.addEventListener('click', () => {
     scrollTo(0, 0)
 })
-//-----------------------------------------------------
-// display the nav items on large screen when the user try to expan the nav from the moile screen size untill the large screen
-window.onresize = () => {
-    if (screen.width > 1200) {
-        navMenu.classList.remove('open');
-        setItems(navMenuItem);
-        burgerBtn.classList.remove('open');
-        rightDiv.classList.remove('open');
-        leftDiv.classList.remove('open');
-    }
-
-
-}
-// displaying the nav-bar once it is clicked
-menuBtn.addEventListener('click', () => {
-    toggleClassOpen(burgerBtn);
-    toggleClassOpen(navMenu);
-    toggleClassOpen(rightDiv);
-    toggleClassOpen(leftDiv);
-
-})
-//-----------------------------------------------------
-
 
 // functions************************************
 function addClassOpenTo(item) {
