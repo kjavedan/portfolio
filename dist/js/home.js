@@ -1,4 +1,6 @@
-// getting main page sections  
+import * as functions from './functions.js'
+
+// getting home page sections  
 const aboutMe = document.getElementById('about-me');
 const mySkills = document.getElementById('my-skills');
 const myProjects = document.getElementById('my-projects');
@@ -37,10 +39,10 @@ const myProjectsWrapper = document.querySelector('.my-porjects-wrapper');
 const subWrapper = document.querySelectorAll('.sub-wrapper');
 
 
-// display preloader until the page completely load then load landing page content
+
 window.addEventListener('load', () => {
-    addClassOpenTo(myName);
-    addClassOpenTo(myJob);
+    functions.addClassOpenTo(myName);
+    functions.addClassOpenTo(myJob);
 })
 
 
@@ -53,47 +55,48 @@ window.addEventListener('scroll', () => {
     const projectOnePosition = projectOne.offsetTop;
     const contactMePosition = contactMe.offsetTop;
 
+    
 
 
     // displaying about me section
     if (scrollingPosition > 250) {
-        addClassOpenTo(aboutMe);
-        setSectionValues(sectionContainer);
-        setSectionValues(wrapper);
-        setSectionValues(animationLine);
-        setSectionValues(containerTitle);
-        setSectionValues(mainTitle);
-        setSectionValues(myTitle);
-        setSectionValues(sectionSubtitle);
-        setSectionValues(sectionText);
-        setSectionValues(sectionButton);
-        addClassOpenTo(toTopBtn);
+        functions.addClassOpenTo(aboutMe);
+        functions.setSectionValues(sectionContainer);
+        functions.setSectionValues(wrapper);
+        functions.setSectionValues(animationLine);
+        functions.setSectionValues(containerTitle);
+        functions.setSectionValues(mainTitle);
+        functions.setSectionValues(myTitle);
+        functions.setSectionValues(sectionSubtitle);
+        functions.setSectionValues(sectionText);
+        functions.setSectionValues(sectionButton);
+        functions.addClassOpenTo(toTopBtn);
     }
     //remove to top btn when the user go back to the landing page
     if (scrollingPosition < 250) {
-        removeClassOpenFrom(toTopBtn);
+        functions.removeClassOpenFrom(toTopBtn);
     }
 
     if (scrollingPosition > (mySkillPosition - screenHeight + 500)) {
-        addClassOpenTo(mySkills);
-        addClassOpenTo(icons);
-        setItems(iconContainer);
+        functions.addClassOpenTo(mySkills);
+        functions.addClassOpenTo(icons);
+        functions.setItems(iconContainer);
 
     }
     // displaying my projects section
     if (scrollingPosition > (myProjectsPosition - screenHeight + 500)) {
-        myProjects.classList.add('open');
-        myProjectsWrapper.classList.add('open');
-        setSectionValues(subWrapper);
-        setSectionValues(animationLine);
-        setSectionValues(containerTitle);
-        setSectionValues(myTitle);
-        setSectionValues(sectionSubtitle);
-        setSectionValues(sectionText);
-        setSectionValues(sectionButton);
+        functions.addClassOpenTo(myProjects);
+        functions.addClassOpenTo(myProjectsWrapper);
+        functions.setSectionValues(subWrapper);
+        functions.setSectionValues(animationLine);
+        functions.setSectionValues(containerTitle);
+        functions.setSectionValues(myTitle);
+        functions.setSectionValues(sectionSubtitle);
+        functions.setSectionValues(sectionText);
+        functions.setSectionValues(sectionButton);
     }
     // displaying the projects; 
-    /* *** note *** I have retyped the setItems function
+    /* *** note *** I have retyped the functions.setItems function
      here because if the user scroll pass my skills section
      and reach my projects section the function is steel working at
      my skills( reason : we have added some delay to display the items),
@@ -115,9 +118,9 @@ window.addEventListener('scroll', () => {
 
     // displaying contact me sectoin 
     if (scrollingPosition > (contactMePosition - screenHeight + 400)) {
-        addClassOpenTo(contactMe);
-        addClassOpenTo(animationDiv);
-        setItems(contactMethods);
+        functions.addClassOpenTo(contactMe);
+        functions.addClassOpenTo(animationDiv);
+        functions.setItems(contactMethods);
     }
 
 
@@ -126,35 +129,4 @@ window.addEventListener('scroll', () => {
 toTopBtn.addEventListener('click', () => {
     scrollTo(0, 0)
 })
-
-// functions************************************
-function addClassOpenTo(item) {
-    item.classList.add('open');
-}
-
-function removeClassOpenFrom(item) {
-    item.classList.remove('open');
-}
-function toggleClassOpen(item) {
-    item.classList.toggle('open');
-}
-
-// function to add the section items when the user scroll to their position
-function setSectionValues(items) {
-    items.forEach(item => {
-        if (item.parentNode.classList.contains('open')) {
-            item.classList.add('open');
-        }
-    });
-}
-
-// add open class to each  container with a .4s delay
-function setItems(items) {
-    let wait = 200;
-    items.forEach((item, index) => {
-        setTimeout(() => {
-            item.classList.add('open');
-        }, index * wait)
-    })
-}
 
