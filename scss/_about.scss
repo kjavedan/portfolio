@@ -1,0 +1,27 @@
+.landing-page{
+
+    .qute-container{
+        background-color: $primary-clr-1;
+        width: 60%;
+        margin: 4rem auto;
+        padding: 5rem 2rem;
+
+        .qute{
+            color: $primary-text-clr-3;
+            font-size: 1.3rem;
+            font-weight: 500;
+
+            span{
+                color: $primary-text-clr-1;
+                font-weight: bolder;
+            }
+        }
+        .qute-from{
+            font-size: 1.5rem;
+            font-weight: bold;
+            font-family: $ff-primary-1;
+            color: $primary-text-clr-1;
+            letter-spacing: $spacing;
+        }
+    }
+}

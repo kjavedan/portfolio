@@ -1235,6 +1235,32 @@ body p {
   }
 }
 
+.landing-page .qute-container {
+  background-color: #FCE38A;
+  width: 60%;
+  margin: 4rem auto;
+  padding: 5rem 2rem;
+}
+
+.landing-page .qute-container .qute {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.landing-page .qute-container .qute span {
+  color: #000;
+  font-weight: bolder;
+}
+
+.landing-page .qute-container .qute-from {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Bebas Neue", cursive;
+  color: #000;
+  letter-spacing: 0.1rem;
+}
+
 .left-div__animation, .right-div__animation {
   top: 0;
   left: 0;
