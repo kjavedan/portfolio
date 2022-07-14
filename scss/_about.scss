@@ -1,27 +1,93 @@
-.landing-page{
+.landing-page {
 
-    .qute-container{
+    .qute-container {
         background-color: $primary-clr-1;
         width: 60%;
         margin: 4rem auto;
         padding: 5rem 2rem;
 
-        .qute{
+        .qute {
             color: $primary-text-clr-3;
             font-size: 1.3rem;
             font-weight: 500;
 
-            span{
+            span {
                 color: $primary-text-clr-1;
                 font-weight: bolder;
             }
         }
-        .qute-from{
+
+        .qute-from {
             font-size: 1.5rem;
             font-weight: bold;
             font-family: $ff-primary-1;
             color: $primary-text-clr-1;
             letter-spacing: $spacing;
+        }
+    }
+}
+
+.more-about-me {
+    margin: auto;
+    width: 85%;
+
+    .container__title>.title:nth-child(3) {
+        color: $primary-clr-1;
+        font-family: $ff-primary-3;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .my-journey-container {
+        margin-top: 2rem;
+        height: auto;
+        position: relative;
+
+        .border {
+            height: 100%;
+            width: 3px;
+            border-radius: 5px;
+            background-color: $primary-clr-2;
+            position: absolute;
+            left: 5px;
+            z-index: 6;
+        }
+
+        .my-journey {
+            width: 100%;
+            height: 100%;
+            // background-color: red;
+            z-index: 7;
+            position: relative;
+
+            &__item {
+                width: 100%;
+                margin: auto;
+                height: 320px;
+                // background-color: blue;
+                display: flex;
+                margin-top: 4rem;
+
+                .icon {
+                    position: absolute;
+                    border-radius: 50%;
+                    left: -18px;
+                    width: 50px;
+                    height: 50px;
+                    background-color: $primary-clr-1;
+                }
+
+                .info {
+                    width: 85%;
+                    height: 80%;
+                    margin-left: 2rem;
+                    margin-top: 3rem;
+                    padding: 1.5rem;
+                    background: #FFFFFF;
+                    box-shadow: 0px 4px 4px $primary-clr-1;
+                    border-radius: 5px;
+                }
+            }
         }
     }
 }

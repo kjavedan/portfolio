@@ -2,7 +2,7 @@ import * as functions from './functions.js'
 
 
 // getting the home page variables
-const preloader = document.getElementById('preloader');
+// const preloader = document.getElementById('preloader');
 // used for nav animation mobile and tablet screen size-------------------
 const rightDiv = document.querySelector('.right-div__animation');
 const leftDiv = document.querySelector('.left-div__animation');
@@ -36,12 +36,12 @@ document.getElementById('date').textContent = date.getFullYear();
 // display preloader until the page completely load then load landing page content
 window.addEventListener('load', () => {
     functions.setItems(navMenuItem);
-    preloader.style.display = "none";
+    // preloader.style.display = "none";
 })
 // close preloader with a button 
-document.querySelector('.close-btn').addEventListener('click', ()=>{
-    preloader.style.display = "none";
-})
+// document.querySelector('.close-btn').addEventListener('click', ()=>{
+//     preloader.style.display = "none";
+// })
 
 
 

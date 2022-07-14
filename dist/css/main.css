@@ -1261,6 +1261,72 @@ body p {
   letter-spacing: 0.1rem;
 }
 
+.more-about-me {
+  margin: auto;
+  width: 85%;
+}
+
+.more-about-me .container__title > .title:nth-child(3) {
+  color: #FCE38A;
+  font-family: "Courgette", cursive;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.more-about-me .my-journey-container {
+  margin-top: 2rem;
+  height: auto;
+  position: relative;
+}
+
+.more-about-me .my-journey-container .border {
+  height: 100%;
+  width: 3px;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  position: absolute;
+  left: 5px;
+  z-index: 6;
+}
+
+.more-about-me .my-journey-container .my-journey {
+  width: 100%;
+  height: 100%;
+  z-index: 7;
+  position: relative;
+}
+
+.more-about-me .my-journey-container .my-journey__item {
+  width: 100%;
+  margin: auto;
+  height: 320px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 4rem;
+}
+
+.more-about-me .my-journey-container .my-journey__item .icon {
+  position: absolute;
+  border-radius: 50%;
+  left: -18px;
+  width: 50px;
+  height: 50px;
+  background-color: #FCE38A;
+}
+
+.more-about-me .my-journey-container .my-journey__item .info {
+  width: 85%;
+  height: 80%;
+  margin-left: 2rem;
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 4px #FCE38A;
+          box-shadow: 0px 4px 4px #FCE38A;
+  border-radius: 5px;
+}
+
 .left-div__animation, .right-div__animation {
   top: 0;
   left: 0;
