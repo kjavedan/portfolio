@@ -35,7 +35,7 @@ document.getElementById('date').textContent = date.getFullYear();
 
 // display preloader until the page completely load then load landing page content
 window.addEventListener('load', () => {
-    functions.setItems(navMenuItem);
+    functions.setItems(navMenuItem,300);
     // preloader.style.display = "none";
 })
 // close preloader with a button 
@@ -50,7 +50,7 @@ window.addEventListener('load', () => {
 window.onresize = () => {
     if (screen.width > 1200) {
         functions.removeClassOpenFrom(navMenu);
-        functions.setItems(navMenuItem);
+        functions.setItems(navMenuItem,300);
         functions.removeClassOpenFrom(burgerBtn);
         functions.removeClassOpenFrom(rightDiv);
         functions.removeClassOpenFrom(leftDiv);

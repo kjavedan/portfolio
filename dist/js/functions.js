@@ -20,8 +20,7 @@ export function setSectionValues(items) {
 }
 
 // add open class to each  container with a .4s delay
-export function setItems(items) {
-    let wait = 200;
+export function setItems(items,wait) {
     items.forEach((item, index) => {
         setTimeout(() => {
             item.classList.add('open');

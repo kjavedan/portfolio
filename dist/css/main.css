@@ -1304,6 +1304,13 @@ body p {
   display: -ms-flexbox;
   display: flex;
   margin-top: 4rem;
+  display: none;
+  -webkit-animation: slide-in-right 3s;
+          animation: slide-in-right 3s;
+}
+
+.more-about-me .my-journey-container .my-journey__item.open {
+  display: block;
 }
 
 .more-about-me .my-journey-container .my-journey__item .icon {

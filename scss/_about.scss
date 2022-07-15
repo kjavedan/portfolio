@@ -67,6 +67,12 @@
                 // background-color: blue;
                 display: flex;
                 margin-top: 4rem;
+                display: none;
+                animation: slide-in-right 3s;
+
+                &.open{
+                    display: block;
+                }
 
                 .icon {
                     position: absolute;
