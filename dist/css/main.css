@@ -353,7 +353,77 @@ body p {
   }
 }
 
-.landing-page {
+@-webkit-keyframes fade-in-bounce {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  70% {
+    -webkit-transform: perspective(100px) translate3d(0, 0, 10px);
+            transform: perspective(100px) translate3d(0, 0, 10px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fade-in-bounce {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  70% {
+    -webkit-transform: perspective(100px) translate3d(0, 0, 10px);
+            transform: perspective(100px) translate3d(0, 0, 10px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes slide-in-right-bounce {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+  70% {
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right-bounce {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+  70% {
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes slide-in-left-bounce {}
+
+@keyframes slide-in-left-bounce {}.landing-page {
   height: 100vh;
   background-color: #FCE38A;
 }
@@ -1304,13 +1374,6 @@ body p {
   display: -ms-flexbox;
   display: flex;
   margin-top: 4rem;
-  display: none;
-  -webkit-animation: slide-in-right 3s;
-          animation: slide-in-right 3s;
-}
-
-.more-about-me .my-journey-container .my-journey__item.open {
-  display: block;
 }
 
 .more-about-me .my-journey-container .my-journey__item .icon {
@@ -1320,6 +1383,9 @@ body p {
   width: 50px;
   height: 50px;
   background-color: #FCE38A;
+  display: none;
+  -webkit-animation: fade-in-bounce 1s;
+          animation: fade-in-bounce 1s;
 }
 
 .more-about-me .my-journey-container .my-journey__item .info {
@@ -1332,6 +1398,17 @@ body p {
   -webkit-box-shadow: 0px 4px 4px #FCE38A;
           box-shadow: 0px 4px 4px #FCE38A;
   border-radius: 5px;
+  display: none;
+  -webkit-animation: slide-in-right-bounce 1s;
+          animation: slide-in-right-bounce 1s;
+}
+
+.more-about-me .my-journey-container .my-journey__item.open .icon {
+  display: block;
+}
+
+.more-about-me .my-journey-container .my-journey__item.open .info {
+  display: block;
 }
 
 .left-div__animation, .right-div__animation {

@@ -235,3 +235,34 @@ body{
       padding-top: 0;
     }
   }
+  // about me animations
+  @keyframes fade-in-bounce{
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 0, 0);
+    }
+    70%{
+        transform: perspective(100px) translate3d(0, 0, 10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+  }
+  @keyframes slide-in-right-bounce {
+      0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    70%{
+        transform: translateX(-10%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+  }
+  @keyframes slide-in-left-bounce {
+    
+  }

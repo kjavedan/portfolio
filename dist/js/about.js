@@ -45,16 +45,16 @@ window.addEventListener('scroll', ()=>{
         if(scrollingPosition > myJourneyPosition - screenHeight + 450){
             functions.addClassOpenTo(itemTwo)
         }
-        if(scrollingPosition > myJourneyPosition - screenHeight + 800){
+        if(scrollingPosition > myJourneyPosition - screenHeight + 900){
             functions.addClassOpenTo(itemThree)
         }
-        if(scrollingPosition > myJourneyPosition - screenHeight + 1150){
+        if(scrollingPosition > myJourneyPosition - screenHeight + 1300){
             functions.addClassOpenTo(itemFour)
         }
-        if(scrollingPosition > myJourneyPosition - screenHeight + 1500){
+        if(scrollingPosition > myJourneyPosition - screenHeight + 1700){
             functions.addClassOpenTo(itemFive)
         }
-        if(scrollingPosition > myJourneyPosition - screenHeight + 1850){
+        if(scrollingPosition > myJourneyPosition - screenHeight + 2000){
             functions.addClassOpenTo(itemSix)
         }
     }
