@@ -21,8 +21,7 @@ window.addEventListener('scroll', ()=>{
     const moreAboutMePosition = moreAboutMeSection.offsetTop;
     // items container position
     const myJourneyPosition = myJourney.offsetTop;
-    console.log('container :'+myJourneyPosition);
-    console.log('   ')
+    
     //items position relative to their container
     const itemOnePosition = itemOne.offsetTop;
     const itemTwoPosition = itemTwo.offsetTop;
@@ -54,7 +53,7 @@ window.addEventListener('scroll', ()=>{
         if(scrollingPosition > myJourneyPosition - screenHeight + 1700){
             functions.addClassOpenTo(itemFive)
         }
-        if(scrollingPosition > myJourneyPosition - screenHeight + 2000){
+        if(scrollingPosition > myJourneyPosition - screenHeight + 2100){
             functions.addClassOpenTo(itemSix)
         }
     }

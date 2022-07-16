@@ -7,8 +7,6 @@ const myProjects = document.getElementById('my-projects');
 const projectOne = document.getElementById('project-1');
 const contactMe = document.getElementById('contact-me');
 
-
-
 // landing page text variables --------------------------------------
 const myName = document.querySelector('.my-name');
 const myJob = document.querySelector('.my-job');
@@ -31,20 +29,15 @@ const projectsContainer = document.querySelectorAll('.project-container');
 const contactMethods = document.querySelectorAll('.contact-method');
 const toTopBtn = document.querySelector('.to-top-wrapper');
 
-
-
 // get the about me and project wrapper in order to flex them in larger screen size
 const wrapper = document.querySelectorAll('.wrapper');
 const myProjectsWrapper = document.querySelector('.my-porjects-wrapper');
 const subWrapper = document.querySelectorAll('.sub-wrapper');
 
-
-
 window.addEventListener('load', () => {
     functions.addClassOpenTo(myName);
     functions.addClassOpenTo(myJob);
 })
-
 
 window.addEventListener('scroll', () => {
     const scrollingPosition = window.pageYOffset;
@@ -54,9 +47,6 @@ window.addEventListener('scroll', () => {
     const myProjectsPosition = myProjects.offsetTop;
     const projectOnePosition = projectOne.offsetTop;
     const contactMePosition = contactMe.offsetTop;
-
-    
-
 
     // displaying about me section
     if (scrollingPosition > 250) {
@@ -76,7 +66,7 @@ window.addEventListener('scroll', () => {
     if (scrollingPosition < 250) {
         functions.removeClassOpenFrom(toTopBtn);
     }
-
+    // displaying skill section
     if (scrollingPosition > (mySkillPosition - screenHeight + 500)) {
         functions.addClassOpenTo(mySkills);
         functions.addClassOpenTo(icons);
@@ -95,26 +85,10 @@ window.addEventListener('scroll', () => {
         functions.setSectionValues(sectionText);
         functions.setSectionValues(sectionButton);
     }
-    // displaying the projects; 
-    /* *** note *** I have retyped the functions.setItems function
-     here because if the user scroll pass my skills section
-     and reach my projects section the function is steel working at
-     my skills( reason : we have added some delay to display the items),
-     therefore we should wait until it finish executing there so the project section
-     can call it again. As a result it causes the computer to regiment.
-     now projects section has its own function which means that it doesn't need to wait.
-    */
+  // displaying projects on the screen
     if (scrollingPosition > (projectOnePosition - screenHeight + 300)) {
-        projectsContainer.forEach((project, index) => {
-            setTimeout(() => {
-                project.classList.add('open');
-            }, 100 * index);
-        })
+        functions.setItems(projectsContainer,200)
     }
-
-
-
-
 
     // displaying contact me sectoin 
     if (scrollingPosition > (contactMePosition - screenHeight + 400)) {
@@ -122,9 +96,8 @@ window.addEventListener('scroll', () => {
         functions.addClassOpenTo(animationDiv);
         functions.setItems(contactMethods,300);
     }
-
-
 })
+
 // scrolling to the top when the user click the to top btn
 toTopBtn.addEventListener('click', () => {
     scrollTo(0, 0)

@@ -1,10 +1,23 @@
-.landing-page {
 
+.more-about-me {
+    margin: auto;
+    width: 85%;
+    // background-color: red;
+    display: grid;
+
+    @include large-tablet{
+        grid-template-columns: 1fr 1fr;
+    }
     .qute-container {
         background-color: $primary-clr-1;
         width: 60%;
         margin: 4rem auto;
         padding: 5rem 2rem;
+         
+        @include large-tablet{
+            margin-top: 6rem;
+            padding: 7rem 2rem;
+        }
 
         .qute {
             color: $primary-text-clr-3;
@@ -15,8 +28,8 @@
                 color: $primary-text-clr-1;
                 font-weight: bolder;
             }
-        }
 
+        }
         .qute-from {
             font-size: 1.5rem;
             font-weight: bold;
@@ -25,26 +38,68 @@
             letter-spacing: $spacing;
         }
     }
-}
 
-.more-about-me {
-    margin: auto;
-    width: 85%;
 
-    .container__title>.title:nth-child(3) {
-        color: $primary-clr-1;
-        font-family: $ff-primary-3;
-        font-size: 1.5rem;
-        font-weight: bold;
+    &__title {
+        // background-color: blue;
+        position: relative;
+        .container__title {
+            .title {
+                line-height: 2rem;
+
+                @include tablet {
+                    line-height: 3rem;
+                }
+
+                .my-title {
+                    font-size: 2rem;
+
+                    @include tablet {
+                        font-size: 3rem;
+                        line-height: 3rem;
+                    }
+                }
+            }
+            
+            @include large-tablet{
+                position: absolute;
+                bottom: 60px;
+            }
+        }
+
+        .container__title>.title:nth-child(4) {
+            color: $primary-clr-1;
+            font-family: $ff-primary-3;
+            font-weight: bold;
+
+
+            .my-title {
+                font-size: 1.3rem;
+                line-height: 3rem;
+
+                @include tablet {
+                    font-size: 1.6rem;
+                }
+
+                @include large-tablet {
+                    font-size: 2rem;
+                }
+            }
+        }
     }
 
     .my-journey-container {
         margin-top: 2rem;
         height: auto;
         position: relative;
+        margin-bottom: 10rem;
+
+        @include large-tablet {
+            margin-top: 10rem;
+        }
 
         .border {
-            height: 100%;
+            height: (88%);
             width: 3px;
             border-radius: 5px;
             background-color: $primary-clr-2;
@@ -92,14 +147,15 @@
                     animation: slide-in-right-bounce 1s;
                 }
 
-                &.open{
-                    .icon{
+                &.open {
+                    .icon {
                         display: block;
                     }
-                    .info{
+
+                    .info {
                         display: block;
                     }
-                    
+
                 }
             }
         }
