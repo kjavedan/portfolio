@@ -14,6 +14,13 @@ const itemFour = document.getElementById('item-4');
 const itemFive = document.getElementById('item-5');
 const itemSix = document.getElementById('item-6');
 
+// displaying item 2,4,6 on the left side on laptop screen size
+itemOne.style.float = "left";
+itemTwo.style.float = "right";
+itemThree.style.float = "left";
+itemFour.style.float = "right";
+itemFive.style.float = "left";
+itemSix.style.float = "right";
 
 window.addEventListener('scroll', ()=>{
     const scrollingPosition = window.pageYOffset;

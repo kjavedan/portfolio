@@ -264,5 +264,15 @@ body{
     }
   }
   @keyframes slide-in-left-bounce {
-    
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    70%{
+        transform: translateX(10%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
   }
