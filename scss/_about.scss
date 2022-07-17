@@ -12,16 +12,17 @@
         background-color: $primary-clr-1;
         width: 60%;
         margin: 4rem auto;
-        padding: 5rem 2rem;
+        padding: 3rem 1rem;
          
-        @include large-tablet{
+        @include laptop{
             margin-top: 6rem;
-            padding: 7rem 2rem;
+            padding: 5rem 2rem;
         }
 
         .qute {
             color: $primary-text-clr-3;
-            font-size: 1.3rem;
+            font-size: 1.5rem;
+            line-height: 1.8rem;
             font-weight: 500;
 
             span {
@@ -45,14 +46,14 @@
         position: relative;
         .container__title {
             .title {
-                line-height: 2rem;
+                line-height: 2.2rem;
 
                 @include tablet {
                     line-height: 3rem;
                 }
 
                 .my-title {
-                    font-size: 2rem;
+                    font-size: 2.2rem;
 
                     @include tablet {
                         font-size: 3rem;
@@ -89,17 +90,19 @@
     }
 
     .my-journey-container {
-        margin-top: 2rem;
+        // background-color: red;
+        margin-top: 4rem;
         height: auto;
         position: relative;
         margin-bottom: 10rem;
 
         @include large-tablet {
-            margin-top: 10rem;
+            grid-column: 1/3;
+            margin-left: 2rem;
         }
 
         .border {
-            height: (88%);
+            height: 85%;
             width: 3px;
             border-radius: 5px;
             background-color: $primary-clr-2;
@@ -121,7 +124,6 @@
                 height: 320px;
                 // background-color: blue;
                 display: flex;
-                margin-top: 4rem;
 
                 .icon {
                     position: absolute;
@@ -132,6 +134,20 @@
                     background-color: $primary-clr-1;
                     display: none;
                     animation: fade-in-bounce 1s;
+
+                    span{
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        font-size: 1.5rem;
+                        color: $primary-clr-3;
+                    }
+                    img{
+                        width: 100%;
+                        border-radius: 100px;
+                    }
+
                 }
 
                 .info {
