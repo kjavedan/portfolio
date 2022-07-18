@@ -178,7 +178,7 @@
                 // adding different animation for the even itmes of my journey
                 // in laptop screen size
                 @include laptop{
-                    @for $i from 1 through 6 {
+                    @for $i from 1 through 5 {
                         @if ($i+1) % 2 == 0 {
                             &:nth-child(#{$i}) {
                                 .info{

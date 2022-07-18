@@ -22,9 +22,20 @@ itemFour.style.float = "right";
 itemFive.style.float = "left";
 itemSix.style.float = "right";
 
+window.addEventListener('load', ()=>{
+    const screenWidth = screen.width;
+    if(screenWidth > 900){
+        functions.addClassOpenTo(animationLine);
+        myTitle.forEach(item => {
+            functions.addClassOpenTo(item);
+        })
+    }
+})
+
 window.addEventListener('scroll', ()=>{
     const scrollingPosition = window.pageYOffset;
     const screenHeight = screen.height;
+
     const moreAboutMePosition = moreAboutMeSection.offsetTop;
     // items container position
     const myJourneyPosition = myJourney.offsetTop;
@@ -60,7 +71,7 @@ window.addEventListener('scroll', ()=>{
         if(scrollingPosition > myJourneyPosition - screenHeight + 1700){
             functions.addClassOpenTo(itemFive)
         }
-        if(scrollingPosition > myJourneyPosition - screenHeight + 2100){
+        if(scrollingPosition > myJourneyPosition - screenHeight + 2000){
             functions.addClassOpenTo(itemSix)
         }
     }
