@@ -1,0 +1,38 @@
+    .landing-page{
+
+        &__welcome-text{
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            width: 90%;
+            transform: translate(-50%, -50%);
+
+            .welcome-container{
+                height: 200px;
+                position: relative;
+
+                .top-left{
+                    position: absolute;
+                }
+                .bottom-right{
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                }
+                .welcome-text{
+                    text-align: center;
+                    padding-top: 2.5rem;
+                    
+                    span{
+                        line-height: 2rem;
+                        font-size: 1.5rem;
+                        font-family: $ff-primary-5;
+                    }
+                    .constant-text{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+   
