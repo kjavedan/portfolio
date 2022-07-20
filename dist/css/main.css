@@ -1892,6 +1892,12 @@ header .nav {
           transform: translate(-50%, -50%);
 }
 
+@media screen and (min-width: 900px) {
+  .landing-page__welcome-text {
+    width: 65%;
+  }
+}
+
 .landing-page__welcome-text .welcome-container {
   height: 200px;
   position: relative;
@@ -1919,15 +1925,28 @@ header .nav {
   font-size: 2.5rem;
 }
 
+@media screen and (min-width: 1200px) {
+  .landing-page__welcome-text .welcome-container .welcome-text .constant-text {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+
 .landing-page__welcome-text .welcome-container .welcome-text .animated-text {
   font-size: 1.5rem;
   opacity: 0;
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   display: inline-block;
   white-space: pre;
+}
+
+@media screen and (min-width: 1200px) {
+  .landing-page__welcome-text .welcome-container .welcome-text .animated-text {
+    font-size: 2rem;
+  }
 }
 
 .landing-page__welcome-text .welcome-container .welcome-text .animated-text.fade-in {
@@ -1938,8 +1957,8 @@ header .nav {
 
 .landing-page__welcome-text .welcome-container .welcome-text .animated-text.fade-out {
   opacity: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 
 #preloader {

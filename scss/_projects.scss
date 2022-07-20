@@ -1,5 +1,4 @@
     .landing-page{
-
         &__welcome-text{
             position: absolute;
             top: 45%;
@@ -7,6 +6,9 @@
             width: 90%;
             transform: translate(-50%, -50%);
 
+            @include large-tablet {
+                width: 65%;
+            }
             .welcome-container{
                 height: 200px;
                 position: relative;
@@ -30,16 +32,24 @@
                         display: block;
                         margin-bottom: 2rem;
                         font-size: 2.5rem;
+
+                        @include laptop{
+                            font-size: 3rem;
+                            margin-bottom: 3rem;
+                        }
                     }
 
                     .animated-text{
                         font-size: 1.5rem;
                         opacity: 0;
-                        transform: translateY(50%);
+                        transform: translateY(100%);
                         transition: all .3s ease-in-out;
                         display: inline-block;
                         white-space: pre;
                         
+                        @include laptop{
+                            font-size: 2rem;
+                        }
 
                         &.fade-in{
                             opacity: 1;
@@ -48,7 +58,7 @@
 
                         &.fade-out{
                             opacity: 0;
-                            transform: translateY(-50%);
+                            transform: translateY(-100%);
                         }
                       }
                 }

@@ -10,13 +10,13 @@ const myArray = [{
     color: "red"
 },
 {
-    text: " Nice to meet you!",
-    color: "yellow"
+    text: " peace!",
+    color: "lightgreen"
 }];
 
 
 let count = 0;
-
+let wait = 20;
 function fadeInOut(){
     console.log('executed');
     changingText.innerHTML = "";
@@ -29,6 +29,7 @@ function fadeInOut(){
         setTimeout(()=>{
             document.querySelectorAll('.animated-text')[i].classList.add('fade-in')
         }, 20 * i)
+        wait *= i;
         setTimeout(()=>{
             setTimeout(()=>{
                 document.querySelectorAll('.animated-text')[i].classList.add('fade-out')
@@ -40,4 +41,4 @@ function fadeInOut(){
 }
 
 fadeInOut()
-setInterval(fadeInOut,5000)
+setInterval(fadeInOut,5200)
