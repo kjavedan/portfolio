@@ -5,23 +5,9 @@
  fonts
  ==============
  */
- @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courgette&family=Major+Mono+Display&family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap'); 
+ @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courgette&family=Major+Mono+Display&family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Roboto+Mono&family=Inter:wght@300;400;500&display=swap'); 
 
  
- @font-face {
-    font-family: 'Silka Regular';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Silka Regular'), url('Silka-Regular.woff') format('woff');
-    }
-    
-
- @font-face {
-    font-family: 'Silka Regular Italic';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Silka Regular Italic'), url('Silka-RegularItalic.woff') format('woff');
-    }
 /*
 ===================
 Global variables
@@ -32,7 +18,8 @@ $ff-primary-1 :'Bebas Neue', cursive;
 $ff-primary-2 : 'Montserrat', sans-serif;
 $ff-primary-3 : 'Courgette', cursive;
 $ff-primary-4 : 'Major Mono Display', monospace;
-$ff-primary-5 : 'Silka Regular', sans-serif;
+$ff-primary-5 : 'Inter', sans-serif;
+$ff-primary-6 : 'Roboto Mono', monospace;
 
 //my colors****************************************
 $primary-clr-1 : #FCE38A;
