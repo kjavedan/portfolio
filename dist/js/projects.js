@@ -1,6 +1,5 @@
 const changingText = document.querySelector('.changing-text')
 
-
 const myArray = [{
     text : " I'm excited to show you my work :)",
     color : "blue"
@@ -18,7 +17,6 @@ const myArray = [{
 let count = 0;
 let wait = 20;
 function fadeInOut(){
-    console.log('executed');
     changingText.innerHTML = "";
     changingText.style.color = myArray[count].color;
     const textLetter = myArray[count].text.split("")
@@ -39,6 +37,7 @@ function fadeInOut(){
     count++;
     if(count == myArray.length) count = 0;
 }
-
-fadeInOut()
+// running fadeInOut on loading the page
+window.addEventListener('DOMContentLoaded', fadeInOut)
+// displaying the text on the main page each 5s
 setInterval(fadeInOut,5200)

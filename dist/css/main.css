@@ -1961,6 +1961,42 @@ header .nav {
           transform: translateY(-100%);
 }
 
+.works {
+  height: 100vh;
+}
+
+.works .filter {
+  width: 250px;
+  height: auto;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.works .filter__btn {
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #676767;
+  font-weight: 300;
+  font-family: "Inter", sans-serif;
+}
+
+.works .filter__btn.active {
+  color: #000;
+  font-weight: bold;
+  -webkit-text-decoration: underline 2px;
+          text-decoration: underline 2px;
+}
+
+.works .filter__btn:hover {
+  color: #000;
+}
+
 #preloader {
   height: 100vh;
   width: 100%;

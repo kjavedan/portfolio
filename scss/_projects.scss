@@ -65,4 +65,37 @@
             }
         }
     }
+    .works{
+        height: 100vh;
+        // background-color: rgb(151, 129, 129);
+
+        .filter{
+            width:250px;
+            height: auto;
+            margin: 0 auto;
+            // background-color: red;
+            display: flex;
+            justify-content: space-around;
+
+            &__btn{
+                background-color: transparent;
+                border: none;
+                font-size: 1.2rem;
+                cursor: pointer;
+                color: $primary-text-clr-4;
+                font-weight: 300;
+                font-family: $ff-primary-5;
+
+                &.active{
+                    color: $primary-clr-4;
+                    font-weight: bold;
+                    text-decoration: underline 2px;
+                }
+
+                &:hover{
+                    color: $primary-clr-4;
+                }
+            }
+        }
+    }
    
