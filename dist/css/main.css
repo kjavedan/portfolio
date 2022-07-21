@@ -1961,10 +1961,6 @@ header .nav {
           transform: translateY(-100%);
 }
 
-.works {
-  height: 100vh;
-}
-
 .works .filter {
   width: 250px;
   height: auto;
@@ -1995,6 +1991,14 @@ header .nav {
 
 .works .filter__btn:hover {
   color: #000;
+}
+
+.works .container {
+  padding: 0;
+}
+
+.works .container .projects {
+  margin-top: 2rem;
 }
 
 #preloader {
