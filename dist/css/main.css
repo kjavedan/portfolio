@@ -1177,7 +1177,7 @@ body p {
 }
 
 .container .projects .project-container .projects-item:hover .project__btn:hover {
-  color: #FCE38A;
+  color: blue;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1997,8 +1997,21 @@ header .nav {
   padding: 0;
 }
 
+@media screen and (min-width: 1200px) {
+  .works .container {
+    background-color: red;
+    width: 100%;
+  }
+}
+
 .works .container .projects {
   margin-top: 2rem;
+  height: auto;
+}
+
+.works .container .projects .project-container {
+  margin: 0;
+  height: 300px;
 }
 
 #preloader {

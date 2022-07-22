@@ -98,13 +98,21 @@
             }
         }
         .container{
-            // margin: 0;
-            // background-color: red;
+           
             padding: 0;
+
+            @include laptop{
+            background-color: red;
+            width: 100%;
+            }
             .projects{
                 margin-top: 2rem;
+              
+                height: auto;
                 .project-container{
                     // background-color: blue;
+                    margin: 0;
+                    height: 300px;
                 }
             }
 
