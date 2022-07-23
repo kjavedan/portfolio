@@ -1,3 +1,6 @@
+import * as functions from './functions.js'
+
+
 const myArray = [{
     text : " I'm excited to show you my work :)",
     color : "blue"
@@ -139,9 +142,12 @@ const projectsData = [
 const changingText = document.querySelector('.changing-text')
 const projectsContainer = document.querySelector('.projects');
 const filterBtns = document.querySelectorAll('.filter__btn');
-
-
-
+const contactMe = document.getElementById('contact-me');
+const animationDiv = document.querySelector('.container__animation-div');
+const contactMethods = document.querySelectorAll('.contact-method');
+const animationLine = document.querySelector('.container__animation-line');
+const myTitle = document.querySelector('.my-title');
+const subtitle = document.querySelector('.container__subtitle');
 // landing page text animation function
 let count = 0;
 let wait = 20;
@@ -204,6 +210,23 @@ filterBtns.forEach(btn =>{
     })
 })
 
+window.addEventListener('scroll', () => {
+    const scrollingPosition = window.pageYOffset;
+    const screenHeight = screen.height;
+   
+    const contactMePosition = contactMe.offsetTop;
+
+    // displaying contact me sectoin 
+    if (scrollingPosition > (contactMePosition - screenHeight + 100)) {
+        functions.addClassOpenTo(contactMe);
+        functions.addClassOpenTo(animationDiv);
+        functions.addClassOpenTo(animationLine);
+        functions.addClassOpenTo(myTitle);
+        functions.addClassOpenTo(subtitle);
+        functions.setItems(contactMethods,300);
+    
+    }
+})
 function setProjectsItems(data){
 
     const projects = data.map(item => {
