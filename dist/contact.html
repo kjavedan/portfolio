@@ -10,7 +10,7 @@
 <body>
      <!-- <div id="preloader"><span class="close-btn"><i class='fa fa-close'></i></span></div> -->
      <main>
-        <section class="landing-page">
+        <section class="landing-page" style="display: grid;">
             <div class="left-div__animation"></div>
             <header>
                 <!-- top logo and active link -->
@@ -44,6 +44,23 @@
             </header>
             <!-- open nav animation -->
             <div class="right-div__animation"></div>
+            <div class="left">
+                <h1>Contact Me</h1>
+            </div>
+            <div class="middle" >
+                <form action="" class="form" >
+                    <label for="name">Name <span class="star">★</span> </label>
+                    <input class="form__name" type="text" id="name" placeholder="Enter Your Name" required>
+                    <label for="name">Last Name <span class="star">★</span></label>
+                    <input class="form__last-name" type="text" id="last-name" placeholder="Enter Your LastName" required>
+                    <label for="email">Email <span class="star">★</span></label>
+                    <input class="form__email" type="email" name="" id="email" placeholder="Enter Your Email" required>
+                    <label for="text-area">Message <span class="star">★</span></label>
+                    <textarea class="form-textarea" name="" id="text-area" cols="30" rows="10" placeholder="Enter your message here"></textarea>
+                    <button class="form-btn" value="submit" >Send</button>
+                </form>
+            </div>
+            <div class="map"></div>
         </section>
         <!-- footer -->
         <section class="copy">
@@ -52,7 +69,6 @@
     </main>
 
     <script type="module" src="/dist/js/navMenu.js"></script>
-    <script type="module" src="/dist/js/home.js"></script>
     <script src="https://kit.fontawesome.com/ee6479f558.js" crossorigin="anonymous"></script>
 </body>
 </html>

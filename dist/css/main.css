@@ -2013,6 +2013,25 @@ header .nav {
   height: 300px;
 }
 
+.landing-page .left {
+  width: 100%;
+  height: 30vh;
+  position: relative;
+}
+
+.landing-page .left h1 {
+  position: absolute;
+  left: 10%;
+  bottom: 10%;
+  font-size: 3rem;
+  color: #fff;
+}
+
+.landing-page .middle {
+  background-color: white;
+  height: 50vh;
+}
+
 #preloader {
   height: 100vh;
   width: 100%;

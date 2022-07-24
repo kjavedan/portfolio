@@ -1,0 +1,22 @@
+.landing-page{
+    .left{
+        width: 100%;
+        // background-color: red;
+        height: 30vh;
+        position: relative;
+
+        h1{
+            position: absolute;
+            left: 10%;
+            bottom: 10%;
+            font-size: 3rem;
+            color: $primary-clr-3;
+        }
+    }
+    .middle{
+        background-color:white;
+        height: 50vh;
+        display: grid;
+    }
+
+}
