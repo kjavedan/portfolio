@@ -148,6 +148,8 @@ const contactMethods = document.querySelectorAll('.contact-method');
 const animationLine = document.querySelector('.container__animation-line');
 const myTitle = document.querySelector('.my-title');
 const subtitle = document.querySelector('.container__subtitle');
+
+
 // landing page text animation function
 let count = 0;
 let wait = 20;
@@ -178,16 +180,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
     setInterval(fadeInOut,5200);
     setProjectsItems(projectsData);
 })
-/*
-I want to display the projects based on category when the user click
-the button
-1. getting the buttons
-2. adding click function to them
-3. getting their name
-4. comparing their name to the project type
-5. if its the same we put thoese date into target array
-6. now we display the data based on what it has been clicked
-*/
+
 //adding functionality to the filter buttons
 filterBtns.forEach(btn =>{
     // btn.classList.remove('active')
