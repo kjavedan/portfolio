@@ -15,8 +15,45 @@
     }
     .middle{
         background-color:white;
-        height: 50vh;
-        display: grid;
+
+        .form{
+            width: 300px;
+            margin: 3rem auto;
+            display: grid;
+
+            label{
+                font-family: $ff-primary-1;
+                margin-top: 30px;
+            }
+
+            input{
+                padding-left: .5rem;
+                height: 30px;
+                font-family: $ff-primary-2;
+                color: $primary-text-clr-4;
+                outline: none;
+                border: none;
+                border-bottom: solid 2px $primary-text-clr-2;
+            }
+            textarea{
+                font-family: $ff-primary-2;
+                outline: none;
+                border-radius: 0;
+                border: 2px solid $primary-text-clr-2;
+                max-width: 300px;
+                padding: .5rem;
+            }
+            button{
+                margin-top: 1rem;
+                background-color: $primary-text-clr-1;
+                color: $primary-text-clr-3;
+                height: 50px;
+                cursor: pointer;
+                font-family: $ff-primary-2;
+                font-size: 1rem;
+                font-weight: 700;
+            }
+        }
     }
 
 }

@@ -2029,7 +2029,48 @@ header .nav {
 
 .landing-page .middle {
   background-color: white;
-  height: 50vh;
+}
+
+.landing-page .middle .form {
+  width: 300px;
+  margin: 3rem auto;
+  display: -ms-grid;
+  display: grid;
+}
+
+.landing-page .middle .form label {
+  font-family: "Bebas Neue", cursive;
+  margin-top: 30px;
+}
+
+.landing-page .middle .form input {
+  padding-left: .5rem;
+  height: 30px;
+  font-family: "Montserrat", sans-serif;
+  color: #676767;
+  outline: none;
+  border: none;
+  border-bottom: solid 2px #313030;
+}
+
+.landing-page .middle .form textarea {
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+  border-radius: 0;
+  border: 2px solid #313030;
+  max-width: 300px;
+  padding: .5rem;
+}
+
+.landing-page .middle .form button {
+  margin-top: 1rem;
+  background-color: #000;
+  color: #fff;
+  height: 50px;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 #preloader {
