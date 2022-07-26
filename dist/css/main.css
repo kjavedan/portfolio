@@ -2014,12 +2014,6 @@ header .nav {
 }
 
 @media screen and (min-width: 900px) {
-  .landing-page {
-    background-color: white;
-  }
-}
-
-@media screen and (min-width: 900px) {
   .landing-page .wrapper-div {
     display: -ms-grid;
     display: grid;
@@ -2051,8 +2045,8 @@ header .nav {
 
 @media screen and (min-width: 900px) {
   .landing-page .wrapper-div .left h1 {
-    bottom: 20%;
-    font-size: 4rem;
+    left: 5%;
+    bottom: 80%;
   }
 }
 
@@ -2075,7 +2069,13 @@ header .nav {
 @media screen and (min-width: 900px) {
   .landing-page .wrapper-div .middle .form {
     height: 100vh;
-    padding-top: 3rem;
+    padding-top: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .landing-page .wrapper-div .middle .form {
+    padding-top: 3.5rem;
   }
 }
 
@@ -2134,11 +2134,18 @@ header .nav {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   font-weight: 700;
+  margin-bottom: 3rem;
 }
 
 .landing-page .wrapper-div .get-in-touch {
   padding: 3rem;
   background-color: #f8f8f8;
+}
+
+@media screen and (min-width: 1200px) {
+  .landing-page .wrapper-div .get-in-touch {
+    padding-top: 6rem;
+  }
 }
 
 #preloader {
