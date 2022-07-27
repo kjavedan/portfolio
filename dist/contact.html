@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,10 @@
     <link rel="stylesheet" href="css/main.css">
     <title>Document</title>
 </head>
+
 <body>
-     <!-- <div id="preloader"><span class="close-btn"><i class='fa fa-close'></i></span></div> -->
-     <main>
+    <!-- <div id="preloader"><span class="close-btn"><i class='fa fa-close'></i></span></div> -->
+    <main>
         <section class="landing-page" style="background-color: white; height: auto;">
             <div class="left-div__animation"></div>
             <header>
@@ -45,45 +47,54 @@
             <!-- open nav animation -->
             <div class="right-div__animation"></div>
             <div class="wrapper-div">
-            <div class="left">
-                <h1>Contact Me</h1>
+                <div class="left">
+                    <h1>Contact Me</h1>
+                </div>
+                <div class="middle">
+                    <form class="form" id="form">
+                        <label for="name">Name <span class="star">★</span> </label>
+                        <input type="text"  name="form_name" placeholder="Enter Your Name" required>
+                        <label for="name">Last Name <span class="star">★</span></label>
+                        <input type="text"  name="form_last-name" placeholder="Enter Your LastName" required>
+                        <label for="email">Email <span class="star">★</span></label>
+                        <input type="email" name="email_id"  placeholder="Enter Your Email" required>
+                        <label for="text-area">Message <span class="star">★</span></label>
+                        <textarea name="message" cols="30" rows="6"
+                            placeholder="Enter your message here"></textarea>
+                        <button type="submit" id="btn" value="send"></button>
+                    </form>
+                </div>
+                <div class="get-in-touch">
+                    <div class="contact-method ">
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        <p><a href="mailto:khaledjavedan76@gmil.com" class="email">khaledjavedan76@gmail.com</a></p>
+                    </div>
+                    <div class="contact-method">
+                        <span><i class="fas fa-phone"></i></span>
+                        <p>+98 917 546 7417</p>
+                    </div>
+                    <div class="contact-method">
+                        <span><i class="fa-solid fa-location-dot"></i></span>
+                        <p>Iran, Hormozgan, BandarLengeh</p>
+                    </div>
+                </div>
             </div>
-            <div class="middle" >
-                <form action="" class="form" >
-                    <label for="name">Name <span class="star">★</span> </label>
-                    <input class="form__first-name" type="text" id="name" placeholder="Enter Your Name" required>
-                    <label for="name">Last Name <span class="star">★</span></label>
-                    <input class="form__last-name" type="text" id="last-name" placeholder="Enter Your LastName" required>
-                    <label for="email">Email <span class="star">★</span></label>
-                    <input class="form__email" type="email" name="" id="email" placeholder="Enter Your Email" required>
-                    <label for="text-area">Message <span class="star">★</span></label>
-                    <textarea class="form__textarea" name="" id="text-area" cols="30" rows="10" placeholder="Enter your message here"></textarea>
-                    <button class="form__btn" value="submit" >Send</button>
-                </form>
-            </div>
-           <div class="get-in-touch">
-            <div class="contact-method ">
-                <span><i class="fa-solid fa-envelope"></i></span>
-                <p><a href="mailto:khaledjavedan76@gmil.com" class="email">khaledjavedan76@gmail.com</a></p>
-            </div>
-            <div class="contact-method">
-                <span><i class="fas fa-phone"></i></span>
-                <p>+98 917 546 7417</p>
-            </div>
-            <div class="contact-method">
-                <span><i class="fa-solid fa-location-dot"></i></span>
-                <p>Iran, Hormozgan, BandarLengeh</p>
-            </div>
-           </div>
-        </div>
         </section>
         <!-- footer -->
         <section class="copy">
             <p>&copy copyright khaled Javedan <span id="date"></span></p>
         </section>
     </main>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
+    <script type="text/javascript">
+        emailjs.init('qL7Ni8xlli8tsGzov')
+    </script>
     <script type="module" src="/dist/js/navMenu.js"></script>
+    <!-- <script src="https://smtpjs.com/v3/smtp.js">
+    </script> -->
+    <script src="/dist/js/contact.js"></script>
     <script src="https://kit.fontawesome.com/ee6479f558.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
