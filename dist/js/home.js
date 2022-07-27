@@ -70,7 +70,7 @@ window.addEventListener('scroll', () => {
     if (scrollingPosition > (mySkillPosition - screenHeight + 500)) {
         functions.addClassOpenTo(mySkills);
         functions.addClassOpenTo(icons);
-        functions.setItems(iconContainer,200);
+        functions.setItems(iconContainer,100);
 
     }
     // displaying my projects section

@@ -803,8 +803,8 @@ body p {
   .container .icons .arrow1,
   .container .icons .arrow2,
   .container .icons .arrow3 {
-    -webkit-transform: rotate(495deg);
-            transform: rotate(495deg);
+    -webkit-transform: rotate(450deg);
+            transform: rotate(450deg);
     -webkit-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
   }
