@@ -34,10 +34,10 @@ const date = new Date();
 document.getElementById('date').textContent = date.getFullYear();
 
 // display preloader until the page completely load then load landing page content
-window.addEventListener('load', () => {
+// window.addEventListener('load', () => {
     functions.setItems(navMenuItem,300);
     // preloader.style.display = "none";
-})
+// })
 // close preloader with a button 
 // document.querySelector('.close-btn').addEventListener('click', ()=>{
 //     preloader.style.display = "none";
