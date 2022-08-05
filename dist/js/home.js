@@ -34,10 +34,10 @@ const wrapper = document.querySelectorAll('.wrapper');
 const myProjectsWrapper = document.querySelector('.my-porjects-wrapper');
 const subWrapper = document.querySelectorAll('.sub-wrapper');
 
-window.addEventListener('load', () => {
+// window.addEventListener('load', () => {
     functions.addClassOpenTo(myName);
     functions.addClassOpenTo(myJob);
-})
+// })
 
 window.addEventListener('scroll', () => {
     const scrollingPosition = window.pageYOffset;
