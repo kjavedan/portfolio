@@ -17,8 +17,8 @@ const myArray = [{
 const projectsData = [
     {
         name : "Iron Brothers",
-        icon : "/dist/img/dumbbell.png",
-        backgroundImg : "/dist/img/IronBrothers.jpg",
+        icon : "/img/dumbbell.png",
+        backgroundImg : "/img/IronBrothers.jpg",
         category : "fitness",
         type : "Design",
         gihubLink : "",
@@ -27,8 +27,8 @@ const projectsData = [
     },
     {
         name : "Online Shop",
-        icon : "/dist/img/dumbbell.png",
-        backgroundImg : "/dist//img/ecommerce.jpg",
+        icon : "/img/dumbbell.png",
+        backgroundImg : "//img/ecommerce.jpg",
         category : "Ecommerce",
         type : "Website",
         gihubLink : "",
@@ -37,8 +37,8 @@ const projectsData = [
     },
     {
         name : "Dream House",
-        icon : "/dist/img/dumbbell.png",
-        backgroundImg : "/dist//img/realEstate.jpg",
+        icon : "/img/dumbbell.png",
+        backgroundImg : "//img/realEstate.jpg",
         category : "Real Estate",
         type : "Design",
         gihubLink : "",
