@@ -1456,7 +1456,7 @@ body p {
 .more-about-me .my-journey-container .my-journey__item {
   width: 100%;
   margin: auto;
-  height: 320px;
+  height: 350px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1536,7 +1536,16 @@ body p {
 }
 
 .more-about-me .my-journey-container .my-journey__item.open .icon {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5rem;
 }
 
 .more-about-me .my-journey-container .my-journey__item.open .info {
