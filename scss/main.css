@@ -812,6 +812,7 @@ body p {
   z-index: 0;
   display: none;
   transition: all 0.4s ease-in-out;
+  background-color: red;
 }
 .container .projects .project-container .projects-item__logo {
   position: absolute;
