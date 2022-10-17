@@ -107,6 +107,12 @@
             }
             .projects{
                 margin-top: 2rem;
+                .projects-item__image{
+
+                   @include tablet{
+                       height: 100%;
+                   }
+                }
               
                 height: auto;
                 .project-container{

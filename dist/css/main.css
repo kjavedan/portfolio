@@ -1994,6 +1994,12 @@ header .nav {
   height: auto;
 }
 
+@media screen and (min-width: 660px) {
+  .works .container .projects .projects-item__image {
+    height: 100%;
+  }
+}
+
 .works .container .projects .project-container {
   margin: 0;
   height: 300px;

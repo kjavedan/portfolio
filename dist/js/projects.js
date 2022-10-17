@@ -18,7 +18,7 @@ const projectsData = [
     {
         name : "Iron Brothers",
         icon : "./img/dumbbell.png",
-        backgroundImg : "./img/IronBrothers.jpg",
+        backgroundImg : "./img/Iron-brothers.jpg",
         category : "fitness",
         type : "Design",
         gihubLink : "",
