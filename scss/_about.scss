@@ -169,11 +169,15 @@
                     margin-left: 2rem;
                     margin-top: 3rem;
                     padding: 1.5rem;
-                    // background: #FFFFFF;
-                    box-shadow: 0px 4px 4px $primary-clr-1;
+                    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
                     border-radius: 5px;
                     display: none;
                     animation: slide-in-right-bounce 1s;
+
+                    h5{
+                        margin-top: .5rem;
+                        margin-bottom: 1.5rem;
+                    }
                 }
                 // adding different animation for the even itmes of my journey
                 // in laptop screen size
