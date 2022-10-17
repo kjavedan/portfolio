@@ -576,6 +576,10 @@ body p {
   display: block;
 }
 @media screen and (min-width: 980px) {
+  .container__text.open {
+    font-size: 1rem;
+    font-weight: 500;
+  }
   .container__text.open p {
     color: #676767;
   }

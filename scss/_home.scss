@@ -232,9 +232,9 @@
             display: block;
 
             @include small-screen{
-                // font-size: 1.1rem;
-                // font-weight: 500;
-
+                font-size: 1rem;
+                font-weight: 500;
+                
                 p{
                     color: $primary-text-clr-4;
                 }
