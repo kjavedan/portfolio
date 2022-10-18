@@ -17,7 +17,6 @@ const myArray = [{
 const projectsData = [
     {
         name : "Iron Brothers",
-        icon : "./img/dumbbell.png",
         backgroundImg : "./img/iron-brothers.jpg",
         category : "fitness",
         type : "Design",
@@ -26,112 +25,37 @@ const projectsData = [
         onclickLink : ""
     },
     {
+        name : "Protfolio",
+        backgroundImg : "./img/portfolio.png",
+        category : "Personal",
+        type : "Website",
+        gihubLink : "",
+        liveLink : "",
+        onclickLink : "",
+    },
+    {
         name : "Quiz",
-        icon : "",
         backgroundImg : "./img/intro-page.png",
         category : "Ecommerce",
         type : "Website",
         gihubLink : "",
         liveLink : "",
-        onclickLink : ""
+        onclickLink : "",
     },
     {
         name : "Note",
-        icon : "./img/dumbbell.png",
         backgroundImg : "./img/note.png",
         category : "Note",
         type : "Website",
         gihubLink : "",
         liveLink : "",
         onclickLink : "",
-        style: "100%"
     },
     {
         name : "Cars",
-        icon : "./img/dumbbell.png",
-        backgroundImg : ".//img/car.jpg",
-        category : "company",
-        type : "Design",
-        gihubLink : "",
-        liveLink : "",
-        onclickLink : ""
-    },
-    {
-        name : "Iron Brothers",
-        icon : "./img/dumbbell.png",
-        backgroundImg : "./img/IronBrothers.jpg",
-        category : "fitness",
-        type : "Website",
-        gihubLink : "",
-        liveLink : "",
-        onclickLink : ""
-    },
-    {
-        name : "Online Shop",
-        icon : "./img/dumbbell.png",
-        backgroundImg : ".//img/ecommerce.jpg",
+        backgroundImg : "./img/ecommerce.png",
         category : "Ecommerce",
-        type : "Design",
-        gihubLink : "",
-        liveLink : "",
-        onclickLink : ""
-    },
-    {
-        name : "Dream House",
-        icon : "./img/dumbbell.png",
-        backgroundImg : ".//img/realEstate.jpg",
-        category : "Real Estate",
         type : "Website",
-        gihubLink : "",
-        liveLink : "",
-        onclickLink : ""
-    },
-    {
-        name : "Cars",
-        icon : "./img/dumbbell.png",
-        backgroundImg : ".//img/car.jpg",
-        category : "company",
-        type : "Website",
-        gihubLink : "",
-        liveLink : "",
-        onclickLink : ""
-    },
-    {
-        name : "Iron Brothers",
-        icon : "./img/dumbbell.png",
-        backgroundImg : "./img/IronBrothers.jpg",
-        category : "fitness",
-        type : "Website",
-        gihubLink : "",
-        liveLink : "",
-        onclickLink : ""
-    },
-    {
-        name : "Online Shop",
-        icon : "./img/dumbbell.png",
-        backgroundImg : ".//img/ecommerce.jpg",
-        category : "Ecommerce",
-        type : "Design",
-        gihubLink : "",
-        liveLink : "",
-        onclickLink : ""
-    },
-    {
-        name : "Dream House",
-        icon : "./img/dumbbell.png",
-        backgroundImg : ".//img/realEstate.jpg",
-        category : "Real Estate",
-        type : "Website",
-        gihubLink : "",
-        liveLink : "",
-        onclickLink : ""
-    },
-    {
-        name : "Cars",
-        icon : "./img/dumbbell.png",
-        backgroundImg : ".//img/car.jpg",
-        category : "company",
-        type : "Design",
         gihubLink : "",
         liveLink : "",
         onclickLink : ""
@@ -208,18 +132,18 @@ window.addEventListener('scroll', () => {
     const scrollingPosition = window.pageYOffset;
     const screenHeight = screen.height;
    
-    const contactMePosition = contactMe.offsetTop;
+    // const contactMePosition = contactMe.offsetTop;
 
     // displaying contact me sectoin 
-    if (scrollingPosition > (contactMePosition - screenHeight + 100)) {
-        functions.addClassOpenTo(contactMe);
-        functions.addClassOpenTo(animationDiv);
-        functions.addClassOpenTo(animationLine);
-        functions.addClassOpenTo(myTitle);
-        functions.addClassOpenTo(subtitle);
-        functions.setItems(contactMethods,300);
+    // if (scrollingPosition > (contactMePosition - screenHeight + 100)) {
+        // functions.addClassOpenTo(contactMe);
+        // functions.addClassOpenTo(animationDiv);
+        // functions.addClassOpenTo(animationLine);
+        // functions.addClassOpenTo(myTitle);
+        // functions.addClassOpenTo(subtitle);
+    //     functions.setItems(contactMethods,300);
     
-    }
+    // }
 })
 function setProjectsItems(data){
 
@@ -231,9 +155,6 @@ function setProjectsItems(data){
             <div class="projects-item">
                 <a href="#" class="projects-item__link">${item.onclickLink}</a>
                 <img class="projects-item__image" src=${item.backgroundImg} alt="project-image" style= width:${item.style ? item.style : 'auto'}>
-                <div class="projects-item__logo">
-                    <img src=${item.icon} alt="logo">
-                </div>
                 <div class="projects-item__info">
                     <h1 class="project-title">${item.name}</h1>
                     <h4 class="project-subtitle">${item.type}</h4>
