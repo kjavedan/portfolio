@@ -487,7 +487,6 @@
         max-width: 1400px;
         width: 100vw;
         margin-left: -13%;
-        border: 1px solid black;
 
         @include tablet {
             grid-template-columns: 1fr 1fr;
@@ -506,7 +505,7 @@
         .project-container {
             height: 350px;
             width: 100%;
-            background-color: lightblue;
+
             &.open {
                 .projects-item {
                     display: block;

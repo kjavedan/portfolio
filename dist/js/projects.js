@@ -18,7 +18,7 @@ const projectsData = [
     {
         name : "Iron Brothers",
         icon : "./img/dumbbell.png",
-        backgroundImg : "./img/Iron-brothers.jpg",
+        backgroundImg : "./img/iron-brothers.jpg",
         category : "fitness",
         type : "Design",
         gihubLink : "",
@@ -26,9 +26,9 @@ const projectsData = [
         onclickLink : ""
     },
     {
-        name : "Online Shop",
-        icon : "./img/dumbbell.png",
-        backgroundImg : ".//img/ecommerce.jpg",
+        name : "Quiz",
+        icon : "",
+        backgroundImg : "./img/intro-page.png",
         category : "Ecommerce",
         type : "Website",
         gihubLink : "",
@@ -36,14 +36,15 @@ const projectsData = [
         onclickLink : ""
     },
     {
-        name : "Dream House",
+        name : "Note",
         icon : "./img/dumbbell.png",
-        backgroundImg : ".//img/realEstate.jpg",
-        category : "Real Estate",
-        type : "Design",
+        backgroundImg : "./img/note.png",
+        category : "Note",
+        type : "Website",
         gihubLink : "",
         liveLink : "",
-        onclickLink : ""
+        onclickLink : "",
+        style: "100%"
     },
     {
         name : "Cars",
@@ -229,7 +230,7 @@ function setProjectsItems(data){
         <div class="project-container open">
             <div class="projects-item">
                 <a href="#" class="projects-item__link">${item.onclickLink}</a>
-                <img class="projects-item__image" src=${item.backgroundImg} alt="project-image">
+                <img class="projects-item__image" src=${item.backgroundImg} alt="project-image" style= width:${item.style ? item.style : 'auto'}>
                 <div class="projects-item__logo">
                     <img src=${item.icon} alt="logo">
                 </div>
