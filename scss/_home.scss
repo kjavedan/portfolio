@@ -149,7 +149,7 @@
 .container {
     width: 80vw;
     margin: 0 auto;
-    padding: 4rem 0 0 0;
+    padding: 2rem 0 0 0;
 
     // adding margin to the container wrapper in the 980px scale
     @include small-screen{
@@ -498,13 +498,34 @@
 
         @include laptop {
             grid-template-columns: 1fr 1fr 1fr 1fr;
-
+            transform: translateX(-4%);
         }
 
         // each project ***************************************
         .project-container {
-            height: 350px;
+            height: 200px;
             width: 100%;
+            background-color: red;
+
+            @include large-mobile{
+                height: 240px;
+            }
+            @include mini-tablet{
+                height: 300px;
+            }
+            @include tablet{
+                height: 220px;
+            }
+            @include large-tablet{
+                height: 300px;
+            }
+            @include small-screen{
+                height: 220px;
+            }
+            @include laptop{
+                height: 240px;
+                width: 120%;
+            }
 
             &.open {
                 .projects-item {
@@ -546,7 +567,7 @@
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    
+                    width: 100%;
                 }
 
                 // project info****************************************

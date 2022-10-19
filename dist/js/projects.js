@@ -154,7 +154,7 @@ function setProjectsItems(data){
         <div class="project-container open">
             <div class="projects-item">
                 <a href="#" class="projects-item__link">${item.onclickLink}</a>
-                <img class="projects-item__image" src=${item.backgroundImg} alt="project-image" style= width:${item.style ? item.style : 'auto'}>
+                <img class="projects-item__image" src=${item.backgroundImg} alt="project-image">
                 <div class="projects-item__info">
                     <h1 class="project-title">${item.name}</h1>
                     <h4 class="project-subtitle">${item.type}</h4>

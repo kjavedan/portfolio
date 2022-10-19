@@ -102,16 +102,13 @@
             padding: 0;
 
             @include laptop{
-            // background-color: red;
-            width: 100%;
+            
             }
             .projects{
                 margin-top: 2rem;
-                .projects-item__image{
-
-                   @include tablet{
-                    //    height: 100%;
-                   }
+                
+                img{
+                    width: 100%;
                 }
               
                 height: auto;

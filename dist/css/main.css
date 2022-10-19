@@ -609,7 +609,7 @@ body p {
 .container {
   width: 80vw;
   margin: 0 auto;
-  padding: 4rem 0 0 0;
+  padding: 2rem 0 0 0;
 }
 
 @media screen and (min-width: 980px) {
@@ -983,10 +983,9 @@ body p {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  max-width: 1400px;
+  max-width: 1650px;
   width: 100vw;
   margin-left: -13%;
-  border: 1px solid black;
 }
 
 @media screen and (min-width: 660px) {
@@ -1007,13 +1006,52 @@ body p {
   .container .projects {
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    -webkit-transform: translateX(-4%);
+            transform: translateX(-4%);
   }
 }
 
 .container .projects .project-container {
-  height: 350px;
+  height: 200px;
   width: 100%;
-  background-color: lightblue;
+  background-color: red;
+}
+
+@media screen and (min-width: 381px) {
+  .container .projects .project-container {
+    height: 240px;
+  }
+}
+
+@media screen and (min-width: 489px) {
+  .container .projects .project-container {
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 660px) {
+  .container .projects .project-container {
+    height: 220px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .container .projects .project-container {
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  .container .projects .project-container {
+    height: 220px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container .projects .project-container {
+    height: 240px;
+    width: 120%;
+  }
 }
 
 .container .projects .project-container.open .projects-item {
@@ -1052,6 +1090,7 @@ body p {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  width: 100%;
 }
 
 .container .projects .project-container .projects-item__info {
@@ -1061,6 +1100,7 @@ body p {
   width: 100%;
   height: 50%;
   padding: 1.5rem;
+  z-index: 12;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
 }
@@ -1112,6 +1152,11 @@ body p {
 .container .projects .project-container .projects-item__link {
   padding: 100%;
   z-index: 10;
+}
+
+.container .projects .project-container .projects-item__link:hover {
+  background-color: black;
+  opacity: .7;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1983,26 +2028,17 @@ header .nav {
   padding: 0;
 }
 
-@media screen and (min-width: 1200px) {
-  .works .container {
-    width: 100%;
-  }
-}
-
 .works .container .projects {
   margin-top: 2rem;
   height: auto;
 }
 
-@media screen and (min-width: 660px) {
-  .works .container .projects .projects-item__image {
-    height: 100%;
-  }
+.works .container .projects img {
+  width: 100%;
 }
 
 .works .container .projects .project-container {
   margin: 0;
-  height: 300px;
 }
 
 @media screen and (min-width: 900px) {
