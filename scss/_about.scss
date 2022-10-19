@@ -102,7 +102,7 @@
         }
 
         .border {
-            height: 85%;
+            height: 90%;
             width: 3px;
             border-radius: 5px;
             background-color: $primary-clr-2;
@@ -126,7 +126,7 @@
             &__item {
                 width: 100%;
                 margin: auto;
-                height: 350px;
+                // height: 350px;
                 display: flex;
 
                 @include laptop{

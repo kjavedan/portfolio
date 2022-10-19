@@ -248,6 +248,7 @@
         padding: 0px 6px;
         display: inline-flex;
         display: none;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 4px;
 
         &.open {
             display: inline-flex;
@@ -500,12 +501,28 @@
             grid-template-columns: 1fr 1fr 1fr 1fr;
             transform: translateX(-4%);
         }
+        
+        @include laptop{
+            height: 530px;
+            width: 100%;
+            margin: 6rem auto auto 0rem;
+            // margin: 5rem auto;
+
+            & > .project-container:nth-child(2){
+                margin-top: 17%;
+            }
+            & > .project-container:nth-child(3){
+                margin-top: 35%;
+            }
+            & > .project-container:nth-child(4){
+                margin-top: 53%;
+            }
+        }
 
         // each project ***************************************
         .project-container {
             height: 200px;
             width: 100%;
-            background-color: red;
 
             @include large-mobile{
                 height: 240px;
@@ -568,12 +585,17 @@
                     left: 50%;
                     transform: translate(-50%, -50%);
                     width: 100%;
+
+                    @include laptop{
+                        width: 130%;
+                        height: 100%;
+                    }
                 }
 
                 // project info****************************************
                 &__info {
                     position: absolute;
-                    bottom: -20%;
+                    bottom: -21%;
                     left: 0;
                     width: 100%;
                     height: 50%;
@@ -581,6 +603,17 @@
                     z-index: 12;
                     
                     @include transition-ease;
+
+                    
+                    @include tablet{
+                        bottom: -15%;
+                    }
+                    @include large-tablet{
+                        bottom: -25%;
+                    }
+                    @include small-screen{
+                        bottom: -15%;
+                    }
 
                     // project title ***************************************
                     .project-title {
@@ -591,14 +624,14 @@
 
                     // project subtitle ***************************************
                     .project-subtitle {
-                        margin-top: 1rem;
+                        margin-top: .5rem;
                         color: $primary-text-clr-3;
                         font-family: $ff-primary-3;
                     }
 
                     // project category ***************************************
                     .project-category {
-                        padding-top: 2rem;
+                        padding-top: 1rem;
                         color: $primary-text-clr-3;
                         font-size: 1.5rem;
                     }
@@ -643,9 +676,8 @@
 
                 &:hover {
                     cursor: pointer;
-
                     .projects-item__info {
-                        bottom: 0;
+                        bottom: 5%;
 
                         .project-title {
                             color: $primary-clr-1;
@@ -664,22 +696,6 @@
 
         }
 
-        @include laptop{
-            height: 530px;
-            width: 100%;
-            margin: 10rem auto 5rem;
-            // margin: 5rem auto;
-
-            & > .project-container:nth-child(2){
-                margin-top: 17%;
-            }
-            & > .project-container:nth-child(3){
-                margin-top: 35%;
-            }
-            & > .project-container:nth-child(4){
-                margin-top: 53%;
-            }
-        }
 
     }
     

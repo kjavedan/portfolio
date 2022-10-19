@@ -24,15 +24,15 @@ const projectsData = [
         liveLink : "",
         onclickLink : ""
     },
-    {
-        name : "Protfolio",
-        backgroundImg : "./img/portfolio.png",
-        category : "Personal",
-        type : "Website",
-        gihubLink : "",
-        liveLink : "",
-        onclickLink : "",
-    },
+    // {
+    //     name : "Protfolio",
+    //     backgroundImg : "./img/portfolio.png",
+    //     category : "Personal",
+    //     type : "Website",
+    //     gihubLink : "",
+    //     liveLink : "",
+    //     onclickLink : "",
+    // },
     {
         name : "Quiz",
         backgroundImg : "./img/intro-page.png",
@@ -151,10 +151,10 @@ function setProjectsItems(data){
         
         return(
             `<!-- start of project  -->
-        <div class="project-container open">
+        <div class="project-container open" style='width: 100%'>
             <div class="projects-item">
                 <a href="#" class="projects-item__link">${item.onclickLink}</a>
-                <img class="projects-item__image" src=${item.backgroundImg} alt="project-image">
+                <img class="projects-item__image" src=${item.backgroundImg} alt="project-image" '>
                 <div class="projects-item__info">
                     <h1 class="project-title">${item.name}</h1>
                     <h4 class="project-subtitle">${item.type}</h4>
