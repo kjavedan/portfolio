@@ -1017,7 +1017,7 @@ body p {
   .container .projects {
     height: 530px;
     width: 100%;
-    margin: 6rem auto auto 0rem;
+    margin: 10rem auto auto 0rem;
   }
   .container .projects > .project-container:nth-child(2) {
     margin-top: 17%;
@@ -1089,19 +1089,6 @@ body p {
   transition: all .4s ease-in-out;
 }
 
-.container .projects .project-container .projects-item__logo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 30%;
-  height: 30%;
-}
-
-.container .projects .project-container .projects-item__logo img {
-  padding: 1rem;
-  width: 70%;
-}
-
 .container .projects .project-container .projects-item__image {
   position: absolute;
   top: 50%;
@@ -1125,7 +1112,6 @@ body p {
   width: 100%;
   height: 50%;
   padding: 1.5rem;
-  z-index: 12;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
 }
@@ -1153,6 +1139,7 @@ body p {
   color: #fff;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
+  z-index: 3;
 }
 
 .container .projects .project-container .projects-item__info .project-subtitle {
@@ -1192,24 +1179,17 @@ body p {
   transition: all .4s ease-in-out;
 }
 
-.container .projects .project-container .projects-item__link {
-  padding: 100%;
-  z-index: 10;
+.container .projects .project-container .projects-item__link-wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 15;
 }
 
-.container .projects .project-container .projects-item__link:hover {
-  background-color: black;
-  opacity: .7;
-}
-
-@media screen and (min-width: 1200px) {
-  .container .projects .project-container .projects-item__link {
-    padding: 50%;
-    z-index: 10;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+.container .projects .project-container .projects-item__link-wrapper:hover .projects-item__info {
+  background-color: rgba(0, 0, 0, 0.76);
+  height: 100%;
+  padding-top: 20%;
 }
 
 .container .projects .project-container .projects-item:hover {
@@ -1217,7 +1197,7 @@ body p {
 }
 
 .container .projects .project-container .projects-item:hover .projects-item__info {
-  bottom: 5%;
+  bottom: 0%;
 }
 
 .container .projects .project-container .projects-item:hover .projects-item__info .project-title {
@@ -1226,10 +1206,11 @@ body p {
 
 .container .projects .project-container .projects-item:hover .project__btn {
   display: block;
+  z-index: 2;
 }
 
 .container .projects .project-container .projects-item:hover .project__btn:hover {
-  color: blue;
+  color: #FCE38A;
 }
 
 @media screen and (min-width: 980px) {

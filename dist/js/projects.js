@@ -22,7 +22,7 @@ const projectsData = [
         type : "Design",
         gihubLink : "",
         liveLink : "",
-        onclickLink : ""
+        onclickLink : "https://khaled-javedan-ironBrothers.netlify.app"
     },
     // {
     //     name : "Protfolio",
@@ -40,7 +40,7 @@ const projectsData = [
         type : "Website",
         gihubLink : "",
         liveLink : "",
-        onclickLink : "",
+        onclickLink : "https://khaled-javedan-quiz.netlify.app",
     },
     {
         name : "Note",
@@ -49,7 +49,7 @@ const projectsData = [
         type : "Website",
         gihubLink : "",
         liveLink : "",
-        onclickLink : "",
+        onclickLink : "https://khaled-javedan-note.netlify.app",
     },
     {
         name : "Cars",
@@ -153,13 +153,14 @@ function setProjectsItems(data){
             `<!-- start of project  -->
         <div class="project-container open" style='width: 100%'>
             <div class="projects-item">
-                <a href="#" class="projects-item__link">${item.onclickLink}</a>
-                <img class="projects-item__image" src=${item.backgroundImg} alt="project-image" '>
-                <div class="projects-item__info">
-                    <h1 class="project-title">${item.name}</h1>
-                    <h4 class="project-subtitle">${item.type}</h4>
-                    <h3 class="project-category">${item.category}</h3>
-                </div>
+                <a href="${item.onclickLink}" class="projects-item__link-wrapper">
+                    <img class="projects-item__image" src=${item.backgroundImg} alt="project-image" '>
+                    <div class="projects-item__info">
+                        <h1 class="project-title">${item.name}</h1>
+                        <h4 class="project-subtitle">${item.type}</h4>
+                        <h3 class="project-category">${item.category}</h3>
+                    </div>
+                </a>
                 <div class="projects-item__btns">
                     <a class="project__btn" href=${item.liveLink}>
                         <i class="fa-solid fa-eye"></i>
