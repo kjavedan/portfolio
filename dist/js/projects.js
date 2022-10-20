@@ -24,15 +24,15 @@ const projectsData = [
         liveLink : "https://khaled-javedan-ironBrothers.netlify.app",
         onclickLink : "https://khaled-javedan-ironBrothers.netlify.app"
     },
-    // {
-    //     name : "Protfolio",
-    //     backgroundImg : "./img/portfolio.png",
-    //     category : "Personal",
-    //     type : "Website",
-    //     gihubLink : "",
-    //     liveLink : "",
-    //     onclickLink : "",
-    // },
+    {
+        name : "Protfolio",
+        backgroundImg : "./img/portfolio.png",
+        category : "Personal",
+        type : "Website",
+        gihubLink : "https://github.com/kjavedan/portfolio",
+        liveLink : "https://khaled-javedan-portfolio.netlify.app/index.html",
+        onclickLink : "https://khaled-javedan-portfolio.netlify.app/index.html",
+    },
     {
         name : "Quiz",
         backgroundImg : "./img/quiz-intro.png",

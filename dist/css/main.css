@@ -1069,6 +1069,13 @@ body p {
 
 @media screen and (min-width: 1200px) {
   .container .projects .project-container {
+    height: 210px;
+    width: 120%;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  .container .projects .project-container {
     height: 240px;
     width: 120%;
   }

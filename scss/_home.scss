@@ -542,6 +542,10 @@
                 height: 220px;
             }
             @include laptop{
+                height: 210px;
+                width: 120%;
+            }
+            @include large-laptop{
                 height: 240px;
                 width: 120%;
             }
