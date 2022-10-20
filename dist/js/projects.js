@@ -35,7 +35,7 @@ const projectsData = [
     // },
     {
         name : "Quiz",
-        backgroundImg : "./img/intro-page.png",
+        backgroundImg : "./img/quiz-intro.png",
         category : "Education",
         type : "React App",
         gihubLink : "https://github.com/kjavedan/Quiz-app",

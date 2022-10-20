@@ -16,7 +16,7 @@ const activePage = document.getElementById('active-page');
 const path = window.location.pathname;
 const page = path.split('/').pop();
 let currentPage = page.split('.')[0];
-if (currentPage == "index") currentPage = "Home";
+if (currentPage == "index") currentPage = "home";
 activePage.textContent = currentPage;
 //adding class active for the active page and removing the class active from the un active page
 navMenuItem.forEach(item => {

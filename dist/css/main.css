@@ -953,8 +953,10 @@ body p {
 }
 
 .container .icons .icons-container h4 {
-  font-size: .7rem;
+  font-size: .8rem;
   color: #313030;
+  font-family: 'Inter';
+  font-weight: unset;
 }
 
 .container .icons .icons-container p {
@@ -1101,7 +1103,6 @@ body p {
 @media screen and (min-width: 1200px) {
   .container .projects .project-container .projects-item__image {
     width: 130%;
-    height: 100%;
   }
 }
 
