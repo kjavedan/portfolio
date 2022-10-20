@@ -31,10 +31,15 @@
 }
 
 main {
-    overflow-x: hidden;
+    overflow-x: clip;
+    
     margin: 0 auto;
     width: 100%;
     transition: all 1s ease-in-out;
+
+    // &::-webkit-scrollbar{
+    //     display: none;
+    // }
     .to-top-wrapper{
         display: none;
     }

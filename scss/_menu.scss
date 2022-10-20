@@ -79,6 +79,7 @@ header {
 
     .nav {
         display: flex;
+        
 
         @include laptop {
             height: 60px;
@@ -91,13 +92,15 @@ header {
 
 .nav-menu {
     display: none;
-
+    &::-webkit-scrollbar{
+        display: none;
+    }
     // displaying the nav for mobile and tablet screen once the burger button is clicked
     &.open {
         padding-top: 8rem;
         display: block;
         width: 50vw;
-        height: 100%;
+        height: 100vh;
         background-color: transparent;
         position: fixed;
         left: 0;
