@@ -631,50 +631,41 @@
                     right: 5%;
                     width: 30%;
                     height: 18%;
+                    // z-index: 16;
                     @include centralize;
                     @include transition-ease;
+                    // background-color: red;
 
                     .project__btn {
                         color: $primary-text-clr-3;
-                        display: none;
-                        @include transition-ease;
+                        // display: none; 
+                        background-color: rgb(255, 163, 77);
+                        height: 30px;
+                        width: 30px;
+                        display: flex;
+                        border-radius: 5px;
+                        align-items: center;
+                        justify-content: center;
+                        z-index: 15;  
+
+                        &:hover{
+                            background-color: rgb(255, 124, 0);
+                        }
                     }
 
                 }
 
                 // project link to the project page ***************************************
-                &__link-wrapper {
-                    position: absolute;
-                    height: 100%;
-                    width: 100%;
-                    z-index:15;
-                    
-                    &:hover{
-                        .projects-item__info{
-                            background-color: rgba(0, 0, 0, 0.76);
-                            height: 100%;
-                            padding-top: 20%;
-                        }
-                    }
-                }
+                
 
                 &:hover {
                     cursor: pointer;
                     .projects-item__info {
+                        @include transition-ease;
                         bottom: 0%;
-
-                        .project-title {
-                            color: $primary-clr-1;
-                        }
-                    }
-
-                    .project__btn {
-                        display: block;
-                        z-index: 2;
-
-                        &:hover {
-                            color: $primary-clr-1;
-                        }
+                        border-top-left-radius: 12px;
+                        border-top-right-radius: 12px;
+                        background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);
                     }
                 }
             }

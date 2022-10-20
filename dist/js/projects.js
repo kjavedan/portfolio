@@ -160,15 +160,15 @@ function setProjectsItems(data){
                         <h4 class="project-subtitle">${item.type}</h4>
                         <h3 class="project-category">${item.category}</h3>
                     </div>
+                    <div class="projects-item__btns">
+                        <a class="project__btn" href=${item.liveLink}>
+                            <i class="fa-solid fa-eye"></i>
+                        </a>
+                        <a class="project__btn" href=${item.gihubLink}>
+                            <i class="fa fa-github" aria-hidden="true"></i>
+                        </a>
+                    </div>
                 </a>
-                <div class="projects-item__btns">
-                    <a class="project__btn" href=${item.liveLink}>
-                        <i class="fa-solid fa-eye"></i>
-                    </a>
-                    <a class="project__btn" href=${item.gihubLink}>
-                        <i class="fa fa-github" aria-hidden="true"></i>
-                    </a>
-                </div>
             </div>
         </div>
         <!-- end of project -->`)

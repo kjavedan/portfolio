@@ -1174,22 +1174,24 @@ body p {
 
 .container .projects .project-container .projects-item__btns .project__btn {
   color: #fff;
-  display: none;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
-}
-
-.container .projects .project-container .projects-item__link-wrapper {
-  position: absolute;
-  height: 100%;
-  width: 100%;
+  background-color: #ffa34d;
+  height: 30px;
+  width: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   z-index: 15;
 }
 
-.container .projects .project-container .projects-item__link-wrapper:hover .projects-item__info {
-  background-color: rgba(0, 0, 0, 0.76);
-  height: 100%;
-  padding-top: 20%;
+.container .projects .project-container .projects-item__btns .project__btn:hover {
+  background-color: #ff7c00;
 }
 
 .container .projects .project-container .projects-item:hover {
@@ -1197,20 +1199,12 @@ body p {
 }
 
 .container .projects .project-container .projects-item:hover .projects-item__info {
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
   bottom: 0%;
-}
-
-.container .projects .project-container .projects-item:hover .projects-item__info .project-title {
-  color: #FCE38A;
-}
-
-.container .projects .project-container .projects-item:hover .project__btn {
-  display: block;
-  z-index: 2;
-}
-
-.container .projects .project-container .projects-item:hover .project__btn:hover {
-  color: #FCE38A;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  background: radial-gradient(circle at 10% 20%, black 0%, #404040 90.2%);
 }
 
 @media screen and (min-width: 980px) {
