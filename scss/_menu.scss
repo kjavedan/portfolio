@@ -182,22 +182,16 @@ header {
                 }
             }
 
-            .instagram:hover {
-                color: $primary-text-clr-3;
-
-                background: #f09433;
-                background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-                background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-                background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+            .github:hover {
+                color: #F1502F;
             }
 
             .linkdin i:hover {
                 color: #0072b1;
             }
 
-            .whatsapp i:hover {
-                color: #25D366;
+            .google i:hover {
+                color:	#0F9D58
             }
 
             @include laptop {
