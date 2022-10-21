@@ -21,7 +21,7 @@ const projectsData = [
         category : "fitness",
         type : "Website",
         gihubLink : "https://github.com/kjavedan/IronBrothers",
-        liveLink : "https://khaled-javedan-ironBrothers.netlify.app",
+        liveLink : "https://ironbrothers.netlify.app",
         onclickLink : "https://khaled-javedan-ironBrothers.netlify.app"
     },
     {
