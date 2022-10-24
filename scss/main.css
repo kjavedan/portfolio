@@ -505,7 +505,7 @@ body p {
 .container {
   width: 80vw;
   margin: 0 auto;
-  padding: 4rem 0 0 0;
+  padding: 2rem 0 0 0;
 }
 @media screen and (min-width: 980px) {
   .container > .wrapper:nth-child(2) {
@@ -590,6 +590,7 @@ body p {
   padding: 0px 6px;
   display: inline-flex;
   display: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 4px;
 }
 .container__button.open {
   display: inline-flex;
@@ -752,8 +753,10 @@ body p {
           animation: fade-in-bottom 0.5s;
 }
 .container .icons .icons-container h4 {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: #313030;
+  font-family: "Inter";
+  font-weight: unset;
 }
 .container .icons .icons-container p {
   font-size: 0.8rem;
@@ -795,11 +798,65 @@ body p {
 @media screen and (min-width: 1200px) {
   .container .projects {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    transform: translateX(-4%);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container .projects {
+    height: 530px;
+    width: 100%;
+    margin: 10rem auto auto 0rem;
+  }
+  .container .projects > .project-container:nth-child(2) {
+    margin-top: 17%;
+  }
+  .container .projects > .project-container:nth-child(3) {
+    margin-top: 35%;
+  }
+  .container .projects > .project-container:nth-child(4) {
+    margin-top: 53%;
   }
 }
 .container .projects .project-container {
-  height: 350px;
+  height: 200px;
   width: 100%;
+}
+@media screen and (min-width: 381px) {
+  .container .projects .project-container {
+    height: 240px;
+  }
+}
+@media screen and (min-width: 489px) {
+  .container .projects .project-container {
+    height: 300px;
+  }
+}
+@media screen and (min-width: 660px) {
+  .container .projects .project-container {
+    height: 220px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .container .projects .project-container {
+    height: 300px;
+  }
+}
+@media screen and (min-width: 980px) {
+  .container .projects .project-container {
+    height: 220px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container .projects .project-container {
+    height: 210px;
+    width: 120%;
+  }
+}
+@media screen and (min-width: 1350px) {
+  .container .projects .project-container {
+    height: 240px;
+    width: 120%;
+  }
 }
 .container .projects .project-container.open .projects-item {
   display: block;
@@ -815,111 +872,115 @@ body p {
   display: none;
   transition: all 0.4s ease-in-out;
 }
-.container .projects .project-container .projects-item__logo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 30%;
-  height: 30%;
-}
-.container .projects .project-container .projects-item__logo img {
-  padding: 1rem;
-  width: 70%;
-}
 .container .projects .project-container .projects-item__image {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  .container .projects .project-container .projects-item__image {
+    width: 130%;
+  }
 }
 .container .projects .project-container .projects-item__info {
   position: absolute;
-  bottom: -20%;
+  bottom: -12%;
   left: 0;
   width: 100%;
-  height: 50%;
+  height: 80%;
   padding: 1.5rem;
-  z-index: 12;
+  opacity: 0;
   transition: all 0.4s ease-in-out;
+}
+@media screen and (max-width: 340px) {
+  .container .projects .project-container .projects-item__info {
+    bottom: -13%;
+  }
+}
+@media screen and (min-width: 381px) {
+  .container .projects .project-container .projects-item__info {
+    bottom: -15%;
+  }
+}
+@media screen and (min-width: 489px) {
+  .container .projects .project-container .projects-item__info {
+    bottom: -23%;
+  }
+}
+@media screen and (min-width: 660px) {
+  .container .projects .project-container .projects-item__info {
+    bottom: -15%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .container .projects .project-container .projects-item__info {
+    bottom: -25%;
+  }
+}
+@media screen and (min-width: 980px) {
+  .container .projects .project-container .projects-item__info {
+    bottom: -15%;
+  }
 }
 .container .projects .project-container .projects-item__info .project-title {
   font-size: 1.5rem;
   color: #fff;
   transition: all 0.4s ease-in-out;
+  z-index: 3;
 }
 .container .projects .project-container .projects-item__info .project-subtitle {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   color: #fff;
   font-family: "Courgette", cursive;
 }
 .container .projects .project-container .projects-item__info .project-category {
-  padding-top: 2rem;
+  padding-top: 1rem;
   color: #fff;
-  font-size: 1.5rem;
 }
 .container .projects .project-container .projects-item__btns {
   position: absolute;
-  bottom: 0;
-  right: 5%;
-  width: 30%;
+  bottom: -20%;
+  left: 5%;
   height: 18%;
   display: flex;
   align-items: center;
   justify-content: space-around;
   transition: all 0.4s ease-in-out;
+  opacity: 0;
 }
 .container .projects .project-container .projects-item__btns .project__btn {
   color: #fff;
-  display: none;
+  background-color: rgb(0, 0, 0);
+  height: 30px;
+  width: 30px;
+  margin-left: 0.5rem;
+  display: flex;
+  border-radius: 3px;
+  align-items: center;
+  justify-content: center;
+  z-index: 15;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 4px;
   transition: all 0.4s ease-in-out;
 }
-.container .projects .project-container .projects-item__link {
-  padding: 100%;
-  z-index: 10;
-}
-.container .projects .project-container .projects-item__link:hover {
-  background-color: black;
-  opacity: 0.7;
-}
-@media screen and (min-width: 1200px) {
-  .container .projects .project-container .projects-item__link {
-    padding: 50%;
-    z-index: 10;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+.container .projects .project-container .projects-item__btns .project__btn:hover {
+  width: 40px;
+  height: 40px;
 }
 .container .projects .project-container .projects-item:hover {
   cursor: pointer;
 }
 .container .projects .project-container .projects-item:hover .projects-item__info {
-  bottom: 0;
+  opacity: 1;
+  height: 100%;
+  transition: all 0.4s ease-in-out;
+  bottom: 0%;
+  background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
 }
-.container .projects .project-container .projects-item:hover .projects-item__info .project-title {
-  color: #FCE38A;
-}
-.container .projects .project-container .projects-item:hover .project__btn {
-  display: block;
-}
-.container .projects .project-container .projects-item:hover .project__btn:hover {
-  color: blue;
-}
-@media screen and (min-width: 1200px) {
-  .container .projects {
-    height: 530px;
-    width: 100%;
-    margin: 10rem auto 5rem;
-  }
-  .container .projects > .project-container:nth-child(2) {
-    margin-top: 17%;
-  }
-  .container .projects > .project-container:nth-child(3) {
-    margin-top: 35%;
-  }
-  .container .projects > .project-container:nth-child(4) {
-    margin-top: 53%;
-  }
+.container .projects .project-container .projects-item:hover .projects-item__btns {
+  opacity: 1;
+  bottom: 20%;
 }
 @media screen and (min-width: 980px) {
   .container .my-porjects-wrapper {
@@ -1033,6 +1094,7 @@ body p {
 .more-about-me {
   margin: auto;
   width: 85%;
+  min-height: 110vh;
   display: grid;
 }
 @media screen and (min-width: 900px) {
@@ -1127,7 +1189,7 @@ body p {
   }
 }
 .more-about-me .my-journey-container .border {
-  height: 85%;
+  height: 90%;
   width: 3px;
   border-radius: 5px;
   background-color: #f8f8f8;
@@ -1150,7 +1212,6 @@ body p {
 .more-about-me .my-journey-container .my-journey__item {
   width: 100%;
   margin: auto;
-  height: 350px;
   display: flex;
 }
 @media screen and (min-width: 1200px) {
@@ -1317,11 +1378,14 @@ header .nav {
 .nav-menu {
   display: none;
 }
+.nav-menu::-webkit-scrollbar {
+  display: none;
+}
 .nav-menu.open {
   padding-top: 8rem;
   display: block;
   width: 50vw;
-  height: 100%;
+  height: 100vh;
   background-color: transparent;
   position: fixed;
   left: 0;
@@ -1400,17 +1464,14 @@ header .nav {
     transition: none;
   }
 }
-.nav-menu__item.social-media .instagram:hover {
-  color: #fff;
-  background: #f09433;
-  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f09433", endColorstr="#bc1888", GradientType=1);
+.nav-menu__item.social-media .github:hover {
+  color: #F1502F;
 }
 .nav-menu__item.social-media .linkdin i:hover {
   color: #0072b1;
 }
-.nav-menu__item.social-media .whatsapp i:hover {
-  color: #25D366;
+.nav-menu__item.social-media .google i:hover {
+  color: #0F9D58;
 }
 @media screen and (min-width: 1200px) {
   .nav-menu__item.social-media {
@@ -1568,14 +1629,12 @@ header .nav {
 .works .container {
   padding: 0;
 }
-@media screen and (min-width: 1200px) {
-  .works .container {
-    width: 100%;
-  }
-}
 .works .container .projects {
   margin-top: 2rem;
   height: auto;
+}
+.works .container .projects img {
+  width: 100%;
 }
 .works .container .projects .project-container {
   margin: 0;
@@ -1713,7 +1772,7 @@ header .nav {
 }
 
 main {
-  overflow-x: hidden;
+  overflow-x: clip;
   margin: 0 auto;
   width: 100%;
   transition: all 1s ease-in-out;
