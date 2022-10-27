@@ -22,7 +22,7 @@ const projectsData = [
         type : "Website",
         gihubLink : "https://github.com/kjavedan/IronBrothers",
         liveLink : "https://ironbrothers.netlify.app",
-        onclickLink : "https://khaled-javedan-ironBrothers.netlify.app"
+        onclickLink : "https://ironbrothers.netlify.app"
     },
     {
         name : "Protfolio",
