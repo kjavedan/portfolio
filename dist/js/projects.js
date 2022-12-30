@@ -59,6 +59,15 @@ const projectsData = [
         gihubLink : "https://github.com/kjavedan/Ecommerce-website",
         liveLink : "",
         onclickLink : ""
+    },
+    {
+        name : "jojoShop.",
+        backgroundImg : "./img/jojoshop.png",
+        category : "Ecommerce",
+        type : "React App",
+        gihubLink : "https://jojooshop.com",
+        liveLink : "https://jojooshop.com",
+        onclickLink : "https://jojooshop.com"
     }
 ]
 
