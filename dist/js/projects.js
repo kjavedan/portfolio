@@ -140,19 +140,6 @@ filterBtns.forEach(btn =>{
 window.addEventListener('scroll', () => {
     const scrollingPosition = window.pageYOffset;
     const screenHeight = screen.height;
-   
-    // const contactMePosition = contactMe.offsetTop;
-
-    // displaying contact me sectoin 
-    // if (scrollingPosition > (contactMePosition - screenHeight + 100)) {
-        // functions.addClassOpenTo(contactMe);
-        // functions.addClassOpenTo(animationDiv);
-        // functions.addClassOpenTo(animationLine);
-        // functions.addClassOpenTo(myTitle);
-        // functions.addClassOpenTo(subtitle);
-    //     functions.setItems(contactMethods,300);
-    
-    // }
 })
 function setProjectsItems(data){
 
