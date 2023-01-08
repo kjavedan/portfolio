@@ -57,8 +57,8 @@ const projectsData = [
         category : "Ecommerce",
         type : "React App",
         gihubLink : "https://github.com/kjavedan/Ecommerce-website",
-        liveLink : "",
-        onclickLink : ""
+        liveLink : "https://khaled-javedan-ecommerce.netlify.app",
+        onclickLink : "https://khaled-javedan-ecommerce.netlify.app/"
     },
     {
         name : "jojoShop.",
